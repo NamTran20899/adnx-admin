@@ -344,7 +344,7 @@ input:checked + .slider:before {
   gap: 15px;
   width: 100%;
 }
-.section-1 {
+#index .section-1 {
   width: 65%;
   height: 100%;
   border: 2px solid rgb(51 146 204);
@@ -354,8 +354,8 @@ input:checked + .slider:before {
   overflow: clip;
   overflow-clip-margin: content-box;
 }
-.section-1 .job,
-.section-1 .reminder {
+#index .section-1 .job,
+#index .section-1 .reminder {
   height: 50%;
 }
 .job .title,
@@ -426,7 +426,7 @@ input:checked + .slider:before {
 .status .green {
   background-color: green;
 }
-.section-2 {
+#index .section-2 {
   display: flex;
   flex-direction: column;
   gap: 15px;

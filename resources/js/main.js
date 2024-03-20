@@ -67,8 +67,10 @@ const renderCalendar = () => {
     // creating li of next month first days
     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
   }
-  currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-  daysTag.innerHTML = liTag;
+  if (currentDate) {
+    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+    daysTag.innerHTML = liTag;
+  }
 };
 renderCalendar();
 
