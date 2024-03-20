@@ -1,0 +1,33 @@
+.content_Personnel {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5% 0 0 5%;
+  }
+.board_Personnel{
+    margin: 17px auto;
+    color: #fff;
+    text-align: center;
+    background-color: white;
+    width: 97%;
+    border: 2px solid #1E90FF;
+    border-radius: 22px;
+    height: 95%;
+} 
+.sub_Personnel {
+    display: flex;
+}
+.sub_Personnel li{
+    margin-right: 52px;
+}
+.sub_Personnel{
+    background-color: #1E90FF;
+    border: 2px solid #1E90FF;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    
+}
