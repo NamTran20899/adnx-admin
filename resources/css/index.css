@@ -344,11 +344,7 @@ input:checked + .slider:before {
   gap: 15px;
   width: 100%;
 }
-<<<<<<< HEAD
 #index .section-1 {
-=======
-.section-1 {
->>>>>>> 4047b863734457ff159a06fca4cb590078c1422d
   width: 65%;
   height: 100%;
   border: 2px solid rgb(51 146 204);
@@ -358,13 +354,8 @@ input:checked + .slider:before {
   overflow: clip;
   overflow-clip-margin: content-box;
 }
-<<<<<<< HEAD
 #index .section-1 .job,
 #index .section-1 .reminder {
-=======
-.section-1 .job,
-.section-1 .reminder {
->>>>>>> 4047b863734457ff159a06fca4cb590078c1422d
   height: 50%;
 }
 .job .title,
@@ -435,11 +426,7 @@ input:checked + .slider:before {
 .status .green {
   background-color: green;
 }
-<<<<<<< HEAD
 #index .section-2 {
-=======
-.section-2 {
->>>>>>> 4047b863734457ff159a06fca4cb590078c1422d
   display: flex;
   flex-direction: column;
   gap: 15px;
