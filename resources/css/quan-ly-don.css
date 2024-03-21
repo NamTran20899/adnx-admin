@@ -62,10 +62,10 @@
   color: #fff;
 }
 .search-btn {
-  background-color: goldenrod;
+  background: goldenrod;
 }
 .excel-btn {
-  background-color: green;
+  background: green;
 }
 
 #application-management .section-2 {
