@@ -1,0 +1,415 @@
+:root {
+    --background-color: linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*:focus {
+    outline: none;
+}
+#error {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#error .section-1 {
+    display: flex;
+    gap: 15px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+.keyword {
+    width: 20% !important;
+}
+.status,
+.keyword,
+.to-date,
+.from-date {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(51 146 204);
+    width: 15%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    font-family: var(--font-family);
+}
+.select2-container {
+    width: 15% !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-results__option {
+    color: black !important;
+    font-family: var(--font-family) !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-dropdown {
+    border: 1px solid rgb(51 146 204) !important;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid rgb(51 146 204) !important;
+    border-radius: 5px!important;
+    height: 100% !important;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    color: black !important; 
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    height: 40px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 8px !important;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent black transparent !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: black transparent transparent transparent !important;
+}
+.to-date a,
+.from-date a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    background: var(--background-color);
+    color: #fff;
+    height: 100%;
+    width: 60px;
+}
+.status input,
+.keyword input,
+.to-date input,
+.from-date input {
+    padding: 6px 8px;
+    border: none;
+    width: 100%;
+}
+.search-advanced-btn,
+.search-btn {
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    width: 10%;
+    color: #fff;
+}
+.search-btn {
+    background-color: goldenrod;
+}
+.search-advanced-btn {
+    background-color: green;
+}
+
+#error .section-2 {
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 20px;
+    border: 2px solid rgb(51 146 204);
+}
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    margin: 10px 0 10px 0;
+    height: 40px;
+    align-items: center;
+}
+.error-btn-group {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+    gap: 15px;
+    width: 33%;
+}
+.error-btn-group a {
+    display: flex;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    width: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 5px;
+    color: #fff;
+}
+.export {
+    background: green;
+}
+.import {
+    background: blue;
+}
+.new {
+    background: orange;
+}
+.error-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+.error-content-1 {
+    width: 100%;
+    background: red;
+    border: 2px solid red;
+    border-radius: 15px;
+}
+.error-content-2 {
+    width: 100%;
+    background: #3491cb;
+    border: 2px solid #3491cb;
+    border-radius: 15px;
+}
+.board-th p {
+    font-size: 18px;
+}
+.board-td p {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board-th {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+}
+.board-content {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 5px;
+}
+.board-td {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(187, 186, 186);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 2px;
+    overflow: hidden;
+    position: relative;
+    color: black;
+    align-items: center;
+}
+.tick {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.urgent {
+    background: red;
+}
+.red {
+    border-left: 15px solid red;
+}
+.high {
+    background: orange;
+}
+.orange {
+    border-left: 15px solid orange;
+}
+.normal {
+    background: green;
+}
+.green {
+    border-left: 15px solid green;
+}
+.left {
+    text-align: left !important;
+    justify-content: left !important;
+}
+.board-th p:nth-child(1),
+.board-td p:nth-child(1) {
+    width: 55%;
+}
+.board-th p:nth-child(2),
+.board-td p:nth-child(2) {
+    width: 15%;
+}
+.board-th p:nth-child(3),
+.board-td p:nth-child(3) {
+    width: 15%;
+}
+.board-th p:nth-child(4),
+.board-td p:nth-child(4) {
+    width: 15%;
+}
+.head-btn-group {
+    margin-left: 10px;
+}
+.head-btn-group button {
+    background: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    color: #337dcb;
+}
+.prioritize {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+.condition {
+    font-size: 14px;
+    background: violet;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 55px auto;
+    background: #fff;
+    border-radius: 15px;
+    width: 80%;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    background: var(--background-color);
+}
+.popup-content {
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 5px 15px 15px 15px;
+}
+.popup-title {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+}
+.close {
+    position: absolute;
+    right: 10px;
+    border: 1px solid blue;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close i {
+    color: #fff;
+}
+.popup-row {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+.popup-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+}
+.popup-input label {
+    font-size: 14px;
+    color: rgb(51 146 204);
+    text-align: left;
+    margin-bottom: 5px;
+}
+.popup-input textarea,
+.popup-input input {
+    border: 1px solid rgb(51 146 204);
+    border-radius: 5px;
+    font-size: 16px;
+    height: 100%;
+    padding: 8px 10px;
+}
+.popup-btn {
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+    gap: 20px;
+}
+.popup-btn button {
+    font-size: 18px;
+    padding: 8px 35px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+textarea {
+    resize: none;
+}
+.content textarea {
+    height: 200px;
+}
+.url textarea {
+    height: 150px;
+}
+.deadline {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(51 146 204);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    font-family: var(--font-family);
+}
+.deadline input {
+    padding: 6px 8px;
+    border: none;
+    width: 100%;
+}
+.deadline a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    background: var(--background-color);
+    color: #fff;
+    height: 100%;
+    width: 60px;
+}
+.confirm {
+    background: var(--background-color);
+}

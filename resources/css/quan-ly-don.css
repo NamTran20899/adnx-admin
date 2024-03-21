@@ -82,7 +82,6 @@
 }
 .board-td p {
   font-size: 16px;
-
 }
 .board-th {
   width: 100%;
@@ -137,6 +136,7 @@
 .board-th p:nth-child(1),
 .board-td p:nth-child(1) {
   width: 5%;
+  justify-self: left;
 }
 .board-th p:nth-child(2),
 .board-td p:nth-child(2) {
@@ -190,6 +190,10 @@
 .popup-content {
   background: #fff;
   border-radius: 15px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 5px 15px 15px 15px;
 }
 .popup-title {
   display: flex;
@@ -213,12 +217,6 @@
 }
 .close i {
   color: #fff;
-}
-.popup-content {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  padding: 5px 15px 15px 15px;
 }
 .popup-row {
   width: 100%;
@@ -246,8 +244,10 @@
   padding: 8px 10px;
 }
 .popup-input textarea {
-  min-width: 100%;
   height: 200px;
+}
+textarea {
+  resize: none;
 }
 .popup-btn {
   display: flex;
@@ -264,8 +264,8 @@
   color: #fff;
 }
 .accept {
-  background-color: orange;
+  background: orange;
 }
 .deny {
-  background-color: red;
+  background: red;
 }
