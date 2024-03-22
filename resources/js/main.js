@@ -93,3 +93,43 @@ prevNextIcon.forEach((icon) => {
     renderCalendar(); // calling renderCalendar function
   });
 });
+
+// mision
+$(".mission-btn").click(function () {
+  if (!$(this).hasClass("mission-btn-active")) {
+    $(".mission-btn.mission-btn-active").removeClass("mission-btn-active");
+    $(this).addClass("mission-btn-active");
+  }
+});
+
+$(".mission-btn").click(function () {
+  if ($(this).hasClass("mission-btn-active")) {
+    $(".mission-content .mission-content-active").removeClass(
+      "mission-content-active"
+    );
+    if ($(this).hasClass("all-btn")) {
+      $(".all-mission").addClass("mission-content-active");
+    } else if ($(this).hasClass("incomplete-btn")) {
+      $(".incomplete-mission").addClass("mission-content-active");
+    } else {
+      $(".completed-mission").addClass("mission-content-active");
+    }
+  }
+});
+
+/* gear
+const btns = document.querySelectorAll(".btn-dropdown");
+const gears = document.querySelectorAll(".gear-content");
+
+btns.forEach((btn, index) => {
+  btns[index].addEventListener("click", function (e) {
+    btn.nextElementSibling.classList.toggle("open");
+    var test = btn.nextElementSibling;
+    return test;
+  });
+});
+*/
+
+$(".btn-dropdown").click(function () {
+  $(this).next().toggleClass("open");
+});
