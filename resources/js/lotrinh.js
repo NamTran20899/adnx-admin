@@ -1,0 +1,27 @@
+$(document).ready(function(){
+    $('#toggleBtn1').click(function(){
+        $('#content1').slideToggle();
+        $('#content2').slideUp();
+        $('#content3').slideUp();
+    });
+    $('#toggleBtn2').click(function(){
+        $('#content2').slideToggle();
+    });
+    $('#toggleBtn3').click(function(){
+        $('#content3').slideToggle();
+    });
+});
+$(document).ready(function(){
+
+    $('#toggleBtn-1').click(function(){
+        $('#content-1').slideToggle();
+        $('#content-2').slideUp();
+        $('#content-3').slideUp();
+    });
+    $('#toggleBtn-2').click(function(){
+        $('#content-2').slideToggle();
+    });
+    $('#toggleBtn-3').click(function(){
+        $('#content-3').slideToggle();
+    });
+});
