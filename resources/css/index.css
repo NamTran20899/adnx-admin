@@ -11,6 +11,9 @@
   margin: 0;
   padding: 0;
 }
+*:focus {
+  outline: none;
+}
 body {
   color: white;
 }
@@ -50,6 +53,7 @@ i {
   font-family: var(--font-family);
 }
 
+
 /*-- Layout --*/
 .header {
   display: flex;
@@ -57,6 +61,7 @@ i {
   width: 100vw;
   height: 100px;
   background: var(--background-color);
+  gap: 0.75%;
 }
 .logo {
   width: 250px;
@@ -86,6 +91,11 @@ i {
 }
 .notibar span {
   font-size: 20px;
+}
+.header-right {
+  display: flex;
+  position: absolute;
+  right: 0;
 }
 .user {
   display: flex;
@@ -181,7 +191,6 @@ input:checked + .slider:before {
   overflow: clip;
   overflow-clip-margin: content-box;
 }
-
 /*-- Sidebar --*/
 .sidebar {
   position: relative;
@@ -241,10 +250,10 @@ input:checked + .slider:before {
 }
 .menu-btn {
   position: absolute;
-  right: -14px;
-  bottom: 20%;
-  width: 38px;
-  height: 38px;
+  right: -10px;
+  top: 75%;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -325,7 +334,6 @@ input:checked + .slider:before {
   box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
-
 /*-- Content --*/
 .content {
   display: flex;
@@ -338,28 +346,28 @@ input:checked + .slider:before {
   border-radius: 25px 0 0 25px;
   padding: 1%;
 }
-/*-- Tong quan --*/
 .content-container {
   display: flex;
   gap: 15px;
   width: 100%;
 }
+/*-- Tong quan --*/
+#index {
+  flex-direction: row;
+}
 #index .section-1 {
   width: 65%;
   height: 100%;
+  border-radius: 15px;
   border: 2px solid rgb(51 146 204);
-  border-radius: 25px;
   display: flex;
   flex-direction: column;
-  overflow: clip;
-  overflow-clip-margin: content-box;
 }
-#index .section-1 .job,
 #index .section-1 .reminder {
   height: 50%;
 }
-.job .title,
-.reminder .title {
+#index .job .title,
+#index .reminder .title {
   display: flex;
   justify-content: left;
   color: #fff;
@@ -370,29 +378,29 @@ input:checked + .slider:before {
   position: relative;
   z-index: 0;
 }
-.triangle-down {
+#index .triangle-down {
   position: absolute;
   border-right: 50px solid transparent;
   border-top: 41.5px solid rgb(50 110 202);
   top: 0;
   right: -50px;
 }
-.job ul li,
-.reminder ul li {
+#index .job ul li,
+#index .reminder ul li {
   margin: 10px;
   padding-bottom: 5px;
 }
-.reminder ul .red {
+#index .reminder ul .red {
   border-bottom: 1.5px solid red;
 }
-.reminder ul .orange {
+#index .reminder ul .orange {
   border-bottom: 1.5px solid orange;
 }
-.job ul .green {
+#index .job ul .green {
   border-bottom: 1.5px solid green;
 }
-.job ul li a,
-.reminder ul li a {
+#index .job ul li a,
+#index .reminder ul li a {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
@@ -416,14 +424,14 @@ input:checked + .slider:before {
   color: #fff;
   padding: 0px 2px;
 }
-.status .red {
+#index .status .red {
   background-color: red;
   border-bottom: 2px solid red;
 }
-.status .orange {
+#index .status .orange {
   background-color: orange;
 }
-.status .green {
+#index .status .green {
   background-color: green;
 }
 #index .section-2 {
@@ -432,75 +440,75 @@ input:checked + .slider:before {
   gap: 15px;
   width: 35%;
 }
-.calendar {
+#index .calendar {
   width: 100%;
   background: linear-gradient(180deg, rgba(68,178,93,1) 0%, rgba(43,167,70,1) 100%);
   padding: 5px;
   border-radius: 25px;
   border: 2px solid rgb(51 146 204);
 }
-#cal-body {
+#index #cal-body {
   background: none !important;
   border: none !important;
 }
-.calendar .title {
+#index .calendar .title {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
 }
-.cal-title-btn,
-.cal-title-icon {
+#index .cal-title-btn,
+#index .cal-title-icon {
   display: flex;
   font-size: 15px;
   align-items: center;
 }
-.cal-title-btn {
+#index .cal-title-btn {
   gap: 5px;
 }
-.cal-btn-2,
-.cal-btn-1 {
+#index .cal-btn-2,
+#index .cal-btn-1 {
   display: flex;
   align-items: center;
   background-color: #29a644;
   padding: 5px;
   border-radius: 5px;
 }
-.calendar .cal-header {
+#index .calendar .cal-header {
   display: flex;
   align-items: center;
   padding: 20px;
   justify-content: space-between;
   font-size: 18px;
 }
-.calendar ul {
+#index .calendar ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
 }
-.calendar .days {
+#index .calendar .days {
   margin-bottom: 15px;
 }
-.calendar li {
+#index .calendar li {
   color: #333;
   width: calc(100% / 7);
   font-size: 18px;
   color: #fff;
 }
-.calendar .days li {
+#index .calendar .days li {
   z-index: 1;
   cursor: pointer;
   position: relative;
   margin-top: 10px;
   font-size: 12px;
 }
-.days li.inactive {
+#index .days li.inactive {
   color: #aaa;
 }
-.days li.active {
+#index .days li.active {
   color: #fff;
 }
-.days li::before {
+#index .days li::before {
   position: absolute;
   content: "";
   left: 50%;
@@ -511,13 +519,13 @@ input:checked + .slider:before {
   border-radius: 5px;
   transform: translate(-50%, -50%);
 }
-.days li.active::before {
+#index .days li.active::before {
   background: #32ce56;
 }
-.days li:not(.active):hover::before {
+#index .days li:not(.active):hover::before {
   background: #32ce56;
 }
-.events {
+#index .events {
   width: 100%;
   height: 100%;
   background: var(--background-color);
@@ -525,10 +533,10 @@ input:checked + .slider:before {
   border-radius: 25px;
   overflow: hidden;
 }
-.title {
+#index .title {
   margin: 10px 0 10px 0;
 }
-.events .title p {
+#index .events .title p {
   font-size: 18px;
 }
 .events-content {
@@ -537,3 +545,5 @@ input:checked + .slider:before {
   background-color: #fff;
   border-radius: 25px;
 }
+
+/*-- Du an --*/
