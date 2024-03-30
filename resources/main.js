@@ -11,9 +11,29 @@ $(".menu > ul > li").click(function (e) {
   $(this).siblings().find("ul").find("li").removeClass("active");
 });
 
+if ($(".container").width() < 780) {
+  console.log("a");
+  $(".sidebar").addClass("active");
+}
+
 $(".menu-btn").click(function () {
+  if ($(".container").width() < 780) {
+    $(".sidebar").addClass("active");
+  }
   $(".sidebar").toggleClass("active");
-  $(".logo").toggleClass("logo-active");
+});
+
+$(".menu__box > li").click(function (e) {
+  // if has sub menu open it
+  $(this).find("ul").slideToggle();
+  // close other sub menu if any open
+  $(this).siblings().find("ul").slideUp();
+  // remove active class of sub menu items
+  $(this).siblings().find("ul").find("li").removeClass("active");
+});
+
+$(".user-res > i").click(function () {
+  $(".user-res-info").toggleClass("user-active");
 });
 
 /*-- Calendar --*/
@@ -94,6 +114,11 @@ prevNextIcon.forEach((icon) => {
   });
 });
 
+/*-- Gear --*/
+$(".btn-dropdown").click(function () {
+  $(this).next().toggleClass("open");
+});
+
 // mision
 $(".mission-btn").click(function () {
   if (!$(this).hasClass("mission-btn-active")) {
@@ -101,7 +126,6 @@ $(".mission-btn").click(function () {
     $(this).addClass("mission-btn-active");
   }
 });
-
 $(".mission-btn").click(function () {
   if ($(this).hasClass("mission-btn-active")) {
     $(".mission-content .mission-content-active").removeClass(
@@ -115,21 +139,4 @@ $(".mission-btn").click(function () {
       $(".completed-mission").addClass("mission-content-active");
     }
   }
-});
-
-/* gear
-const btns = document.querySelectorAll(".btn-dropdown");
-const gears = document.querySelectorAll(".gear-content");
-
-btns.forEach((btn, index) => {
-  btns[index].addEventListener("click", function (e) {
-    btn.nextElementSibling.classList.toggle("open");
-    var test = btn.nextElementSibling;
-    return test;
-  });
-});
-*/
-
-$(".btn-dropdown").click(function () {
-  $(this).next().toggleClass("open");
 });

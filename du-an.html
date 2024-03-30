@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
+    <link rel="stylesheet" href="./resources/style.css">
+    <!-- Icon -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
-    <link rel="stylesheet" href="../../resources/css/index.css">
-    <link rel="stylesheet" href="../../resources/css/du-an.css">
-
     <!-- Flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Select2 -->
@@ -18,26 +17,40 @@
 <body>
     <div class="container">
         <!-- Header -->
-        <div class="header">
-            <div class="logo">
-                <img src="../../resources/images/AdnX-Logo.png" alt="">
+        <header>
+            <div class="header-left">
+                <a class="logo" href="./index.html">
+                    <img src="./resources/images/AdnX-Logo.png" alt="">
+                </a>
+                <a href="#" class="notibar">
+                    Thông báo nghỉ Lễ 30/4 và Ngày Quốc tế Lao Động 01/5
+                </a>
             </div>
-            <a href="#" type="button" class="notibar">
-                <span class="text">Thông báo nghỉ Lễ 30/4 và Ngày Quốc tế Lao Động 01/5</span>
-            </a>
             <div class="header-right">
-                <div class="user">
-                    <div class="username">
-                        <img src="../resources/images/user.png" alt="">
-                        <p class="text">Nguyễn Văn A</p>
+                <a href="#" class="user">
+                    <div class="user-info">
+                        <img src="./resources/images/user.png" alt="">
+                        <p>Nguyễn Văn A</p>
                     </div>
-                    <a href="#" class="text">Số ngày nghỉ phép còn: 10/12</a>
-                </div>
-                <div class="btn-group">
+                    <p>Số ngày nghỉ phép còn: 10/12</p>
+                </a>
+                <div class="header-btn-group">
                     <div class="header-icon">
+                        <div class="user-res">
+                            <i class="fa-regular fa-user"></i>
+                            <div class="user-res-info">
+                                <div class="info-res">
+                                    <img src="./resources/images/user.png" alt="">
+                                    <p>Nguyễn Văn A</p>
+                                </div>
+                                <p>Số ngày nghỉ phép còn: 10/12</p>
+                            </div>
+                        </div>
+                        
+
                         <div class="bell">
                             <i class="fa-regular fa-bell"></i>
-                            <span class="indicator text">0</span>
+                            <span class="indicator">0</span>
                         </div>
                         <i class="fa-light fa-calendar-days"></i>
                     </div>
@@ -47,33 +60,157 @@
                     </label>
                 </div>
             </div>
-        </div>
-        <div class="main">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li>
+                        <a class="menu__item" href="./index.html">
+                            <i class="fa-solid fa-house icon"></i>
+                            <span class="text">Tổng quan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./du-an.html">
+                            <i class="fa-solid fa-shuttle-space icon"></i>
+                            <span class="text">Dự án</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./nhan-su.html">
+                            <i class="fa-solid fa-plane-departure icon"></i>
+                            <span class="text">Nhân sự</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./lo-trinh.html">
+                            <i class="fa-solid fa-map icon"></i>
+                            <span class="text">Lộ trình</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#">
+                            <i class="fa-solid fa-cubes icon"></i>
+                            <span class="text">Quản lý dự án</span>
+                            <i class="fa-regular fa-chevron-down arrow"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="menu__item" href="./quan-ly-du-an.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Tổng quan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./tasks.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="#">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">My tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./today-tasks.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Today tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./today-deadline.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Today dealine</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./bao-loi-du-an.html">
+                            <i class="fa-solid fa-cloud-exclamation icon"></i>
+                            <span class="text">Báo lỗi dự án</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#">
+                            <i class="fa-solid fa-flag icon"></i>
+                            <span class="text">Tác vụ</span>
+                            <i class="fa-regular fa-chevron-down arrow"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="menu__item" href="./nghi-phep.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Nghỉ phép</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./lam-them.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Làm thêm</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./phong-hop.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Phòng họp</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="#">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Tài liệu</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./quan-ly-don.html">
+                            <i class="fa-solid fa-comment icon"></i>
+                            <span class="text">Quản lý đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <span class="text">Bảo mật</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
             <!-- Sidebar -->
             <div class="sidebar">
-                <div class="nav">
+                <nav class="nav">
                     <div class="menu">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="./index.html">
                                     <i class="fa-solid fa-house icon"></i>
                                     <span class="text">Tổng quan</span>
                                 </a>
-                                </li>
+                            </li>
                             <li>
-                                <a href="#">
+                                <a href="./du-an.html">
                                     <i class="fa-solid fa-shuttle-space icon"></i>
                                     <span class="text">Dự án</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="nhan-su.html">
+                                <a href="./nhan-su.html">
                                     <i class="fa-solid fa-plane-departure icon"></i>
                                     <span class="text">Nhân sự</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="./lo-trinh.html">
                                     <i class="fa-solid fa-map icon"></i>
                                     <span class="text">Lộ trình</span>
                                 </a>
@@ -86,13 +223,13 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#">
+                                        <a href="./quan-ly-du-an.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Tổng quan</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="./tasks.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Tasks</span>
                                         </a>
@@ -104,13 +241,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="./today-tasks.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Today tasks</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="./today-deadline.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Today dealine</span>
                                         </a>
@@ -118,7 +255,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="./bao-loi-du-an.html">
                                     <i class="fa-solid fa-cloud-exclamation icon"></i>
                                     <span class="text">Báo lỗi dự án</span>
                                 </a>
@@ -131,19 +268,19 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#">
+                                        <a href="./nghi-phep.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Nghỉ phép</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="./lam-them.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Làm thêm</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="./phong-hop.html">
                                             <i class="fa-regular fa-minus"></i>
                                             <span class="text">Phòng họp</span>
                                         </a>
@@ -157,7 +294,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="./quan-ly-don.html">
                                     <i class="fa-solid fa-comment icon"></i>
                                     <span class="text">Quản lý đơn</span>
                                 </a>
@@ -170,15 +307,16 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </nav>
                 <div class="menu-btn">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
             </div>
+
             <!-- Content -->
             <div class="content">
-                <div id="project" class="content-container">
-                <section class="section-1">
+                <div class="content-container" id="project">
+                    <section class="section-1">
                         <select class="project js-states form-control" name="project">
                             <option value="-1"></option>
                             <option value="pj-1">project 1</option>
@@ -190,32 +328,30 @@
                             <a class="input-button" title="toggle" data-toggle>
                                 <i class="fa-light fa-calendar-days"></i>
                             </a>
-                            <input class="text" type="text" placeholder="Từ ngày" data-input>
+                            <input name="from-date" type="text" placeholder="Từ ngày" data-input>
                         </div>
                         <div class="to-date">
                             <a class="input-button" title="toggle" data-toggle>
                                 <i class="fa-light fa-calendar-days"></i>
                             </a>
-                            <input class="text" type="text" placeholder="Đến ngày" data-input>
-                        </div>
-                        <div class="status">
-                            <input class="text" type="text" placeholder="Trạng thái">
+                            <input type="text" placeholder="Đến ngày" data-input>
                         </div>
                         <div class="keyword">
-                            <input class="text" type="text" placeholder="Nhập từ khoá">
+                            <input type="text" placeholder="Nhập từ khoá">
                         </div>
-                        <button class="search-btn text">
+                        <button class="search-btn">
                             Tìm kiếm
                         </button>
-                        <button class="search-advanced-btn text">
+                        <button class="search-advanced-btn">
                             Tìm kiếm <br> nâng cao
                         </button>
                     </section>
+
                     <section class="section-2">
                         <div class="title">
-                            <p class="text">Dự án</p>
+                            <h1>Dự án</h1>
                             <div class="project-btn-group">
-                                <a class="text new" href="#popup">
+                                <a class="new-btn" href="#project-popup">
                                     <i class="fa-solid fa-plus"></i>
                                     Tạo mới
                                 </a>
@@ -225,7 +361,7 @@
                             <div class="project-row">
                                 <div class="project-container">
                                     <div class="project-head">
-                                        <a href="#" class="text">Quản lý dự án nội bộ</a>
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
                                         <div class="gear-wrapper">
                                             <div class="btn-dropdown">
                                                 <i class="fa-solid fa-gear"></i>
@@ -234,49 +370,49 @@
                                             <div class="gear-content">
                                                 <a href="#">
                                                     <i class="fa-solid fa-files"></i>
-                                                    <p class="text">Biên tập</p>
+                                                    <p>Biên tập</p>
                                                 </a>
                                                 <a href="#">
                                                     <i class="fa-solid fa-trash"></i>
-                                                    <p class="text">Xoá bỏ</p>
+                                                    <p>Xoá bỏ</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-content">
                                         <div class="project-title">
-                                            <h1 class="text">Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h1>
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
                                         </div>
                                         <div class="project-body">
-                                            <p class="text">
+                                            <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                             </p>
-                                            <h1 class="text">Ngày khởi tạo: 15-03-2003 17:31</h1>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
                                         </div>
                                         <div class="project-footer">
                                             <div class="leader">
-                                                <h1 class="text">Project Leader :</h1>
+                                                <h5>Project Leader :</h5>
                                                 <div class="leader-avatar">
-                                                    <span class="leader-name text">SA</span>
+                                                    <span class="ava-name">SA</span>
                                                 </div>
                                             </div>
                                             <div class="team">
-                                                <h1 class="text">Project Team :</h1>
+                                                <h5>Project Team :</h5>
                                                 <div class="team-group flex">
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -284,15 +420,14 @@
                                                 <div class="complete"></div>
                                             </div>
                                             <div class="progress-info">
-                                                <h1 class="text">25%</h1>
+                                                <h1>50%</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-    
                                 <div class="project-container">
                                     <div class="project-head">
-                                        <a href="#" class="text">Quản lý dự án nội bộ</a>
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
                                         <div class="gear-wrapper">
                                             <div class="btn-dropdown">
                                                 <i class="fa-solid fa-gear"></i>
@@ -301,49 +436,49 @@
                                             <div class="gear-content">
                                                 <a href="#">
                                                     <i class="fa-solid fa-files"></i>
-                                                    <p class="text">Biên tập</p>
+                                                    <p>Biên tập</p>
                                                 </a>
                                                 <a href="#">
                                                     <i class="fa-solid fa-trash"></i>
-                                                    <p class="text">Xoá bỏ</p>
+                                                    <p>Xoá bỏ</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-content">
                                         <div class="project-title">
-                                            <h1 class="text">Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h1>
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
                                         </div>
                                         <div class="project-body">
-                                            <p class="text">
+                                            <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                             </p>
-                                            <h1 class="text">Ngày khởi tạo: 15-03-2003 17:31</h1>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
                                         </div>
                                         <div class="project-footer">
                                             <div class="leader">
-                                                <h1 class="text">Project Leader :</h1>
+                                                <h5>Project Leader :</h5>
                                                 <div class="leader-avatar">
-                                                    <span class="leader-name text">SA</span>
+                                                    <span class="ava-name">SA</span>
                                                 </div>
                                             </div>
                                             <div class="team">
-                                                <h1 class="text">Project Team :</h1>
+                                                <h5>Project Team :</h5>
                                                 <div class="team-group flex">
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -351,15 +486,14 @@
                                                 <div class="complete"></div>
                                             </div>
                                             <div class="progress-info">
-                                                <h1 class="text">25%</h1>
+                                                <h1>50%</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-    
-                                <div class="project-container">
+                                <div class="project-container res">
                                     <div class="project-head">
-                                        <a href="#" class="text">Quản lý dự án nội bộ</a>
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
                                         <div class="gear-wrapper">
                                             <div class="btn-dropdown">
                                                 <i class="fa-solid fa-gear"></i>
@@ -368,49 +502,49 @@
                                             <div class="gear-content">
                                                 <a href="#">
                                                     <i class="fa-solid fa-files"></i>
-                                                    <p class="text">Biên tập</p>
+                                                    <p>Biên tập</p>
                                                 </a>
                                                 <a href="#">
                                                     <i class="fa-solid fa-trash"></i>
-                                                    <p class="text">Xoá bỏ</p>
+                                                    <p>Xoá bỏ</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-content">
                                         <div class="project-title">
-                                            <h1 class="text">Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h1>
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
                                         </div>
                                         <div class="project-body">
-                                            <p class="text">
+                                            <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                             </p>
-                                            <h1 class="text">Ngày khởi tạo: 15-03-2003 17:31</h1>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
                                         </div>
                                         <div class="project-footer">
                                             <div class="leader">
-                                                <h1 class="text">Project Leader :</h1>
+                                                <h5>Project Leader :</h5>
                                                 <div class="leader-avatar">
-                                                    <span class="leader-name text">SA</span>
+                                                    <span class="ava-name">SA</span>
                                                 </div>
                                             </div>
                                             <div class="team">
-                                                <h1 class="text">Project Team :</h1>
+                                                <h5>Project Team :</h5>
                                                 <div class="team-group flex">
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -418,16 +552,150 @@
                                                 <div class="complete"></div>
                                             </div>
                                             <div class="progress-info">
-                                                <h1 class="text">25%</h1>
+                                                <h1>50%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-row row-res">
+                                <div class="project-container">
+                                    <div class="project-head">
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
+                                        <div class="gear-wrapper">
+                                            <div class="btn-dropdown">
+                                                <i class="fa-solid fa-gear"></i>
+                                            </div>
+                                            
+                                            <div class="gear-content">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-files"></i>
+                                                    <p>Biên tập</p>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                    <p>Xoá bỏ</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-title">
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
+                                        </div>
+                                        <div class="project-body">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </p>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
+                                        </div>
+                                        <div class="project-footer">
+                                            <div class="leader">
+                                                <h5>Project Leader :</h5>
+                                                <div class="leader-avatar">
+                                                    <span class="ava-name">SA</span>
+                                                </div>
+                                            </div>
+                                            <div class="team">
+                                                <h5>Project Team :</h5>
+                                                <div class="team-group flex">
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="complete"></div>
+                                            </div>
+                                            <div class="progress-info">
+                                                <h1>50%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-container">
+                                    <div class="project-head">
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
+                                        <div class="gear-wrapper">
+                                            <div class="btn-dropdown">
+                                                <i class="fa-solid fa-gear"></i>
+                                            </div>
+                                            
+                                            <div class="gear-content">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-files"></i>
+                                                    <p>Biên tập</p>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                    <p>Xoá bỏ</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-title">
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
+                                        </div>
+                                        <div class="project-body">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </p>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
+                                        </div>
+                                        <div class="project-footer">
+                                            <div class="leader">
+                                                <h5>Project Leader :</h5>
+                                                <div class="leader-avatar">
+                                                    <span class="ava-name">SA</span>
+                                                </div>
+                                            </div>
+                                            <div class="team">
+                                                <h5>Project Team :</h5>
+                                                <div class="team-group flex">
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                    <div class="team-avatar">
+                                                        <span class="ava-name">SA</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="complete"></div>
+                                            </div>
+                                            <div class="progress-info">
+                                                <h1>50%</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="project-row">
-                                <div class="project-container">
+                                <div class="project-container res">
                                     <div class="project-head">
-                                        <a href="#" class="text">Quản lý dự án nội bộ</a>
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
                                         <div class="gear-wrapper">
                                             <div class="btn-dropdown">
                                                 <i class="fa-solid fa-gear"></i>
@@ -436,49 +704,49 @@
                                             <div class="gear-content">
                                                 <a href="#">
                                                     <i class="fa-solid fa-files"></i>
-                                                    <p class="text">Biên tập</p>
+                                                    <p>Biên tập</p>
                                                 </a>
                                                 <a href="#">
                                                     <i class="fa-solid fa-trash"></i>
-                                                    <p class="text">Xoá bỏ</p>
+                                                    <p>Xoá bỏ</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-content">
                                         <div class="project-title">
-                                            <h1 class="text">Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h1>
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
                                         </div>
                                         <div class="project-body">
-                                            <p class="text">
+                                            <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                             </p>
-                                            <h1 class="text">Ngày khởi tạo: 15-03-2003 17:31</h1>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
                                         </div>
                                         <div class="project-footer">
                                             <div class="leader">
-                                                <h1 class="text">Project Leader :</h1>
+                                                <h5>Project Leader :</h5>
                                                 <div class="leader-avatar">
-                                                    <span class="leader-name text">SA</span>
+                                                    <span class="ava-name">SA</span>
                                                 </div>
                                             </div>
                                             <div class="team">
-                                                <h1 class="text">Project Team :</h1>
+                                                <h5>Project Team :</h5>
                                                 <div class="team-group flex">
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -486,15 +754,14 @@
                                                 <div class="complete"></div>
                                             </div>
                                             <div class="progress-info">
-                                                <h1 class="text">25%</h1>
+                                                <h1>50%</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-    
                                 <div class="project-container">
                                     <div class="project-head">
-                                        <a href="#" class="text">Quản lý dự án nội bộ</a>
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
                                         <div class="gear-wrapper">
                                             <div class="btn-dropdown">
                                                 <i class="fa-solid fa-gear"></i>
@@ -503,49 +770,49 @@
                                             <div class="gear-content">
                                                 <a href="#">
                                                     <i class="fa-solid fa-files"></i>
-                                                    <p class="text">Biên tập</p>
+                                                    <p>Biên tập</p>
                                                 </a>
                                                 <a href="#">
                                                     <i class="fa-solid fa-trash"></i>
-                                                    <p class="text">Xoá bỏ</p>
+                                                    <p>Xoá bỏ</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-content">
                                         <div class="project-title">
-                                            <h1 class="text">Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h1>
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
                                         </div>
                                         <div class="project-body">
-                                            <p class="text">
+                                            <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                             </p>
-                                            <h1 class="text">Ngày khởi tạo: 15-03-2003 17:31</h1>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
                                         </div>
                                         <div class="project-footer">
                                             <div class="leader">
-                                                <h1 class="text">Project Leader :</h1>
+                                                <h5>Project Leader :</h5>
                                                 <div class="leader-avatar">
-                                                    <span class="leader-name text">SA</span>
+                                                    <span class="ava-name">SA</span>
                                                 </div>
                                             </div>
                                             <div class="team">
-                                                <h1 class="text">Project Team :</h1>
+                                                <h5>Project Team :</h5>
                                                 <div class="team-group flex">
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -553,15 +820,14 @@
                                                 <div class="complete"></div>
                                             </div>
                                             <div class="progress-info">
-                                                <h1 class="text">25%</h1>
+                                                <h1>50%</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-    
                                 <div class="project-container">
                                     <div class="project-head">
-                                        <a href="#" class="text">Quản lý dự án nội bộ</a>
+                                        <a href="./chi-tiet-du-an.html">Quản lý dự án nội bộ</a>
                                         <div class="gear-wrapper">
                                             <div class="btn-dropdown">
                                                 <i class="fa-solid fa-gear"></i>
@@ -570,49 +836,49 @@
                                             <div class="gear-content">
                                                 <a href="#">
                                                     <i class="fa-solid fa-files"></i>
-                                                    <p class="text">Biên tập</p>
+                                                    <p>Biên tập</p>
                                                 </a>
                                                 <a href="#">
                                                     <i class="fa-solid fa-trash"></i>
-                                                    <p class="text">Xoá bỏ</p>
+                                                    <p>Xoá bỏ</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-content">
                                         <div class="project-title">
-                                            <h1 class="text">Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h1>
+                                            <h2>Tổng 40 nhiệm vụ, 10 nhiệm vụ đã hoàn thành</h2>
                                         </div>
                                         <div class="project-body">
-                                            <p class="text">
+                                            <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                             </p>
-                                            <h1 class="text">Ngày khởi tạo: 15-03-2003 17:31</h1>
+                                            <h5>Ngày khởi tạo: 15-03-2003 17:31</h5>
                                         </div>
                                         <div class="project-footer">
                                             <div class="leader">
-                                                <h1 class="text">Project Leader :</h1>
+                                                <h5>Project Leader :</h5>
                                                 <div class="leader-avatar">
-                                                    <span class="leader-name text">SA</span>
+                                                    <span class="ava-name">SA</span>
                                                 </div>
                                             </div>
                                             <div class="team">
-                                                <h1 class="text">Project Team :</h1>
+                                                <h5>Project Team :</h5>
                                                 <div class="team-group flex">
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                     <div class="team-avatar">
-                                                        <span class="leader-name text">SA</span>
+                                                        <span class="ava-name">SA</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -620,7 +886,7 @@
                                                 <div class="complete"></div>
                                             </div>
                                             <div class="progress-info">
-                                                <h1 class="text">25%</h1>
+                                                <h1>50%</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -628,61 +894,59 @@
                             </div>
                         </div>
                     </section>
-                    <div id="popup" class="overlay">
-	                    <div class="popup">
-                            <div class="popup-title">
-                                <p class="text">Tạo mới</p>
+                    <div class="overlay" id="project-popup">
+                        <div class="popup">
+                            <div class="title">
+                                <h1>Tạo mới</h1>
                                 <a href="#" class="close">
                                     <i class="fa-solid fa-xmark"></i>
                                 </a>
                             </div>
 		                    <div class="popup-content">
                                 <div class="popup-input">
-                                    <label class="text" for="name-pj">Tên dự án</label>
+                                    <label for="name-pj">Tên dự án</label>
                                     <input type="text" id="name-pj">
                                 </div>
                                 
                                 <div class="popup-row">
                                     <div class="popup-input">
-                                        <label class="text" for="start">Bắt đầu</label>
-                                        <div class="start">
+                                        <label for="from-date">Bắt đầu</label>
+                                        <div class="from-date">
                                             <a class="input-button" title="toggle" data-toggle>
                                                 <i class="fa-light fa-calendar-days"></i>
                                             </a>
-                                            <input class="text" type="text" data-input>
+                                            <input type="text" data-input>
                                         </div>
                                     </div>
                                     <div class="popup-input">
-                                        <label class="text" for="end">Kết thúc</label>
-                                        <div class="end">
+                                        <label for="to-date">Kết thúc</label>
+                                        <div class="to-date">
                                             <a class="input-button" title="toggle" data-toggle>
                                                 <i class="fa-light fa-calendar-days"></i>
                                             </a>
-                                            <input class="text" type="text" data-input>
+                                            <input type="text" data-input>
                                         </div>
                                     </div>
                                     <div class="popup-input">
-                                        <label class="text" for="status">Trạng thái</label>
+                                        <label for="status">Trạng thái</label>
                                         <input type="text" id="status">
                                     </div>
                                 </div>
 
                                 <div class="popup-row">
                                     <div class="popup-input">
-                                        <label class="file text" for="upload-logo">Logo dự án</label>
+                                        <label class="file" for="upload-logo">Logo dự án</label>
                                         <input type="file" id="upload-logo" name="upload-logo">
                                     </div>
                                     <div class="popup-input">
-                                        <label class="file text" for="upload-img">Ảnh mô tả game</label>
+                                        <label class="file" for="upload-img">Ảnh mô tả game</label>
                                         <input type="file" id="upload-img" name="upload-img">
                                     </div>
                                 </div>
 
-                                <div class="popup-row">
-                                    <div class="popup-input">
-                                        <label class="text" for="description">Mô tả</label>
-                                        <textarea id="description" name="description"></textarea>
-                                    </div>
+                                <div class="popup-input">
+                                    <label for="description">Mô tả</label>
+                                    <textarea id="description" name="description"></textarea>
                                 </div>
                                 
                                 <div class="popup-btn">
@@ -693,9 +957,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
-
 
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -704,7 +967,7 @@
     <!-- Select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS -->
-    <script src="../../resources/js/main.js"></script>
+    <script src="./resources/main.js"></script>
 
     <script>
         $(".project").select2({
@@ -717,25 +980,14 @@
             wrap: true,
             dateFormat: "d-m-Y",
             minDate: "today",
+            disableMobile: "true"
         });
         $(".to-date").flatpickr({
             wrap: true,
             dateFormat: "d-m-Y",
             minDate: "today",
-        });
-        $(".start").flatpickr({
-            wrap: true,
-            enableTime: true,
-            dateFormat: "d-m-Y H:i",
-            minDate: "today",
-        });
-        $(".end").flatpickr({
-            wrap: true,
-            enableTime: true,
-            dateFormat: "d-m-Y H:i",
-            minDate: "today",
+            disableMobile: "true"
         });
     </script>
-
 </body>
 </html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./resources/style.css">
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+
+    <title>Tổng quan</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <a class="logo" href="./index.html">
+                    <img src="./resources/images/AdnX-Logo.png" alt="">
+                </a>
+                <a href="#" class="notibar">
+                    Thông báo nghỉ Lễ 30/4 và Ngày Quốc tế Lao Động 01/5
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="#" class="user">
+                    <div class="user-info">
+                        <img src="./resources/images/user.png" alt="">
+                        <p>Nguyễn Văn A</p>
+                    </div>
+                    <p>Số ngày nghỉ phép còn: 10/12</p>
+                </a>
+                <div class="header-btn-group">
+                    <div class="header-icon">
+                        <div class="user-res">
+                            <i class="fa-regular fa-user"></i>
+                            <div class="user-res-info">
+                                <div class="info-res">
+                                    <img src="./resources/images/user.png" alt="">
+                                    <p>Nguyễn Văn A</p>
+                                </div>
+                                <p>Số ngày nghỉ phép còn: 10/12</p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="bell">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="indicator">0</span>
+                        </div>
+                        <i class="fa-light fa-calendar-days"></i>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li>
+                        <a class="menu__item" href="./index.html">
+                            <i class="fa-solid fa-house icon"></i>
+                            <span class="text">Tổng quan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./du-an.html">
+                            <i class="fa-solid fa-shuttle-space icon"></i>
+                            <span class="text">Dự án</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./nhan-su.html">
+                            <i class="fa-solid fa-plane-departure icon"></i>
+                            <span class="text">Nhân sự</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./lo-trinh.html">
+                            <i class="fa-solid fa-map icon"></i>
+                            <span class="text">Lộ trình</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#">
+                            <i class="fa-solid fa-cubes icon"></i>
+                            <span class="text">Quản lý dự án</span>
+                            <i class="fa-regular fa-chevron-down arrow"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="menu__item" href="./quan-ly-du-an.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Tổng quan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./tasks.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="#">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">My tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./today-tasks.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Today tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./today-deadline.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Today dealine</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./bao-loi-du-an.html">
+                            <i class="fa-solid fa-cloud-exclamation icon"></i>
+                            <span class="text">Báo lỗi dự án</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#">
+                            <i class="fa-solid fa-flag icon"></i>
+                            <span class="text">Tác vụ</span>
+                            <i class="fa-regular fa-chevron-down arrow"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a class="menu__item" href="./nghi-phep.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Nghỉ phép</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./lam-them.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Làm thêm</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="./phong-hop.html">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Phòng họp</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="#">
+                                    <i class="fa-regular fa-minus"></i>
+                                    <span class="text">Tài liệu</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="./quan-ly-don.html">
+                            <i class="fa-solid fa-comment icon"></i>
+                            <span class="text">Quản lý đơn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__item" href="#">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <span class="text">Bảo mật</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <nav class="nav">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="./index.html">
+                                    <i class="fa-solid fa-house icon"></i>
+                                    <span class="text">Tổng quan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./du-an.html">
+                                    <i class="fa-solid fa-shuttle-space icon"></i>
+                                    <span class="text">Dự án</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./nhan-su.html">
+                                    <i class="fa-solid fa-plane-departure icon"></i>
+                                    <span class="text">Nhân sự</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./lo-trinh.html">
+                                    <i class="fa-solid fa-map icon"></i>
+                                    <span class="text">Lộ trình</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-cubes icon"></i>
+                                    <span class="text">Quản lý dự án</span>
+                                    <i class="fa-regular fa-chevron-down arrow"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="./quan-ly-du-an.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Tổng quan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./tasks.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Tasks</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">My tasks</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./today-tasks.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Today tasks</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./today-deadline.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Today dealine</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./bao-loi-du-an.html">
+                                    <i class="fa-solid fa-cloud-exclamation icon"></i>
+                                    <span class="text">Báo lỗi dự án</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-flag icon"></i>
+                                    <span class="text">Tác vụ</span>
+                                    <i class="fa-regular fa-chevron-down arrow"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="./nghi-phep.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Nghỉ phép</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./lam-them.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Làm thêm</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./phong-hop.html">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Phòng họp</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-minus"></i>
+                                            <span class="text">Tài liệu</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./quan-ly-don.html">
+                                    <i class="fa-solid fa-comment icon"></i>
+                                    <span class="text">Quản lý đơn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-lock icon"></i>
+                                    <span class="text">Bảo mật</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <div class="content-container" id="dashboard">
+                    <section class="section-1">
+                        <div class="due-reminder">
+                            <div class="title">
+                                <h2>Nhắc nhở đến hạn</h2>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h5>Chỉnh sửa UI Lục địa Loren</h5>
+                                        <div class="work-status">
+                                            <p>15/02/2023</p>
+                                            <span>Quá hạn</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>Chỉnh sửa UI Lục địa Loren_2.0</h5>
+                                        <div class="work-status">
+                                            <p>15/02/2023</p>
+                                            <span>Sắp hết hạn</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="today-work">
+                            <div class="title">
+                                <h2>Công việc hôm nay</h2>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h5>Banner_Lễ tình nhân_Loren</h5>
+                                        <div class="work-status">
+                                            <p>15/02/2023</p>
+                                            <span>Được giao</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>Banner_Lễ tình nhân_Loren</h5>
+                                        <div class="work-status">
+                                            <p>15/02/2023</p>
+                                            <span>Được giao</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="section-2">
+                        <div class="calendar">
+                            <div class="cal-title">
+                                <div class="cal-title-icon">
+                                    <i class="fa-light fa-calendar-days"></i>
+                                    <p>Calendar</p>
+                                </div>
+                                <div class="cal-title-btn">
+                                    <span class="cal-btn-1">
+                                        <i class="fa-solid fa-bars"></i>
+                                        <i class="fa-solid fa-caret-down fa-xs"></i>
+                                    </span>
+                                    <span class="cal-btn-2">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cal-header">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <p class="current-date"></p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                            <div class="calendar" id="cal-body">
+                                <ul class="weeks">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul class="days"></ul>
+                            </div>
+                        </div>
+                        <div class="events">
+                            <div class="title">
+                                <h1>Sự kiện trong tháng</h1>
+                            </div>
+                            <div class="events-content"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JS -->
+    <script src="./resources/main.js"></script>
+</body>
+</html>
