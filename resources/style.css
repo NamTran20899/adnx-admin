@@ -34,14 +34,13 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 10rem;
+    height: 100px;
     background: var(--background);
 }
 .header-left {
     display: flex;
     align-items: center;
-    gap: 2.5vw;
-    margin-left: 1.5rem;
+    gap: 1.75vw;
 }
 .logo {
     display: flex;
@@ -49,7 +48,7 @@ header {
     align-items: center;
 }
 .logo img {
-    width: 100%;
+    width: 75%;
 }
 .notibar {
     display: flex;
@@ -58,9 +57,9 @@ header {
     border-radius: 15px;
     text-align: center;
     background-color: #fff;
-    height: 5rem;
-    width: 55rem;
-    font-size: 2rem;
+    height: 70px;
+    width: 35rem;
+    font-size: 20px;
 }
 .header-right {
     display: flex;
@@ -71,27 +70,27 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 15px;
 }
 .user-info img {
-    width: 18%;
+    width: 10%;
 }
 .user {
-    font-size: 2rem;
+    font-size: 15px;
     color: #fff;
 }
 .header-btn-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-right: 40px;
+    gap: 5px;
+    margin-right: 35px;
 }
 .header-icon {
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 1rem;
-    font-size: 3rem;
+    gap: 15px;
+    font-size: 15px;
     color: #fff;
 }
 .bell {
@@ -100,12 +99,12 @@ header {
 .indicator {
     display: flex;
     background-color: gold;
-    font-size: 1.5rem;
+    font-size: 10px;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
-    width: 2rem;
-    height: 2rem;
+    width: 15px;
+    height: 15px;
     position: absolute;
     top: 2%;
     right: -15%;
@@ -113,8 +112,8 @@ header {
 .switch {
     position: relative;
     display: inline-block;
-    width: 10rem;
-    height: 3rem;
+    width: 100px;
+    height: 30px;
 }
 .switch input {
     opacity: 0;
@@ -135,8 +134,8 @@ header {
 .slider:before {
     position: absolute;
     content: "";
-    width: 5rem;
-    height: 4.5rem;
+    width: 50px;
+    height: 55px;
     left: 0;
     top: -12px;
     background-image: url("./images/vietnam.png");
@@ -148,7 +147,7 @@ header {
     overflow: hidden;
 }
 input:checked + .slider:before {
-    transform: translateX(5.5rem);
+    transform: translateX(52px);
     background-image: url("./images/us.png");
 }
 .slider.round {
@@ -158,12 +157,12 @@ input:checked + .slider:before {
 /*-- Sidebar --*/
 .sidebar {
     position: relative;
-    width: 430px;
-    min-height: calc(100vh - 10rem);
+    width: 300px;
+    min-height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 15px;
+    padding: 15px;
     transition: all 0.3s ease;
 }
 .nav {
@@ -177,8 +176,8 @@ input:checked + .slider:before {
 .menu ul li a {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 2rem;
+    gap: 15px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
     padding: 12px 8px;
@@ -201,30 +200,30 @@ input:checked + .slider:before {
 }
 .menu .sub-menu {
     display: none;
-    margin-left: 20px;
-    padding-left: 20px;
+    margin-left: 15px;
+    padding-left: 15px;
     padding-top: 5px;
     border-left: 1px solid #fff;
 }
 .menu:not(:last-child) {
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     border-bottom: 2px solid #f6f6f6;
 }
 .menu-btn {
     position: absolute;
-    right: -1.75rem;
+    right: -10px;
     top: 55%;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border: 2px solid #f6f6f6;
     background-color: #fff;
-    font-size: 2rem;
+    font-size: 15px;
 }
 .menu-btn i {
     transition: all 0.3s ease;
@@ -306,11 +305,10 @@ main {
     margin: 0 auto;
     color: #fff;
     text-align: center;
-    font-size: 3rem;
     background-color: #fff;
     width: 100%;
     border-radius: 25px 0 0 25px;
-    padding: 2rem;
+    padding: 25px;
 }
 .content-container {
     display: flex;
@@ -344,12 +342,12 @@ main {
 #dashboard .due-reminder .title h2,
 #dashboard .today-work .title h2 {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 20px;
 }
 #dashboard .due-reminder ul li,
 #dashboard .today-work ul li {
-    margin: 1.5rem;
-    padding-bottom: 0.5rem;
+    margin: 15px;
+    padding-bottom: 5px;
 }
 #dashboard .today-work ul li {
     border-bottom: 2px solid green;
@@ -369,21 +367,21 @@ main {
 }
 #dashboard .due-reminder ul li h5,
 #dashboard .today-work ul li h5 {
-    font-size: 2rem;
+    font-size: 15px;
 }
 #dashboard .due-reminder ul li p,
 #dashboard .today-work ul li p {
-    font-size: 1.5rem;
+    font-size: 15px;
 }
 #dashboard .work-status {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
     align-items: center;
     width: 20rem;
     justify-content: space-between;
 }
 #dashboard .work-status span {
-    font-size: 1.2rem;
+    font-size: 10px;
     display: flex;
     border-radius: 5px;
     justify-content: center;
@@ -408,7 +406,6 @@ main {
 }
 #dashboard .calendar {
     width: 100%;
-    height: 45%;
     background: rgba(43,167,70,1);
     padding: 5px;
     border-radius: 15px;
@@ -426,28 +423,28 @@ main {
 #dashboard .cal-title-btn,
 #dashboard .cal-title-icon {
     display: flex;
-    gap: 1rem;
-    font-size: 2.5rem;
+    gap: 15px;
+    font-size: 15px;
     align-items: center;
 }
 #dashboard .cal-title-btn {
-    gap: 1rem;
+    gap: 15px;
 }
 #dashboard .cal-btn-2,
 #dashboard .cal-btn-1 {
     display: flex;
     align-items: center;
     background-color: #098d25;
-    padding: 0.5rem;
+    padding: 5px;
     border-radius: 5px;
-    gap: 1rem;
+    gap: 15px;
 }
 #dashboard .calendar .cal-header {
     display: flex;
     align-items: center;
-    padding: 1.5rem;
+    padding: 15px;
     justify-content: space-between;
-    font-size: 2rem;
+    font-size: 20px;
 }
 #dashboard .calendar ul {
     display: flex;
@@ -461,7 +458,7 @@ main {
 #dashboard .calendar li {
     color: #333;
     width: calc(100% / 7);
-    font-size: 2rem;
+    font-size: 15px;
     color: #fff;
 }
 #dashboard .calendar .days li {
@@ -469,7 +466,7 @@ main {
     cursor: pointer;
     position: relative;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 10px;
 }
 #dashboard .days li.inactive {
     color: #aaa;
@@ -482,8 +479,8 @@ main {
     content: "";
     left: 50%;
     top: 50%;
-    height: 3rem;
-    width: 6rem;
+    height: 25px;
+    width: 45px;
     z-index: -1;
     border-radius: 5px;
     transform: translate(-50%, -50%);
@@ -507,8 +504,8 @@ main {
     position: relative;
 }
 .title h1 {
-    font-size: 3rem;
-    margin: 0.5rem 0;
+    font-size: 20px;
+    margin: 10px 0;
 }
 #dashboard .events-content {
     width: 100%;
@@ -528,7 +525,7 @@ main {
 #project .section-1 {
     display: flex;
     gap: 15px;
-    height: 3.5rem;
+    height: 35px;
     align-items: center;
     justify-content: space-between;
 }
@@ -574,15 +571,15 @@ main {
     border-radius: 5px!important;
     display: flex !important;
     align-items: center !important;
-    height: 3.5rem !important;
+    height: 35px !important;
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
     color: #000 !important; 
-    font-size: 1.5rem !important;
+    font-size: 15px !important;
     display: flex !important;
     align-items: center !important;
     text-align: left !important;
-    height: 40px !important;
+    height: 35px !important;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     top: 0.75rem !important;
@@ -597,11 +594,10 @@ main {
     border-width: 10px 8px 0 8px !important;
 }
 .select2-results__option--selectable{
-    font-size: 1.5rem !important;
+    font-size: 15px !important;
 }
 .select2-search--dropdown .select2-search__field {
-    padding: 1rem !important;
-    font-size: 1.5rem !important;
+    font-size: 15px !important;
 }
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
     font-weight: 400 !important;
@@ -625,8 +621,8 @@ main {
     background: var(--background);
     color: #fff;
     height: 100%;
-    width: 5rem;
-    font-size: 2rem;
+    width: 55px;
+    font-size: 15px;
 }
 #application-management .section-1 .keyword input,
 #application-management .section-1 .to-date input,
@@ -649,9 +645,8 @@ main {
     padding: 6px 8px;
     border: none;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 15px;
     font-weight: 600;
-    color: #999;
     font-family: var(--font-family);
 }
 .excel-btn,
@@ -659,7 +654,7 @@ main {
 .search-btn,
 .new-top-btn {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -699,13 +694,13 @@ main {
 .error-btn-group a,
 .project-btn-group a {
     display: flex;
-    font-size: 2rem;
-    border-radius: 15px;
+    font-size: 15px;
+    border-radius: 5px;
     cursor: pointer;
     border: none;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 5px 15px;
     gap: 0.5rem;
     color: #fff;
 }
@@ -716,15 +711,15 @@ main {
 .project-content-group {
     background: #fff;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 15px;
     height: 100%;
 }
 .project-row {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
 }
 .project-container {
     width: 33%;
@@ -741,27 +736,27 @@ main {
     color: #fff;
 }
 .project-head a {
-    font-size: 2.5rem;
+    font-size: 20px;
     color: #fff;
-    margin: 0.5rem 0;
+    margin: 5px 0;
 }
 .project-head .fa-gear {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 15px;
+    top: 12px;
     cursor: pointer;
 }
 .project-content {
     width: 100%;
     max-height: 100%;
-    background: #999;
+    background: #cfcfcf;
     border-radius: 15px;
     padding: 15px;
     position: relative;
     text-align: left;
 }
 .project-title h2 {
-    font-size: 2.5rem;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 .gear-content {
@@ -782,8 +777,8 @@ main {
     color: #000;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
+    gap: 10px;
+    font-size: 15px;
 }
 .gear-content a:nth-child(1) {
     padding: 10px 10px 5px 10px;
@@ -792,7 +787,7 @@ main {
     padding: 5px 10px 10px 10px;
 }
 .gear-content a:hover {
-    background: grey;
+    background: rgb(178, 178, 178);
     color: white;
 }
 .open {
@@ -801,7 +796,7 @@ main {
     border: 1px solid var(--border-color);
 }
 .project-body p {
-    font-size: 1.5rem;
+    font-size: 15px;
     font-style: italic;
     line-height: 1.5;
     display: -webkit-box;
@@ -812,7 +807,7 @@ main {
 }
 .project-body h5,
 .project-footer h5 {
-    font-size: 2rem;
+    font-size: 20px;
 }
 .detail-col-2 .leader h2,
 .project-detail-title h2,
@@ -821,7 +816,7 @@ main {
 .project-body p,
 .project-body h5,
 .project-footer h5 {
-    background: -webkit-linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(57, 126, 228) 100%, rgb(57, 126, 228) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -831,13 +826,12 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 30px;
+    height: 30px;
     overflow: hidden;
     border-radius: 100%;
     background: blue;
     border: 1px solid grey;
-    margin-top: 0.5rem;
 }
 .team-avatar:nth-child(1) {
     z-index: 5;
@@ -859,42 +853,44 @@ main {
     z-index: 1;
 }
 .ava-name {
-    font-size: 1rem;
+    font-size: 10px;
     color: #fff;
 }
 .team-group {
     display: flex;
 }
-.leader {
+.leader,
+.team {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .progress-info {
     display: flex;
     position: absolute;
-    bottom: 2rem;
-    right: 1rem;
+    bottom: 25px;
+    right: 15px;
 }
 .progress-info h1,
 .detail-progress .progress-info h1 {
-    font-size: 3rem;
-    background: -webkit-linear-gradient(90deg, rgb(193, 119, 39) 0%, rgb(202, 139, 50) 100%);
+    font-size: 30px;
+    background: -webkit-linear-gradient(90deg, rgb(253, 160, 61) 0%, rgb(237, 168, 71) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .progress {
     width: 100%;
-    height: 0.5rem;
-    background: grey;
+    height: 8px;
+    background: rgb(158, 156, 156);
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .complete {
-    background: green;
+    background: rgb(0, 181, 0);
     width: 50%;
-    height: 0.5rem;
+    height: 8px;
 }
 .overlay {
     position: fixed;
@@ -916,11 +912,11 @@ main {
     opacity: 1;
 }
 .popup {
-    background: #fff;
     border-radius: 15px;
     position: relative;
     transition: all 0.3s ease-in-out;
     background: var(--background);
+    border: 2px solid var(--border-color);
 }
 .popup-title {
     display: flex;
@@ -931,18 +927,18 @@ main {
 }
 .close {
     position: absolute;
-    right: 1rem;
+    right: 15px;
     border: 1px solid var(--border-color);
     border-radius: 100%;
-    width: 3rem;
-    height: 3rem;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .close i {
     color: #fff;
-    font-size: 2rem;
+    font-size: 20px;
 }
 .popup-content {
     background: #fff;
@@ -950,13 +946,13 @@ main {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 1rem;
-    gap: 1.5rem;
+    padding: 15px;
+    gap: 15px;
 }
 .popup-row {
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 15px;
 }
 .popup-input {
     display: flex;
@@ -966,7 +962,7 @@ main {
 }
 .popup label {
     display: flex;
-    font-size: 2rem;
+    font-size: 15px;
     color: #000;
     align-items: center;
     gap: 5px;
@@ -975,7 +971,7 @@ main {
 .popup-input input {
     border: 1px solid rgb(51 146 204);
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 15px;
     height: 100%;
     padding: 8px 10px;
     font-family: var(--font-family);
@@ -1003,13 +999,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     background: var(--background);
     color: #fff;
     height: 100%;
-    width: 5rem;
+    width: 55px;
 }
 #upload-img,
 #upload-logo {
@@ -1026,16 +1022,16 @@ input[type="file"]::-webkit-file-upload-button{
     top: 0;
     left: 0;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 15px;
     height: 100%;
 }
 #description {
     resize: none;
-    height: 300px;
+    height: 200px;
 }
 .popup-btn button {
-    font-size: 2rem;
-    padding: 1rem 3rem;
+    font-size: 20px;
+    padding: 5px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1064,22 +1060,22 @@ input[type="file"]::-webkit-file-upload-button{
     padding: 15px;
     border: 2px solid var(--border-color);
     border-radius: 15px;
-    gap: 2rem;
+    gap: 15px;
     width: 100%;
     justify-content: space-between;
 }
 .project-detail-title h2,
 .project-detail-footer h2 {
-    font-size: 3rem;
+    font-size: 20px;
 }
 .project-detail-body p {
-    font-size: 2.5rem;
+    font-size: 15px;
     color: #000;
     font-style: italic;
     line-height: 1.5;
     display: -webkit-box;
     max-height: 300px;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1099,11 +1095,11 @@ input[type="file"]::-webkit-file-upload-button{
     justify-content: space-around;
 }
 .mission-btn-group h5 {
-    font-size: 2rem;
-    border-radius: 15px;
+    font-size: 15px;
+    border-radius: 10px;
     cursor: pointer;
     color: #000;
-    padding: 0.75rem 1rem;
+    padding: 10px 15px;
 }
 .mission-btn-active, .mission-btn:hover {
     background: orange;
@@ -1125,20 +1121,20 @@ input[type="file"]::-webkit-file-upload-button{
     align-items: center;
 }
 .mission-content ul li p {
-    font-size: 2rem;
+    font-size: 15px;
     color: #000;
 }
 .incomplete {
     display: inline-block;
     background: red;
-    width: 1rem;
-    height: 1rem;
+    width: 10px;
+    height: 10px;
 }
 .completed {
     display: inline-block;
     background: green;
-    width: 1rem;
-    height: 1rem;
+    width: 10px;
+    height: 10px;
 }
 @keyframes example {
     from {top: 1.5vw;}
@@ -1161,25 +1157,23 @@ input[type="file"]::-webkit-file-upload-button{
     text-align: left;
     border: 2px solid rgb(39, 134, 193);
     border-radius: 15px;
-    gap: 2rem;
+    gap: 15px;
     width: 35%;
-    height: calc(100% - (5rem + 4px));
+    height: 93.75%;
 }
 .detail-col-2 .project-detail-title {
-    padding: 1rem 1rem 0 1rem;
+    padding: 15px 15px 0 15px;
 }
 .detail-col-2 ul li {
     color: black;
     text-align: left;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 10px 15px;
 }
-.detail-col-2 ul li h5 {
-    font-size: 2rem;
-}
+.detail-col-2 ul li h5,
 .detail-col-2 ul li p {
-    font-size: 2rem;
+    font-size: 15px;
 }
 .detail-col-2 ul li.grey {
     background-color: #999;
@@ -1188,38 +1182,38 @@ input[type="file"]::-webkit-file-upload-button{
     position: relative;
 }
 .detail-col-2 .progress {
-    margin-top: 4rem;
+    margin-top: 35px;
 }
 .detail-col-2 .progress-info {
-    bottom: 1rem;
+    bottom: 10px;
 }
 .detail-col-2 .leader {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 0.5rem 1rem 0 1rem;
+    gap: 5px;
+    padding: 7px 15px 0 15px;
 }
 .detail-col-2 .leader h2 {
-    font-size: 2.5rem;
+    font-size: 20px;
 }
 .detail-col-2 .leader-info {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
     align-items: center;
 }
 .detail-col-2 .leader-avatar {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 30px;
+    height: 30px;
 }
 .detail-col-2 .leader-avatar .ava-name {
-    font-size: 2rem;
+    font-size: 10px;
 }
 .leader-role h5 {
-    font-size: 2rem;
+    font-size: 20px;
     color: #000;
 }
 .leader-role p {
-    font-size: 1.5rem;
+    font-size: 15px;
     color: #000;
 }
 .leader-info .team-avatar, 
@@ -1249,8 +1243,8 @@ input[type="file"]::-webkit-file-upload-button{
     flex-direction: column;
     background-color: #fff;
     border-radius: 15px;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 10px;
+    gap: 15px;
 }
 .error-content-1 {
     width: 100%;
@@ -1261,13 +1255,21 @@ input[type="file"]::-webkit-file-upload-button{
 .board-content {
     background-color: #fff;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 10px;
     height: 100%;
 }
-#error-report .board-th p:nth-child(1),
-#error-report .board-td div:nth-child(1) {
-    width: 55%;
+#error-report .board-th p:nth-child(1) {
+    width: 50%;
     display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+#error-report .board-td div:nth-child(1) {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    margin-left: 15px;
 }
 #error-report .board-th p:nth-child(2),
 #error-report .board-td div:nth-child(2) {
@@ -1279,17 +1281,14 @@ input[type="file"]::-webkit-file-upload-button{
 }
 #error-report .board-th p:nth-child(4),
 #error-report .board-td div:nth-child(4) {
-    width: 15%;
+    width: 20%;
 }
 .board-th {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1rem 1.5rem;
-}
-.board-th p:nth-child(1) {
-    margin-left: 1rem;
+    padding: 10px 15px;
 }
 .tick {
     position: absolute;
@@ -1307,7 +1306,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-left: 15px solid green;
 }
 .board-th p {
-    font-size: 2.5rem;
+    font-size: 20px;
 }
 .board-td {
     width: 100%;
@@ -1327,13 +1326,8 @@ input[type="file"]::-webkit-file-upload-button{
     align-items: center;
     justify-content: center;
 }
-
-#error-report .board-td div:nth-child(1) {
-    justify-content: left;
-    margin-left: 1rem;
-}
 .board-td div h5 {
-    font-size: 2rem;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1347,18 +1341,18 @@ input[type="file"]::-webkit-file-upload-button{
     background: none;
     border: 1px solid grey;
     border-radius: 5px;
-    padding: 0.5rem 0.75rem;
+    padding: 5px 10px;
     color: var(--border-color);
-    font-size: 1.5rem;
+    font-size: 15px;
 }
 .leave-status,
 .prioritize,
 .condition {
-    padding: 0.25rem 1rem;
+    padding: 5px 10px;
     border-radius: 10px;
 }
 .board-td div p {
-    font-size: 1.5rem;
+    font-size: 10px;
     color: #fff;
 }
 .condition {
@@ -1423,14 +1417,20 @@ input[type="file"]::-webkit-file-upload-button{
     overflow: hidden;
     border: 2px solid var(--border-color);
 }
-#action-leave-ot .board-th p:nth-child(1),
+#action-leave-ot .board-th p:nth-child(1) {
+    width: 5%;
+    display: flex;
+    position: relative;
+    left: 10px;
+}
 #action-leave-ot .board-td div:nth-child(1) {
     display: flex;
+    justify-content: left;
     width: 5%;
 }
 #action-leave-ot .board-th p:nth-child(2),
 #action-leave-ot .board-td div:nth-child(2) {
-    width: 30%;
+    width: 20%;
 }
 #action-leave-ot .board-th p:nth-child(3),
 #action-leave-ot .board-td div:nth-child(3) {
@@ -1438,19 +1438,20 @@ input[type="file"]::-webkit-file-upload-button{
 }
 #action-leave-ot .board-th p:nth-child(4),
 #action-leave-ot .board-td div:nth-child(4) {
-    width: 20%;
+    width: 15%;
 }
 #action-leave-ot .board-th p:nth-child(5),
 #action-leave-ot .board-td div:nth-child(5) {
-    width: 15%;
+    width: 20%;
 }
 #action-leave-ot .board-th p:nth-child(6),
 #action-leave-ot .board-td div:nth-child(6) {
-    width: 15%;
+    width: 10%;
 }
 #application-management .board-td div:nth-child(1) h2,
 #action-leave-ot .board-td div:nth-child(1) h2 {
-    font-size: 2.5rem;
+    margin-left: 10px;
+    font-size: 25px;
     background: -webkit-linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -1463,25 +1464,24 @@ input[type="file"]::-webkit-file-upload-button{
     background: none;
     border: 1px solid grey;
     border-radius: 5px;
-    padding: 0.5rem 0.75rem;
+    padding: 8px 10px;
     color: var(--border-color);
-    font-size: 1.5rem;
+    font-size: 15px;
     margin-left: 1rem;
 }
 #action-meeting .section-1 {
     display: flex;
 }
 #action-meeting .section-1 a {
-    font-size: 1.5rem;
+    font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
     height: 100%;
-    width: 10%;
+    width: 15%;
     color: #fff;
     background: orange;
     padding: 0.5rem 0.75rem;
-    width: 15rem;
 }
 #action-meeting .section-2 {
     width: 100%;
@@ -1496,28 +1496,28 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 15px;
 }
 .fc .fc-col-header-cell-cushion {
-    font-size: 2rem;
+    font-size: 20px;
 }
 .fc .fc-toolbar-title {
-    font-size: 2.5rem;
+    font-size: 20px;
     color: black;
 }
 .fc .fc-button {
-    padding: 0.5rem 0.75rem;
-    font-size: 2rem;
+    padding: 5px 10px;
+    font-size: 15px;
 }
 .fc .fc-toolbar.fc-header-toolbar {
-    margin: 1rem;
+    margin: 15px;
 }
 .fc .fc-button .fc-icon {
-    font-size: 3rem;
+    font-size: 22.5px;
 }
 .fc .fc-button-group > .fc-button {
     display: flex;
     align-items: center;
 }
 .fc .fc-daygrid-day-number {
-    font-size: 1.5rem;
+    font-size: 15px;
 }
 .opinion textarea {
     height: 350px;
@@ -1527,7 +1527,7 @@ input[type="file"]::-webkit-file-upload-button{
     width: 100% !important;
 }
 #action-meeting .select2-container .select2-selection--single .select2-selection__rendered {
-    font-size: 2rem !important;
+    font-size: 20px !important;
 }
 .select2-container--default .select2-selection--multiple {
     border: 1px solid rgb(51 146 204) !important;
@@ -1535,7 +1535,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 5px !important;
 }
 .select2-container .select2-search--inline .select2-search__field {
-    height: 3.75rem !important;
+    height: 30px !important;
     font-size: 2rem !important;
     font-family: var(--font-family);
 }
@@ -1559,6 +1559,34 @@ input[type="file"]::-webkit-file-upload-button{
 #application-management {
     flex-direction: column;
 }
+#application-management .board-th p:nth-child(1) {
+    position: relative;
+    left: 20px;
+}
+#application-management .board-th p:nth-child(2) {
+    position: relative;
+    left: 15px;
+}
+#application-management .board-th p:nth-child(3) {
+    position: relative;
+    left: 25px;
+}
+#application-management .board-th p:nth-child(4) {
+    position: relative;
+    left: 25px;
+}
+#application-management .board-th p:nth-child(5) {
+    position: relative;
+    left: 5px;
+}
+#application-management .board-td div:nth-child(5) {
+    position: relative;
+    right: 5px;
+}
+#application-management .board-td div:nth-child(6) {
+    position: relative;
+    left: 15px;
+}
 #application-management .board-th p:nth-child(1),
 #application-management .board-td div:nth-child(1) {
     display: flex;
@@ -1566,15 +1594,13 @@ input[type="file"]::-webkit-file-upload-button{
 }
 #application-management .board-th p:nth-child(2),
 #application-management .board-td div:nth-child(2) {
-    width: 25%;
+    width: 15%;
 }
 #application-management .board-th p:nth-child(3),
 #application-management .board-td div:nth-child(3) {
     width: 10%;
 }
-#application-management .board-th p:nth-child(4){
-    width: 20%;
-}
+#application-management .board-th p:nth-child(4),
 #application-management .board-td div:nth-child(4) {
     width: 25%;
 }
@@ -1708,6 +1734,7 @@ input[type="file"]::-webkit-file-upload-button{
 .hamburger-menu {
     display: none;
 }
+/*--
 
 @media screen and (max-width: 1990px) {
     .project-detail-group .detail-col-2 {
@@ -2198,7 +2225,6 @@ input[type="file"]::-webkit-file-upload-button{
         font-size: 3vw;
     }
 }
-
 @media screen and (max-width: 426px) {
     .project-detail-group .detail-col-2 {
         height: calc(100% - (66.25vw + 2px));
