@@ -30,6 +30,7 @@ a {
 ul {
     list-style-type: none;
 }
+/* width */
 
 /*------------ Layout ------------*/
 
@@ -1868,10 +1869,10 @@ hr {
     }
     .project-content-group {
         overflow: scroll;
+        max-height: 900px;
     }
     #project .section-2 {
-        overflow: scroll;
-        max-height: 900px;
+        height: 955px;
     }
 }
 @media screen and (max-width: 1150px) {
