@@ -1,8 +1,13 @@
 @font-face {
-    font-family: Avo;
+    font-family: Avo-Bold;
     src: url(./font/[Innhanmac]\ UTM\ AvoBold.ttf);
 }
+@font-face {
+    font-family: Avo;
+    src: url(./font/[Innhanmac]\ UTM\ Avo.ttf);
+}
 :root {
+    --font-family-bold: Avo-Bold;
     --font-family: Avo;
     --background: linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
     --border-color: rgb(51 146 204);
@@ -234,7 +239,7 @@ input:checked + .slider:before {
 .menu-btn {
     position: absolute;
     right: -10px;
-    top: 55%;
+    top: 650px;
     width: 25px;
     height: 25px;
     border-radius: 5px;
@@ -302,13 +307,12 @@ input:checked + .slider:before {
     position: absolute;
     top: 0;
     left: 45px;
-    width: 315px;
+    width: 250px;
     border-radius: 15px;
-    padding: 10px 20px;
     border: 2px solid var(--border-color);
     background-color: var(--border-color);
     box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+    z-index: 10;
 }
 /*------------ Layout ------------*/
 
@@ -366,6 +370,7 @@ main {
 #dashboard .today-work .title h2 {
     color: #fff;
     font-size: 22px;
+    font-family: var(--font-family-bold);
 }
 #dashboard .due-reminder ul li,
 #dashboard .today-work ul li {
@@ -449,6 +454,7 @@ main {
     gap: 15px;
     font-size: 18px;
     align-items: center;
+    font-family: var(--font-family-bold);
 }
 #dashboard .cal-title-btn {
     gap: 15px;
@@ -468,6 +474,7 @@ main {
     padding: 15px;
     justify-content: space-between;
     font-size: 22px;
+    font-family: var(--font-family-bold);
 }
 #dashboard .calendar ul {
     display: flex;
@@ -530,6 +537,7 @@ main {
 .title h1 {
     font-size: 22px;
     margin: 10px 0;
+    font-family: var(--font-family-bold);
 }
 #dashboard .events-content {
     width: 100%;
@@ -681,7 +689,7 @@ main {
 .search-btn,
 .new-top-btn {
     display: flex;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -786,6 +794,7 @@ main {
 .project-title h2 {
     font-size: 22px;
     margin-bottom: 10px;
+    font-family: var(--font-family-bold);
 }
 .gear-content {
     background: #fff;
@@ -836,6 +845,7 @@ main {
 .project-body h5,
 .project-footer h5 {
     font-size: 22px;
+    font-family: var(--font-family-bold);
 }
 .detail-col-2 .leader h2,
 .project-detail-title h2,
@@ -898,6 +908,7 @@ main {
     position: absolute;
     bottom: 25px;
     right: 15px;
+    font-family: var(--font-family-bold);
 }
 .progress-info h1,
 .detail-progress .progress-info h1 {
@@ -994,6 +1005,7 @@ main {
     color: #000;
     align-items: center;
     gap: 5px;
+    font-family: var(--font-family-bold);
 }
 .popup-input textarea,
 .popup-input input {
@@ -1083,7 +1095,7 @@ input[type="file"]::-webkit-file-upload-button{
 .overview {
     display: flex;
     flex-direction: column;
-    background: rgb(194, 194, 194);
+    background: rgb(225, 225, 225);
     text-align: left;
     padding: 15px;
     border: 2px solid var(--border-color);
@@ -1095,6 +1107,7 @@ input[type="file"]::-webkit-file-upload-button{
 .project-detail-title h2,
 .project-detail-footer h2 {
     font-size: 22px;
+    font-family: var(--font-family-bold);
 }
 .project-detail-body p {
     font-size: 18px;
@@ -1128,6 +1141,12 @@ input[type="file"]::-webkit-file-upload-button{
     cursor: pointer;
     color: #000;
     padding: 10px 15px;
+    font-family: var(--font-family-bold);
+}
+hr {
+    height: 1.5px;
+    background-color: grey;
+    border: none;
 }
 .mission-btn-active, .mission-btn:hover {
     background: orange;
@@ -1181,7 +1200,7 @@ input[type="file"]::-webkit-file-upload-button{
 .project-detail-group .detail-col-2 {
     display: flex;
     flex-direction: column;
-    background: rgb(194, 194, 194);
+    background: rgb(225, 225, 225);
     text-align: left;
     border: 2px solid rgb(39, 134, 193);
     border-radius: 15px;
@@ -1199,12 +1218,15 @@ input[type="file"]::-webkit-file-upload-button{
     justify-content: space-between;
     padding: 10px 15px;
 }
+.detail-col-2 ul li h5 {
+    font-family: var(--font-family-bold);
+}
 .detail-col-2 ul li h5,
 .detail-col-2 ul li p {
     font-size: 18px;
 }
 .detail-col-2 ul li.grey {
-    background-color: #999;
+    background-color: #bebebe;
 }
 .detail-col-2 .detail-progress {
     position: relative;
@@ -1223,6 +1245,7 @@ input[type="file"]::-webkit-file-upload-button{
 }
 .detail-col-2 .leader h2 {
     font-size: 22px;
+    font-family: var(--font-family-bold);
 }
 .detail-col-2 .leader-info {
     display: flex;
@@ -1239,6 +1262,7 @@ input[type="file"]::-webkit-file-upload-button{
 .leader-role h5 {
     font-size: 22px;
     color: #000;
+    font-family: var(--font-family-bold)
 }
 .leader-role p {
     font-size: 18px;
@@ -1292,6 +1316,13 @@ input[type="file"]::-webkit-file-upload-button{
     justify-content: left;
     margin-left: 20px;
 }
+#error-report .board-td div:nth-child(1) h5 {
+    width: 350px;
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 #error-report .board-td div:nth-child(1) {
     width: 50%;
     display: flex;
@@ -1317,6 +1348,7 @@ input[type="file"]::-webkit-file-upload-button{
     flex-direction: row;
     justify-content: space-around;
     padding: 10px 15px;
+    font-family: var(--font-family-bold);
 }
 .tick {
     position: absolute;
@@ -1358,7 +1390,6 @@ input[type="file"]::-webkit-file-upload-button{
     font-size: 18px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .board-btn-group {
     display: flex;
@@ -1468,6 +1499,15 @@ input[type="file"]::-webkit-file-upload-button{
 #action-leave-ot .board-th p:nth-child(3),
 #action-leave-ot .board-td div:nth-child(3) {
     width: 30%;
+
+}
+#action-leave-ot .board-th p:nth-child(3) h5,
+#action-leave-ot .board-td div:nth-child(3) h5 {
+    width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 #action-leave-ot .board-th p:nth-child(4),
 #action-leave-ot .board-td div:nth-child(4) {
@@ -1484,6 +1524,7 @@ input[type="file"]::-webkit-file-upload-button{
 #application-management .board-td div:nth-child(1) h2,
 #action-leave-ot .board-td div:nth-child(1) h2 {
     margin-left: 10px;
+    font-family: var(--font-family-bold);
     font-size: 25px;
     background: -webkit-linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
     -webkit-background-clip: text;
@@ -1534,6 +1575,7 @@ input[type="file"]::-webkit-file-upload-button{
 .fc .fc-toolbar-title {
     font-size: 22px;
     color: black;
+    font-family: var(--font-family-bold);
 }
 .fc .fc-button {
     padding: 5px 10px;
@@ -1636,6 +1678,13 @@ input[type="file"]::-webkit-file-upload-button{
 #application-management .board-td div:nth-child(4) {
     width: 25%;
 }
+#application-management .board-th p:nth-child(4) h5,
+#application-management .board-td div:nth-child(4) h5 {
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 #application-management .board-th div:nth-child(5),
 #application-management .board-td p:nth-child(5) {
     width: 20%;
@@ -1678,7 +1727,7 @@ input[type="file"]::-webkit-file-upload-button{
     width: 25px;
     height: 25px;
     cursor: pointer;
-    z-index: 200;
+    z-index: 99;
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -1711,7 +1760,7 @@ input[type="file"]::-webkit-file-upload-button{
     background: var(--background);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
     transition-duration: .25s;
-    z-index: 100;
+    z-index: 98;
 }
 .menu__item {
     display: flex;
@@ -1791,6 +1840,10 @@ input[type="file"]::-webkit-file-upload-button{
     gap: 15px;
     width: 50%;
 }
+#project-row-res-1,
+#project-row-res-2 {
+    display: none;
+}
 @media screen and (max-width: 1440px) {
     #dashboard .section-1 .due-reminder ul, 
     #dashboard .section-1 .today-work ul {
@@ -1810,12 +1863,21 @@ input[type="file"]::-webkit-file-upload-button{
     .res-1 {
         display: none;
     }
+    #project-row-res-1 {
+        display: flex;
+    }
+    .project-content-group {
+        overflow: scroll;
+    }
+    #project .section-2 {
+        overflow: scroll;
+        max-height: 900px;
+    }
 }
 @media screen and (max-width: 1150px) {
     .content {
         width: 93%;
     }
-    .menu-btn,
     .user {
         display: none;
     }
@@ -1835,13 +1897,13 @@ input[type="file"]::-webkit-file-upload-button{
     .error-content {
         overflow-x: scroll;
     }
+    #application-management .board-content,  #application-management .board-th,
+    #action-leave-ot .board-content, #action-leave-ot .board-th {
+        min-width: 1200px;
+    }
     .error-content-1,
     .error-content-2 {
         min-width: 1026px;
-    }
-    .board-content,
-    .board-th {
-        min-width: 1210px;
     }
     #error-report .title {
         justify-content: flex-start;
@@ -1849,6 +1911,13 @@ input[type="file"]::-webkit-file-upload-button{
     }
     #action-meeting .section-1 a {
         width: 20%;
+    }
+    #project-row-res-2 {
+        display: flex;
+    }
+    .sidebar .menu-btn,
+    .sidebar .text {
+        display: none;
     }
 }
 @media screen and (max-width: 910px) {
@@ -1902,17 +1971,23 @@ input[type="file"]::-webkit-file-upload-button{
 
 }
 @media screen and (max-width: 768px) {
+    .project-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-row .project-container:nth-child(2),
     .project-row .project-container:nth-child(1) {
         width: 100%;
     }
-    .project-row .project-container:nth-child(2) {
-        display: none;
-    }
-    #application-management .section-1, #action-leave-ot .section-1, #error-report .section-1, #project-detail .section-1 {
+    
+    #application-management .section-1, #action-leave-ot .section-1, #project-detail .section-1 {
         flex-direction: column;
         height: 285px;
     }
-
+    #error-report .section-1 { 
+        flex-direction: column;
+        height: 307px;
+    }
     .select2-container {
         width: 100% !important;
     }

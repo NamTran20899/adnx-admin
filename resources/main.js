@@ -13,6 +13,7 @@ $(".menu > ul > li").click(function (e) {
 
 if ($(".container").width() < 1150) {
   $(".sidebar").addClass("active");
+  $(".menu-href").removeAttr("href");
 }
 
 $(".menu-btn").click(function () {
