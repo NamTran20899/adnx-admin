@@ -1,9 +1,9 @@
 @font-face {
-    font-family: Nexa;
-    src: url(./font/SVN-Nexa-Bold.ttf);
+    font-family: Avo;
+    src: url(./font/[Innhanmac]\ UTM\ AvoBold.ttf);
 }
 :root {
-    --font-family: Nexa;
+    --font-family: Avo;
     --background: linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
     --border-color: rgb(51 146 204);
 }
@@ -16,7 +16,7 @@
     padding: 0;
 }
 html {
-    font-family: Nexa;
+    font-family: Avo;
 }
 a {
     text-decoration: none;
@@ -30,17 +30,20 @@ ul {
 
 /*-- Header --*/
 header {
+    background: var(--background);
+}
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100px;
-    background: var(--background);
+    gap: 15px;
 }
 .header-left {
     display: flex;
     align-items: center;
-    gap: 1.75vw;
+    gap: 2vw;
 }
 .logo {
     display: flex;
@@ -48,7 +51,7 @@ header {
     align-items: center;
 }
 .logo img {
-    width: 75%;
+    width: 80%;
 }
 .notibar {
     display: flex;
@@ -57,9 +60,27 @@ header {
     border-radius: 15px;
     text-align: center;
     background-color: #fff;
-    height: 70px;
-    width: 35rem;
-    font-size: 20px;
+    height: 55px;
+    width: 52vw;
+    overflow: hidden;
+}
+.notibar-res p,
+.notibar p {
+    font-size: 22px;
+    min-width: 650px;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+    0%   {
+    transform: translateX(100%); 		
+    }
+    100% {
+    transform: translateX(-100%); 
+    }
 }
 .header-right {
     display: flex;
@@ -76,7 +97,7 @@ header {
     width: 10%;
 }
 .user {
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
 }
 .header-btn-group {
@@ -90,7 +111,7 @@ header {
     align-items: center;
     justify-content: end;
     gap: 15px;
-    font-size: 15px;
+    font-size: 22px;
     color: #fff;
 }
 .bell {
@@ -99,15 +120,15 @@ header {
 .indicator {
     display: flex;
     background-color: gold;
-    font-size: 10px;
+    font-size: 15px;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 2%;
-    right: -15%;
+    right: -25%;
 }
 .switch {
     position: relative;
@@ -177,7 +198,7 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
     padding: 12px 8px;
@@ -308,7 +329,7 @@ main {
     background-color: #fff;
     width: 100%;
     border-radius: 25px 0 0 25px;
-    padding: 25px;
+    padding: 15px;
 }
 .content-container {
     display: flex;
@@ -328,6 +349,8 @@ main {
 #dashboard .section-1 .due-reminder,
 #dashboard .section-1 .today-work {
     height: 50%;
+    max-height: 500px;
+    overflow-x: scroll;
 }
 #dashboard .due-reminder .title,
 #dashboard .today-work .title {
@@ -336,13 +359,13 @@ main {
     background-image: url("./images/title-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 35%;
+    width: 300px;
     justify-content: left !important;
 }
 #dashboard .due-reminder .title h2,
 #dashboard .today-work .title h2 {
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
 }
 #dashboard .due-reminder ul li,
 #dashboard .today-work ul li {
@@ -367,21 +390,21 @@ main {
 }
 #dashboard .due-reminder ul li h5,
 #dashboard .today-work ul li h5 {
-    font-size: 15px;
+    font-size: 18px;
 }
 #dashboard .due-reminder ul li p,
 #dashboard .today-work ul li p {
-    font-size: 15px;
+    font-size: 18px;
 }
 #dashboard .work-status {
     display: flex;
     gap: 15px;
     align-items: center;
-    width: 20rem;
+    width: 15rem;
     justify-content: space-between;
 }
 #dashboard .work-status span {
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     border-radius: 5px;
     justify-content: center;
@@ -424,7 +447,7 @@ main {
 #dashboard .cal-title-icon {
     display: flex;
     gap: 15px;
-    font-size: 15px;
+    font-size: 18px;
     align-items: center;
 }
 #dashboard .cal-title-btn {
@@ -444,7 +467,7 @@ main {
     align-items: center;
     padding: 15px;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 22px;
 }
 #dashboard .calendar ul {
     display: flex;
@@ -458,7 +481,7 @@ main {
 #dashboard .calendar li {
     color: #333;
     width: calc(100% / 7);
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
 }
 #dashboard .calendar .days li {
@@ -466,7 +489,7 @@ main {
     cursor: pointer;
     position: relative;
     margin-top: 1rem;
-    font-size: 10px;
+    font-size: 15px;
 }
 #dashboard .days li.inactive {
     color: #aaa;
@@ -496,6 +519,7 @@ main {
     border: 2px solid rgb(51 146 204);
     border-radius: 15px;
     overflow: hidden;
+    min-height: 300px;
 }
 .title {
     display: flex;
@@ -504,7 +528,7 @@ main {
     position: relative;
 }
 .title h1 {
-    font-size: 20px;
+    font-size: 22px;
     margin: 10px 0;
 }
 #dashboard .events-content {
@@ -529,10 +553,6 @@ main {
     align-items: center;
     justify-content: space-between;
 }
-#error-report .section-1 .keyword,
-#project .section-1 .keyword {
-    width: 20% !important;
-}
 #application-management .section-1 .keyword,
 #application-management .section-1 .to-date,
 #application-management .section-1 .from-date,
@@ -554,7 +574,7 @@ main {
     display: flex;
     align-items: center;
     border: 1px solid rgb(51 146 204);
-    width: 15%;
+    width: 20%;
     height: 100%;
     overflow: hidden;
     border-radius: 5px;
@@ -575,7 +595,7 @@ main {
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
     color: #000 !important; 
-    font-size: 15px !important;
+    font-size: 18px !important;
     display: flex !important;
     align-items: center !important;
     text-align: left !important;
@@ -587,17 +607,17 @@ main {
 }
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
     border-color: transparent transparent black transparent !important;
-    border-width:  0 8px 10px 8px !important;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: black transparent transparent transparent !important;
-    border-width: 10px 8px 0 8px !important;
+    left: 70% !important;
+    top: 25% !important;
 }
 .select2-results__option--selectable{
-    font-size: 15px !important;
+    font-size: 18px !important;
 }
 .select2-search--dropdown .select2-search__field {
-    font-size: 15px !important;
+    font-size: 18px !important;
 }
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
     font-weight: 400 !important;
@@ -622,7 +642,7 @@ main {
     color: #fff;
     height: 100%;
     width: 55px;
-    font-size: 15px;
+    font-size: 18px;
 }
 #application-management .section-1 .keyword input,
 #application-management .section-1 .to-date input,
@@ -645,27 +665,34 @@ main {
     padding: 6px 8px;
     border: none;
     width: 100%;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+}
+.section-1-btn-group {
+    display: flex;
+    width: 25%;
+    gap: 15px;
 }
 .excel-btn,
 .search-advanced-btn,
 .search-btn,
 .new-top-btn {
     display: flex;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
-    height: 100%;
-    width: 15%;
+    width: 50%;
     color: #fff;
     font-family: var(--font-family);
     line-height: 1;
     gap: 5px;
     align-items: center;
     justify-content: center;
+    height: 35px;
 }
 .new-top-btn,
 .search-btn {
@@ -674,6 +701,7 @@ main {
 .excel-btn,
 .search-advanced-btn {
     background-color: green;
+    overflow: hidden;
 }
 #project-detail .section-2,
 #project .section-2 {
@@ -694,7 +722,7 @@ main {
 .error-btn-group a,
 .project-btn-group a {
     display: flex;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -736,14 +764,14 @@ main {
     color: #fff;
 }
 .project-head a {
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
     margin: 5px 0;
 }
 .project-head .fa-gear {
     position: absolute;
     right: 15px;
-    top: 12px;
+    top: 15px;
     cursor: pointer;
 }
 .project-content {
@@ -756,7 +784,7 @@ main {
     text-align: left;
 }
 .project-title h2 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 .gear-content {
@@ -778,7 +806,7 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 15px;
+    font-size: 18px;
 }
 .gear-content a:nth-child(1) {
     padding: 10px 10px 5px 10px;
@@ -796,7 +824,7 @@ main {
     border: 1px solid var(--border-color);
 }
 .project-body p {
-    font-size: 15px;
+    font-size: 18px;
     font-style: italic;
     line-height: 1.5;
     display: -webkit-box;
@@ -807,7 +835,7 @@ main {
 }
 .project-body h5,
 .project-footer h5 {
-    font-size: 20px;
+    font-size: 22px;
 }
 .detail-col-2 .leader h2,
 .project-detail-title h2,
@@ -853,7 +881,7 @@ main {
     z-index: 1;
 }
 .ava-name {
-    font-size: 10px;
+    font-size: 12px;
     color: #fff;
 }
 .team-group {
@@ -873,7 +901,7 @@ main {
 }
 .progress-info h1,
 .detail-progress .progress-info h1 {
-    font-size: 30px;
+    font-size: 32px;
     background: -webkit-linear-gradient(90deg, rgb(253, 160, 61) 0%, rgb(237, 168, 71) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -938,7 +966,7 @@ main {
 }
 .close i {
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
 }
 .popup-content {
     background: #fff;
@@ -962,7 +990,7 @@ main {
 }
 .popup label {
     display: flex;
-    font-size: 15px;
+    font-size: 18px;
     color: #000;
     align-items: center;
     gap: 5px;
@@ -971,7 +999,7 @@ main {
 .popup-input input {
     border: 1px solid rgb(51 146 204);
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 18px;
     height: 100%;
     padding: 8px 10px;
     font-family: var(--font-family);
@@ -999,7 +1027,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 18px;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     background: var(--background);
@@ -1022,7 +1050,7 @@ input[type="file"]::-webkit-file-upload-button{
     top: 0;
     left: 0;
     color: #fff;
-    font-size: 15px;
+    font-size: 18px;
     height: 100%;
 }
 #description {
@@ -1030,7 +1058,7 @@ input[type="file"]::-webkit-file-upload-button{
     height: 200px;
 }
 .popup-btn button {
-    font-size: 20px;
+    font-size: 22px;
     padding: 5px 15px;
     border: none;
     border-radius: 5px;
@@ -1066,10 +1094,10 @@ input[type="file"]::-webkit-file-upload-button{
 }
 .project-detail-title h2,
 .project-detail-footer h2 {
-    font-size: 20px;
+    font-size: 22px;
 }
 .project-detail-body p {
-    font-size: 15px;
+    font-size: 18px;
     color: #000;
     font-style: italic;
     line-height: 1.5;
@@ -1095,7 +1123,7 @@ input[type="file"]::-webkit-file-upload-button{
     justify-content: space-around;
 }
 .mission-btn-group h5 {
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
     color: #000;
@@ -1121,7 +1149,7 @@ input[type="file"]::-webkit-file-upload-button{
     align-items: center;
 }
 .mission-content ul li p {
-    font-size: 15px;
+    font-size: 18px;
     color: #000;
 }
 .incomplete {
@@ -1173,7 +1201,7 @@ input[type="file"]::-webkit-file-upload-button{
 }
 .detail-col-2 ul li h5,
 .detail-col-2 ul li p {
-    font-size: 15px;
+    font-size: 18px;
 }
 .detail-col-2 ul li.grey {
     background-color: #999;
@@ -1194,7 +1222,7 @@ input[type="file"]::-webkit-file-upload-button{
     padding: 7px 15px 0 15px;
 }
 .detail-col-2 .leader h2 {
-    font-size: 20px;
+    font-size: 22px;
 }
 .detail-col-2 .leader-info {
     display: flex;
@@ -1206,14 +1234,14 @@ input[type="file"]::-webkit-file-upload-button{
     height: 30px;
 }
 .detail-col-2 .leader-avatar .ava-name {
-    font-size: 10px;
+    font-size: 12px;
 }
 .leader-role h5 {
-    font-size: 20px;
+    font-size: 22px;
     color: #000;
 }
 .leader-role p {
-    font-size: 15px;
+    font-size: 18px;
     color: #000;
 }
 .leader-info .team-avatar, 
@@ -1306,7 +1334,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-left: 15px solid green;
 }
 .board-th p {
-    font-size: 20px;
+    font-size: 22px;
 }
 .board-td {
     width: 100%;
@@ -1327,7 +1355,7 @@ input[type="file"]::-webkit-file-upload-button{
     justify-content: center;
 }
 .board-td div h5 {
-    font-size: 15px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1343,7 +1371,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 5px;
     padding: 5px 10px;
     color: var(--border-color);
-    font-size: 15px;
+    font-size: 18px;
 }
 .leave-status,
 .prioritize,
@@ -1352,7 +1380,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 10px;
 }
 .board-td div p {
-    font-size: 10px;
+    font-size: 12px;
     color: #fff;
 }
 .condition {
@@ -1406,8 +1434,13 @@ input[type="file"]::-webkit-file-upload-button{
 #application-management .excel-btn,
 #action-leave-ot .search-btn,
 #action-leave-ot .new-top-btn {
-    width: 20%;
+    width: 50%;
 }
+#application-management .section-1-btn-group,
+#action-leave-ot .section-1-btn-group {
+    width: 35%;
+}
+
 #application-management .section-2,
 #action-leave-ot .section-2 {
     width: 100%;
@@ -1466,14 +1499,14 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 5px;
     padding: 8px 10px;
     color: var(--border-color);
-    font-size: 15px;
+    font-size: 18px;
     margin-left: 1rem;
 }
 #action-meeting .section-1 {
     display: flex;
 }
 #action-meeting .section-1 a {
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -1496,28 +1529,28 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 15px;
 }
 .fc .fc-col-header-cell-cushion {
-    font-size: 20px;
+    font-size: 22px;
 }
 .fc .fc-toolbar-title {
-    font-size: 20px;
+    font-size: 22px;
     color: black;
 }
 .fc .fc-button {
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 18px;
 }
 .fc .fc-toolbar.fc-header-toolbar {
     margin: 15px;
 }
 .fc .fc-button .fc-icon {
-    font-size: 22.5px;
+    font-size: 27.5px;
 }
 .fc .fc-button-group > .fc-button {
     display: flex;
     align-items: center;
 }
 .fc .fc-daygrid-day-number {
-    font-size: 15px;
+    font-size: 18px;
 }
 .opinion textarea {
     height: 350px;
@@ -1527,7 +1560,7 @@ input[type="file"]::-webkit-file-upload-button{
     width: 100% !important;
 }
 #action-meeting .select2-container .select2-selection--single .select2-selection__rendered {
-    font-size: 20px !important;
+    font-size: 22px !important;
 }
 .select2-container--default .select2-selection--multiple {
     border: 1px solid rgb(51 146 204) !important;
@@ -1536,7 +1569,7 @@ input[type="file"]::-webkit-file-upload-button{
 }
 .select2-container .select2-search--inline .select2-search__field {
     height: 30px !important;
-    font-size: 2rem !important;
+    font-size: 22px !important;
     font-family: var(--font-family);
 }
 .select2-container--default .select2-selection--multiple {
@@ -1546,7 +1579,7 @@ input[type="file"]::-webkit-file-upload-button{
     border: 1px solid var(--border-color) !important;
     background: var(--background) !important;
     color: #fff !important;
-    font-size: 2rem !important;
+    font-size: 22px !important;
     vertical-align: text-top !important;
     margin-top: 3px !important;
     padding-left: 2rem !important;
@@ -1712,7 +1745,7 @@ input[type="file"]::-webkit-file-upload-button{
     color: #fff;
     z-index: 10;
     width: 145px;
-    font-size: 10px;
+    font-size: 12px;
     background: var(--background);
     border-radius: 10px;
     padding: 5px;
@@ -1734,768 +1767,175 @@ input[type="file"]::-webkit-file-upload-button{
 .hamburger-menu {
     display: none;
 }
-/*--
-
-@media screen and (max-width: 1990px) {
-    .project-detail-group .detail-col-2 {
-        height: calc(100% - (4.5rem + 4px));
-    }
-    .notibar {
-        height: 5rem;
-        width: 50rem;
-        font-size: 1.75rem;
-    }
-    .user {
-        font-size: 1.75rem;
-    }
-    .user-info img {
-        width: 15%;
-    }
-    .header-icon {
-        font-size: 2rem;
-    }
-    .indicator {
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 1rem;
-    }
-    .menu ul li a {
-        font-size: 1.75rem;
-    }
-    .board-td div h5,
-    #dashboard .due-reminder ul li h5, #dashboard .today-work ul li h5 {
-        font-size: 1.75rem;
-    }
-    #dashboard .due-reminder .title h2, #dashboard .today-work .title h2 {
-        font-size: 2rem;
-    }
-    #dashboard .days li::before {
-        height: 2.5rem;
-        width: 4.5rem;
-    }
-    .title h1 {
-        font-size: 2.5rem;
-    }
-    .error-btn-group a, .project-btn-group a {
-        font-size: 1.75rem;
-    }
-    .project-head a {
-        font-size: 2rem;
-    }
-    .project-head .fa-gear {
-        font-size: 2rem;
-    }
-    .project-title h2 {
-        font-size: 2rem;
-    }
-    .project-body p {
-        -webkit-line-clamp: 3;
-    }
-    .board-btn-group {
-        margin-left: 2.5rem;
-    }
-    .board-th p {
-        font-size: 2rem;
-    }
-    #error-report-popup .popup {
-        width: 80%;
-    }
-    #error-report-popup #name-pj,
-    #error-report-popup #prioritize,
-    #error-report-popup #category,
-    #error-report-popup #server,
-    #error-report-popup #status {
-        width: 100%;
-    }
+.notibar-res {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #fff;
+    height: 40px;
+    margin-bottom: 15px;
+    width: 90vw;
+    overflow: hidden;
+    position: relative;
+    top: -5px;
+    right: -5%;
 }
-@media screen and (max-width: 1780px) {
-    .content {
-        padding: 2vw;
+@media screen and (max-width: 1440px) {
+    #dashboard .section-1 .due-reminder ul, 
+    #dashboard .section-1 .today-work ul {
+        overflow-x: scroll;
     }
-    header {
-        height: 8vw;
+    #dashboard .section-1 .due-reminder ul li, 
+    #dashboard .section-1 .today-work ul li {
+        min-width: 700px;
     }
+    .header-right,
     .header-left {
-        gap: 2.5vw;
-        margin-left: 1vw;
-    }
-    .logo img {
-        width: 15vw;
+        gap: 1vw;
     }
     .notibar {
-        height: 5vw;
-        width: 35vw;
-        font-size: 1.25vw;
-        padding: 1vw;
+        width: 46vw;
     }
+    .res-1 {
+        display: none;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .content {
+        width: 93%;
+    }
+    .menu-btn,
     .user {
-        font-size: 1.25vw;
-    }
-    .switch {
-        width: 10vw;
-        height: 2.75vw;
-    }
-    .slider:before {
-        width: 5vw;
-        height: 4.5vw;
-        top: -30%;
-    }
-    .menu-btn {
-        right: -20%;
-        width: 3vw;
-        height: 3vw;
-        font-size: 1.5vw;
-    }
-    .menu ul li {
-        margin-bottom: 0.5vw;
-    }
-    .menu ul li a {
-        padding: 1vw 0.5vw;
-    }
-    .title h1,
-    .header-icon {
-        font-size: 1.5vw;
-    }
-    .indicator {
-        width: 1vw;
-        height: 1vw;
-        font-size: 1vw;
-    }
-    .sidebar {
-        width: 22vw;
-        gap: 1vw;
-        padding: 1vw;
-    }
-    .menu ul li a {
-        font-size: 1.25vw;
-    }
-    #dashboard .due-reminder .title h2, #dashboard .today-work .title h2 {
-        font-size: 1.5vw;
-    }
-    #dashboard .due-reminder ul li p, #dashboard .today-work ul li p,
-    .board-td div h5, #dashboard .due-reminder ul li h5, #dashboard .today-work ul li h5 {
-        font-size: 1.25vw;
-    }
-    #dashboard .work-status span {
-        font-size: 1vw;
-    }
-    #dashboard .calendar {
-        height: 23.5vw;
-    }
-    #dashboard .calendar .cal-header,
-    #dashboard .cal-title-btn, #dashboard .cal-title-icon {
-        padding: 0.5vw;
-        font-size: 1.25vw;
-    }
-    #dashboard .calendar li {
-        font-size: 1.25vw;
-    }
-    #dashboard .calendar .days li {
-        font-size: 0.75vw;
-    }
-    #dashboard .days li::before {
-        width: 3vw;
-        height: 2vw;
-    }
-    #dashboard .due-reminder ul li, #dashboard .today-work ul li {
-        margin: 1vw;
-    }
-    #dashboard .work-status {
-        width: 16vw;
-    }
-    .select2-container .select2-selection--single .select2-selection__rendered {
-        font-size: 1vw !important;
-    }
-    #application-management .section-1 .keyword input, #application-management .section-1 .to-date input, #application-management .section-1 .from-date input, #action-leave-ot .section-1 .approved-btn button, #action-leave-ot .section-1 .from-date input, #action-leave-ot .section-1 .to-date input, #error-report .section-1 .status input, #error-report .section-1 .keyword input, #error-report .section-1 .to-date input, #error-report .section-1 .from-date input, #project-detail .section-1 .status input, #project-detail .section-1 .keyword input, #project-detail .section-1 .to-date input, #project-detail .section-1 .from-date input, #project .section-1 .status input, #project .section-1 .keyword input, #project .section-1 .to-date input, #project .section-1 .from-date input {
-        font-size: 1vw !important;
-    }
-    .select2-container--default .select2-selection--single,
-    #application-management .section-1, #action-leave-ot .section-1, #error-report .section-1, #project-detail .section-1, #project .section-1 {
-        height: 3vw !important;
-    }
-    #application-management .section-1 .to-date a, #application-management .section-1 .from-date a, #action-leave-ot .section-1 .to-date a, #action-leave-ot .section-1 .from-date a, #error-report .section-1 .to-date a, #error-report .section-1 .from-date a, #project-detail .section-1 .to-date a, #project-detail .section-1 .from-date a, #project .section-1 .to-date a, #project .section-1 .from-date a {
-        font-size: 1.5vw !important;
-        width: 4vw !important;
-    }
-    .project-body p,
-    .select2-results__option--selectable,
-    .excel-btn, .search-advanced-btn, .search-btn, .new-top-btn {
-        font-size: 1vw !important;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        top: 48% !important;
-        left: 110% !important;
-    }
-    .select2-search--dropdown .select2-search__field {
-        padding: 0.5vw !important;
-        font-size: 1vw !important;
-    }
-    .error-btn-group a, .project-btn-group a {
-        font-size: 1vw !important;
-        border-radius: 5px !important;
-    }
-    .fc .fc-button,
-    .board-th p,
-    .leader-role h5,
-    .detail-col-2 .leader h2, .project-detail-title h2, .project-detail-footer h2, .project-title h2, .project-body p, .project-body h5, .project-footer h5,
-    .project-title h2,
-    .project-head .fa-gear,
-    .project-head a {
-        font-size: 1.4vw;
-    }
-    .progress-info h1, .detail-progress .progress-info h1 {
-        font-size: 2vw;
-    }
-    .leader-role p,
-    .detail-col-2 .leader-avatar .ava-name,
-    .project-detail-body p,
-    .ava-name {
-        font-size: 1vw;
-    }
-    .detail-col-2 .leader-avatar,
-    .team-avatar, .leader-avatar {
-        width: 2.5vw;
-        height: 2.5vw;
-    }
-    .detail-col-2 ul li p,
-    .detail-col-2 ul li h5,
-    .mission-content ul li p,
-    .mission-btn-group h5 {
-        font-size: 1vw;
-    }
-    .completed, .incomplete {
-        width: 0.5vw;
-        height: 0.5vw;
-    }
-    .project-detail-group .detail-col-2,
-    .mission, .overview {
-        gap: 1vw;
-    }
-    .mission-btn-group h5 {
-        padding: 0.75vw 1vw;
-        border-radius: 10px;
-    }
-    .detail-col-2 .project-detail-title {
-        padding: 1vw 1vw 0 1vw;
-    }
-    .mission, .overview {
-        padding: 1vw;
-    }
-    .detail-col-2 .progress {
-        margin-top: 3vw;
-    }
-    .detail-col-2 .leader {
-        gap: 0.5vw;
-        padding: 0 1vw 0 1vw;
-    }
-    .detail-col-2 .leader-info {
-        gap: 0.5vw;
-    }
-    .project-detail-group .detail-col-2 {
-        height: calc(100% - (5vw + 2px));
-    }
-    .fc .fc-daygrid-day-number,
-    .approve,
-    .board-td div p,
-    .board-btn-group button {
-        font-size: 1vw;
-    }
-    .fc .fc-col-header-cell-cushion,
-    .fc .fc-toolbar-title,
-    #application-management .board-td div:nth-child(1) h2, #action-leave-ot .board-td div:nth-child(1) h2 {
-        font-size: 2vw;
-    }
-    #action-meeting .section-1 a {
-        font-size: 1.5vw;
-        width: 15vw;
-    }
-    .fc .fc-button .fc-icon {
-        font-size: 2.25vw;
-    }
-    .board-th {
-        padding: 1vw 0.5vw;
-    }
-    .board-content {
-        padding: 1vw;
-    }
-    .board-td {
-        padding: 0.5vw;
-    }
-    .sidebar.active .menu > ul > li > a .text {
-        min-width: 10vw;
-    }
-    .sidebar.active .menu .sub-menu {
-        width: 15vw;
-    }
-    .sidebar.active .menu > ul > li > a:hover .text {
-        left: 90%;
-    }
-    .project-content {
-        padding: 1vw;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        border-width: 6px 4px 0 4px !important;
-    }
-    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-        border-width: 0 4px 6px 4px !important;
-    }
-    .approve {
-        padding: 0.5vw 0.75vw;
-    }
-    .popup {
-        width: 70vw;
-    }
-    .popup label {
-        font-size: 1.5vw;
-    }
-    .popup-content {
-        height: 100%;
-    }
-    .popup-input .from-date input,
-    .popup-input .to-date input {
-        font-size: 1.5vw;
-    }
-    #description {
-        height: 20vw;
-    }
-    .popup-input textarea, .popup-input input {
-        height: 4vw;
-    }
-    .close {
-        width: 2vw;
-        height: 2vw;
-    }
-    .close i {
-        font-size: 1.5vw;
-    }
-    .url textarea {
-        height: 6vw;
-    }
-    .opinion textarea,
-    .content-lang textarea {
-        height: 8vw;
-        width: 100%;
-    }
-    .popup-btn button {
-        font-size: 2vw;
-        padding: 1vw 2vw;
-    }
-    .user-info {
-        gap: 1vw;
-    }
-}
-@media screen and (max-width: 1441px) {
-    .title h1, .header-icon {
-        font-size: 2vw;
-    }
-    input:checked + .slider:before {
-        transform: translateX(4.75rem);
-    }
-    .header-btn-group {
-        gap: 0.5vw;
-    }
-}
-@media screen and (max-width: 1025px) {
-    .project-detail-group .detail-col-2 {
-        height: calc(100% - (4.25vw + 2px));
-    }
-    input:checked + .slider:before {
-        transform: translateX(3.4rem);
-    }
-    #action-leave-ot .board-td div:nth-child(1) {
-        display: flex;
-        width: 8%;
-    }
-    .tick.red {
-        border-left: 1vw solid red;
-    }
-    .tick.orange {
-        border-left: 1vw solid orange;
-    }
-    .tick.green {
-        border-left: 1vw solid green;
-    }
-    .sidebar.active {
-        width: 5vw;
-    }
-    #dashboard .due-reminder .title, #dashboard .today-work .title {
-        padding: 0.5vw;
-    }
-    #dashboard .calendar {
-        height: 45%;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        top: 12% !important;
-    }
-    input[type="file"]::file-selector-button {
-        border-radius: 0%;
-        font-size: 1.5vw;
-    }    
-    .close {
-        width: 3vw;
-        height: 3vw;
-    }
-    .close i {
-        font-size: 2.5vw;
-    }
-}
-@media screen and (max-width: 800px) {
-    input:checked + .slider:before {
-        transform: translateX(2.5rem);
-    }
-    .popup-input .from-date a, .popup-input .to-date a {
-        font-size: 3vw;
-    }
-    .project-detail-group, .project-content-group {
-        padding: 1vw;
-    }
-    .fc .fc-button, .board-th p, .leader-role h5, .detail-col-2 .leader h2, .project-detail-title h2, .project-detail-footer h2, .project-title h2, .project-body p, .project-body h5, .project-footer h5, .project-title h2, .project-head .fa-gear, .project-head a {
-        font-size: 2.5vw;
-    }
-    .leader-role p, .detail-col-2 .leader-avatar .ava-name, .project-detail-body p, .ava-name {
-        font-size: 1.75vw;
-    }
-    .img-group {
-        gap: 1.5vw;
-    }
-    .mission-btn-group h5 {
-        border-radius: 5px;
-    }
-    .detail-col-2 ul li p, .detail-col-2 ul li h5, .mission-content ul li p, .mission-btn-group h5 {
-        font-size: 1.25vw;
-    }
-    .mission-content-active {
-        gap: 1.5vw;
-    }
-    .detail-col-2 ul li {
-        padding: 1vw;
-    }
-    .detail-col-2 .progress-info {
-        bottom: 1.25vw;
-    }
-    .detail-col-2 .leader-avatar, .team-avatar, .leader-avatar {
-        width: 3.75vw;
-        height: 3.75vw;
-    }
-    .project-detail-group .detail-col-2 {
-        height: calc(100% - (9.25vw + 2px));
-    }
-    .project-detail-group .detail-col-1,
-    .project-detail-group, .project-content-group {
-        gap: 1.5vw;
-    }
-}
-@media screen and (max-width: 769px) {
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        top: -3% !important;
-        left: 132% !important;
-    }
-    .menu-btn {
         display: none;
     }
-    .header-icon,
-    .header-btn-group {
-        gap: 1vw;
+    .user-res {
+        display: block;
     }
-    .team-avatar:nth-child(2) {
-        transform: translateX(-1.75vw);
-        z-index: 4;
+    .notibar {
+        width: 60vw;
     }
-    .team-avatar:nth-child(3) {
-        transform: translateX(-3.5vw);
-        z-index: 3;
-    }
-    .team-avatar:nth-child(4) {
-        transform: translateX(-5.25vw);
-        z-index: 2;
-    }
-    .team-avatar:nth-child(5) {
-        transform: translateX(-7vw);
-        z-index: 1;
-    }
-    .progress {
-        margin-top: 2vw;
-    }
-
-    .progress-info {
-        bottom: 1rem;
-        right: 0.75rem;
-    }
-    .progress-info h1, .detail-progress .progress-info h1 {
-        font-size: 3vw;
-    }
-}
-@media screen and (max-width: 426px) {
-    .project-detail-group .detail-col-2 {
-        height: calc(100% - (66.25vw + 2px));
-    }
-    .project-detail-title h2 {
-        font-size: 3.5vw !important;
-    }
-    .leader-role p, .detail-col-2 .leader-avatar .ava-name, .project-detail-body p, .ava-name {
-        font-size: 2vw;
-    }
-    .project-detail-footer h2 {
-        font-size: 2.5vw !important;
-    }
-    .img-group {
-        margin-top: 2vw;
-    }
-    .img-group img {
-        border-radius: 5px;
-        width: calc((100% - 5vw) / 4);
-    }
-    .mission-btn-group {
-        gap: 1vw;
-    }
-    .detail-col-2 ul li p, .detail-col-2 ul li h5, .mission-content ul li p, .mission-btn-group h5 {
-        font-size: 1.75vw;
-        text-align: center;
-    }
-    .user-res,
-    .hamburger-menu {
-        display: block !important;
-    }
-    .header-btn-group {
-        margin-right: 20px;
-    }
-    .switch {
-        width: 11.5vw;
-    }
-    .slider:before {
-        width: 5.5vw;
-    }
-    input:checked + .slider:before {
-        transform: translateX(1.65rem);
-    }
-    .sidebar {
+    .res {
         display: none;
-    }
-    #dashboard {
-        flex-direction: column;
-    }
-    #dashboard .calendar,
-    #dashboard .section-2,
-    #dashboard .section-1 {
-        width: 100%;
-        height: 100%;
-    }
-    .title h1, .header-icon,
-    #dashboard .calendar .cal-header, #dashboard .cal-title-btn, #dashboard .cal-title-icon,
-    #dashboard .due-reminder .title h2, #dashboard .today-work .title h2 {
-        font-size: 3.5vw;
-    }
-    #dashboard .due-reminder .title, #dashboard .today-work .title {
-        padding: 0.75vw;
-        width: 40%;
-    }
-    #dashboard .calendar li,
-    #dashboard .due-reminder ul li p, #dashboard .today-work ul li p, .board-td div h5, #dashboard .due-reminder ul li h5, #dashboard .today-work ul li h5 {
-        font-size: 2.75vw;
-    }
-    #dashboard .work-status {
-        width: 32vw;
-    }
-    #dashboard .calendar .days li,
-    #dashboard .work-status span {
-        font-size: 1.75vw;
-    }
-    #dashboard .days li::before {
-        width: 11vw;
-        height: 5vw;
-    }
-    #dashboard .events-content {
-        min-height: 30vw;
-    }
-    .res { 
-        display: none;
-    }
-    .row-res {
-        display: flex;
     }
     .project-container {
         width: 50%;
     }
-    .select2-container--default .select2-selection--single, #application-management .section-1, #action-leave-ot .section-1, #error-report .section-1, #project-detail .section-1, #project .section-1 {
-        height: 5vw !important;
-    }
-    #application-management .section-1, #action-leave-ot .section-1, #error-report .section-1, #project-detail .section-1, #project .section-1 {
-        gap: 0.5vw;
-    }
-    .excel-btn, .search-advanced-btn, .search-btn, .new-top-btn {
-        width: 10%;
-    }
-    #application-management .section-1 .keyword, #application-management .section-1 .to-date, #application-management .section-1 .from-date, #action-leave-ot .section-1 .approved-btn, #action-leave-ot .section-1 .to-date, #action-leave-ot .section-1 .from-date, #error-report .section-1 .status, #error-report .section-1 .keyword, #error-report .section-1 .to-date, #error-report .section-1 .from-date, #project-detail .section-1 .status, #project-detail .section-1 .keyword, #project-detail .section-1 .to-date, #project-detail .section-1 .from-date, #project .section-1 .status, #project .section-1 .keyword, #project .section-1 .to-date, #project .section-1 .from-date {
-        width: 20%;
-    }
-    .fc .fc-daygrid-day-number, .approve, .board-td div p, .board-btn-group button,
-    .fc .fc-button, .board-th p, .leader-role h5, .detail-col-2 .leader h2, .project-title h2, .project-body p, .project-body h5, .project-footer h5, .project-title h2, .project-head .fa-gear, .project-head a,
-    .select2-container .select2-selection--single .select2-selection__rendered,
-    #application-management .section-1 .keyword input, #application-management .section-1 .to-date input, #application-management .section-1 .from-date input, #action-leave-ot .section-1 .approved-btn button, #action-leave-ot .section-1 .from-date input, #action-leave-ot .section-1 .to-date input, #error-report .section-1 .status input, #error-report .section-1 .keyword input, #error-report .section-1 .to-date input, #error-report .section-1 .from-date input, #project-detail .section-1 .status input, #project-detail .section-1 .keyword input, #project-detail .section-1 .to-date input, #project-detail .section-1 .from-date input, #project .section-1 .status input, #project .section-1 .keyword input, #project .section-1 .to-date input, #project .section-1 .from-date input {
-        font-size: 2vw !important;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        border-width: 3.5px 2.5px 0 2.5px !important;
-    }
-    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-        border-width: 0px 2.5px 3.5px 2.5px !important;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        top: 0% !important;
-        left: 140% !important;
-    }
-    #application-management .section-1 .to-date a, #application-management .section-1 .from-date a, #action-leave-ot .section-1 .to-date a, #action-leave-ot .section-1 .from-date a, #error-report .section-1 .to-date a, #error-report .section-1 .from-date a, #project-detail .section-1 .to-date a, #project-detail .section-1 .from-date a, #project .section-1 .to-date a, #project .section-1 .from-date a {
-        font-size: 2vw !important;
-        width: 6.5vw !important;
-    }
-    .project-body p, .select2-results__option--selectable, .excel-btn, .search-advanced-btn, .search-btn, .new-top-btn {
-        font-size: 1.75vw !important;
-    }
-    .error-btn-group a, .project-btn-group a {
-        font-size: 2.5vw !important;
-        padding: 1vw 2vw;
-    }
-    .project-head .fa-gear {
-        right: 2.5vw;
-        top: 1.75vw;
-    }
-    .project-head a {
-        margin: 1vw 0;
-    }
-    .detail-col-2 .leader-avatar, .team-avatar, .leader-avatar,
-    .team-avatar, .leader-avatar {
-        margin: 0;
-        border: 0.5px solid grey;
-        width: 3.5vw;
-        height: 3.5vw;
-    }
     #application-management .section-2, #action-leave-ot .section-2,
     .error-content {
         overflow-x: scroll;
-        padding: 1vw;
     }
-    .project-detail-group, .project-content-group {
-        padding: 1vw;
-    }
-    .board-th,
-    .board-content,
     .error-content-1,
     .error-content-2 {
-        min-width: 700px;
+        min-width: 1026px;
     }
-    .board-btn-group button {
-        padding: 1.25vw;
+    .board-content,
+    .board-th {
+        min-width: 1210px;
     }
-    .export-btn i,
-    .import-btn i,
-    .new-btn i {
-        display: none;
-    }
-    #error-report .section-2 .error-btn-group, #project .section-2 .project-btn-group {
-        gap: 1vw;
-        right: 1vw;
-    }
-    .error-btn-group a, .project-btn-group a {
-        font-size: 1.5vw !important;
-    }
-    .fc .fc-col-header-cell-cushion, .fc .fc-toolbar-title, #application-management .board-td div:nth-child(1) h2, #action-leave-ot .board-td div:nth-child(1) h2 {
-        font-size: 3vw;
-    }
-    .fc .fc-toolbar.fc-header-toolbar {
-        margin: 0 1vw 0 1vw;
-    }
-    .fc-header-toolbar .fc-toolbar .fc-toolbar-ltr {
-        height: 15vw;
+    #error-report .title {
+        justify-content: flex-start;
+        margin-left: 25px;
     }
     #action-meeting .section-1 a {
-        font-size: 2.5vw;
-        width: 25vw;
-    }
-    .fc .fc-button {
-        padding: 1vw 1.5vw;
-    }
-    .fc .fc-button .fc-icon {
-        font-size: 3.25vw;
-    }
-    .popup {
-        width: 85vw;
-        height: 95vw;
-    }
-    .popup-content {
-        padding: 1vw;
-        gap: 1vw;
-    }
-    .popup-row,
-    .popup-input {
-        gap: 1vw;
-    }
-    input[type="file"]::file-selector-button {
-        border-radius: 0%;
-        font-size: 1.5vw;
-    }    
-    .popup label {
-        font-size: 2.75vw;
-    }
-    .popup-input .from-date, .popup-input .to-date,
-    .popup-input textarea, .popup-input input {
-        height: 7vw;
-    }  
-    .popup-input .from-date a, .popup-input .to-date a {
-        font-size: 3.75vw;
-    }
-    #description {
-        height: 30vw;
-    }
-    .popup-btn button {
-        font-size: 3.5vw;
-    }
-    .close {
-        width: 7vw;
-        height: 7vw;
-    }
-    .close i {
-        font-size: 4.5vw;
-    }
-    header {
-        height: 10vw;
-    }
-    .logo img {
-        width: 20vw;
-    }
-    .notibar {
-        height: 7vw;
-        width: 42vw;
-        font-size: 2.25vw;
-    }
-    .user {
-        display: none;
-    }
-    .indicator {
-        width: 1.5vw;
-        height: 1.5vw;
-        font-size: 1.5vw;
-        top: 12%;
-        right: -2%;
-    }
-    @media screen and (max-width: 376px) {
-        input:checked + .slider:before {
-            transform: translateX(1.45rem);
-        }
-        .select2-container--default .select2-selection--single .select2-selection__arrow b {
-            top: -6% !important;
-            left: 150% !important;
-        }
-    }
-    @media screen and (max-width: 321px) {
-        input:checked + .slider:before {
-            transform: translateX(1.25rem);
-        }
-        .menu__btn {
-            top: 2%;
-        }
-        .select2-container--default .select2-selection--single .select2-selection__arrow b {
-            top: -11% !important;
-        }
+        width: 20%;
     }
 }
+@media screen and (max-width: 910px) {
+    #dashboard,
+    #project .section-1,
+    .project-detail-group {
+        flex-direction: column;
+    }
+    .project-detail-group .detail-col-1,
+    .project-detail-group .detail-col-2,
+    #dashboard .section-1,
+    #dashboard .section-2 {
+        width: 100% !important;
+    }
+    #project .select2-container,
+    #project .section-1 .from-date,
+    #project .section-1 .to-date,
+    #project .section-1 .keyword,
+    #project .section-1-btn-group {
+        width: 100% !important;
+    }
+    #project .title {
+        justify-content: flex-start;
+        margin-left: 25px;
+    }
+    #project .section-1 {
+        height: 251px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 45px;
+    }
+    .header-btn-group {
+        margin-right: 85px;
+    }
+    .content {
+        border-radius: 0;
+        width: 100%;
+    }
+    .notibar {
+        width: 40vw;
+    }
+    #project-detail .section-2, #project .section-2 {
+        overflow: scroll;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .project-row .project-container:nth-child(1) {
+        width: 100%;
+    }
+    .project-row .project-container:nth-child(2) {
+        display: none;
+    }
+    #application-management .section-1, #action-leave-ot .section-1, #error-report .section-1, #project-detail .section-1 {
+        flex-direction: column;
+        height: 285px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+    .section-1-btn-group,
+    #application-management .section-1 .keyword, #application-management .section-1 .to-date, #application-management .section-1 .from-date, #action-leave-ot .section-1 .approved-btn, #action-leave-ot .section-1 .to-date, #action-leave-ot .section-1 .from-date, #error-report .section-1 .status, #error-report .section-1 .keyword, #error-report .section-1 .to-date, #error-report .section-1 .from-date, #project-detail .section-1 .status, #project-detail .section-1 .keyword, #project-detail .section-1 .to-date, #project-detail .section-1 .from-date, #project .section-1 .status, #project .section-1 .keyword, #project .section-1 .to-date, #project .section-1 .from-date {
+        width: 100% !important;
+    }
+    #action-meeting .section-1 a {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 668px) {
+    #error-report .title {
+        display: flex;
+        flex-direction: column;
+    }
+    #error-report .section-2 .error-btn-group {
+        position: relative;
+        margin-bottom: 15px;
+    }
+    #error-report .section-2 .error-btn-group i {
+        display: none;
+    }
+    #action-meeting .section-1 a {
+        width: 35%;
+    }
+    .notibar {
+        display: none;
+    }
+    .notibar-res {
+        display: flex;
+    }
+}
+
 /*------------ Responsive ------------*/

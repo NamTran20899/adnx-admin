@@ -11,8 +11,7 @@ $(".menu > ul > li").click(function (e) {
   $(this).siblings().find("ul").find("li").removeClass("active");
 });
 
-if ($(".container").width() < 780) {
-  console.log("a");
+if ($(".container").width() < 1150) {
   $(".sidebar").addClass("active");
 }
 
