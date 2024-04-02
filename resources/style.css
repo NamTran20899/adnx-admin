@@ -1553,8 +1553,7 @@ input[type="file"]::-webkit-file-upload-button{
     font-size: 18px;
 }
 .opinion textarea {
-    height: 350px;
-    width: 1280px;
+    height: 300px;
 }
 #action-meeting .select2-container {
     width: 100% !important;
@@ -1782,6 +1781,16 @@ input[type="file"]::-webkit-file-upload-button{
     top: -5px;
     right: -5%;
 }
+#error-row-1-res,
+#name-pj-res,
+#project-status-res {
+    display: none;
+}
+.error-row-2 {
+    display: flex;
+    gap: 15px;
+    width: 50%;
+}
 @media screen and (max-width: 1440px) {
     #dashboard .section-1 .due-reminder ul, 
     #dashboard .section-1 .today-work ul {
@@ -1936,6 +1945,43 @@ input[type="file"]::-webkit-file-upload-button{
     .notibar-res {
         display: flex;
     }
+}
+@media screen and (max-width: 425px) {
+    #project-row {
+        flex-direction: column;
+    }
+    #project-status {
+        display: none;
+    }
+    #project-status-res {
+        display: flex;
+    }
+    #name-pj {
+        display: none;
+    }
+    #error-row-1 {
+        display: none;
+    }
+    #error-row-1-res {
+        display: flex;
+    }
+    #error-row-1-res-a,
+    #error-row-1-res-b {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .url i {
+        display: none;
+    }
+    .error-row-2 {
+        flex-direction: column;
+    }
+    .opinion textarea,
+    .content-lang textarea {
+        height: 200px;
+    }
+    
 }
 
 /*------------ Responsive ------------*/

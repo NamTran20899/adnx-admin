@@ -646,10 +646,14 @@
                                 </a>
                             </div>
 		                    <div class="popup-content">
-                                <div class="popup-row">
+                                <div class="popup-input" id="name-pj-res">
+                                    <label for="name-pj">Tên dự án</label>
+                                    <input type="text">
+                                </div>
+                                <div class="popup-row" id="error-row-1">
                                     <div class="popup-input" id="name-pj">
                                         <label for="name-pj">Tên dự án</label>
-                                        <input type="text" id="name-pj">
+                                        <input type="text">
                                     </div>
                                     <div class="popup-input" id="prioritize">
                                         <label for="prioritize">Ưu tiên</label>
@@ -666,6 +670,28 @@
                                     <div class="popup-input" id="status">
                                         <label for="status">Trạng thái</label>
                                         <input type="text" id="status">
+                                    </div>
+                                </div>
+                                <div class="popup-row" id="error-row-1-res">
+                                    <div id="error-row-1-res-a">
+                                        <div class="popup-input" id="prioritize">
+                                            <label for="prioritize">Ưu tiên</label>
+                                            <input type="text" id="prioritize">
+                                        </div>
+                                        <div class="popup-input" id="category">
+                                            <label for="category">Thể loại</label>
+                                            <input type="text" id="category">
+                                        </div>
+                                    </div>
+                                    <div id="error-row-1-res-b">
+                                        <div class="popup-input" id="server">
+                                            <label for="server">Server</label>
+                                            <input type="text" id="server">
+                                        </div>
+                                        <div class="popup-input" id="status">
+                                            <label for="status">Trạng thái</label>
+                                            <input type="text" id="status">
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -694,26 +720,30 @@
                                 </div>
 
                                 <div class="popup-row">
-                                    <div class="popup-input">
-                                        <label for="title-vn">Tiêu đề VN</label>
-                                        <input type="text" id="title-vn">
-                                    </div>
-                                    <div class="popup-input">
-                                        <label for="title-cn">Tiêu đề CN</label>
-                                        <input type="text" id="title-cn">
-                                    </div>
-                                    <div class="popup-input">
-                                        <label for="deadline">Deadline</label>
-                                        <div class="from-date">
-                                            <a class="input-button" title="toggle" data-toggle>
-                                                <i class="fa-light fa-calendar-days"></i>
-                                            </a>
-                                            <input type="text" placeholder="Từ ngày" data-input>
+                                    <div class="error-row-2">
+                                        <div class="popup-input">
+                                            <label for="title-vn">Tiêu đề VN</label>
+                                            <input type="text" id="title-vn">
+                                        </div>
+                                        <div class="popup-input">
+                                            <label for="title-cn">Tiêu đề CN</label>
+                                            <input type="text" id="title-cn">
                                         </div>
                                     </div>
-                                    <div class="popup-input">
-                                        <label for="translate">Biên dịch</label>
-                                        <input type="text" id="translate">
+                                    <div class="error-row-2">
+                                        <div class="popup-input">
+                                            <label for="deadline">Deadline</label>
+                                            <div class="from-date">
+                                                <a class="input-button" title="toggle" data-toggle>
+                                                    <i class="fa-light fa-calendar-days"></i>
+                                                </a>
+                                                <input type="text" placeholder="Từ ngày" data-input>
+                                            </div>
+                                        </div>
+                                        <div class="popup-input">
+                                            <label for="translate">Biên dịch</label>
+                                            <input type="text" id="translate">
+                                        </div>
                                     </div>
                                 </div>
 

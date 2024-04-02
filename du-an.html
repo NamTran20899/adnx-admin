@@ -912,9 +912,15 @@
                                 </a>
                             </div>
 		                    <div class="popup-content">
-                                <div class="popup-input">
-                                    <label for="name-pj">Tên dự án</label>
-                                    <input type="text" id="name-pj">
+                                <div class="popup-row">
+                                    <div class="popup-input">
+                                        <label for="name-pj">Tên dự án</label>
+                                        <input type="text" id="name-pj">
+                                    </div>
+                                    <div class="popup-input" id="project-status-res">
+                                        <label for="status">Trạng thái</label>
+                                        <input type="text" id="status">
+                                    </div>
                                 </div>
                                 
                                 <div class="popup-row">
@@ -936,13 +942,13 @@
                                             <input type="text" data-input>
                                         </div>
                                     </div>
-                                    <div class="popup-input">
+                                    <div class="popup-input" id="project-status">
                                         <label for="status">Trạng thái</label>
                                         <input type="text" id="status">
                                     </div>
                                 </div>
 
-                                <div class="popup-row">
+                                <div class="popup-row" id="project-row">
                                     <div class="popup-input">
                                         <label class="file" for="upload-logo">Logo dự án</label>
                                         <input type="file" id="upload-logo" name="upload-logo">
