@@ -30,7 +30,9 @@ a {
 ul {
     list-style-type: none;
 }
-/* width */
+.content {
+    overflow-x: hidden;
+}
 
 /*------------ Layout ------------*/
 
@@ -49,7 +51,6 @@ header {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 2vw;
 }
 .logo {
     display: flex;
@@ -57,7 +58,7 @@ header {
     align-items: center;
 }
 .logo img {
-    width: 80%;
+    width: 70%;
 }
 .notibar {
     display: flex;
@@ -335,6 +336,7 @@ main {
     width: 100%;
     border-radius: 25px 0 0 25px;
     padding: 15px;
+    
 }
 .content-container {
     display: flex;
@@ -356,6 +358,8 @@ main {
     height: 50%;
     max-height: 500px;
     overflow-x: scroll;
+    scrollbar-color: rgb(19, 152, 235) red;
+    scrollbar-width: thin;
 }
 #dashboard .due-reminder .title,
 #dashboard .today-work .title {
@@ -1319,10 +1323,21 @@ hr {
 }
 #error-report .board-td div:nth-child(1) h5 {
     width: 350px;
-    max-width: 400px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+#error-report .board-td div:nth-child(1) h5:hover {
+    overflow: visible;
+    text-overflow: inherit;
+    background: #fff;
+    border: 1px solid #eaebec;
+    padding: 0 .5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.28);
+    white-space: normal;
+    word-wrap: break-word;
+    display:block;
+    color:black;
 }
 #error-report .board-td div:nth-child(1) {
     width: 50%;
@@ -1389,8 +1404,7 @@ hr {
 }
 .board-td div h5 {
     font-size: 18px;
-    display: flex;
-    align-items: center;
+    text-align: left;
 }
 .board-btn-group {
     display: flex;
@@ -1870,15 +1884,24 @@ hr {
     .project-content-group {
         overflow: scroll;
         max-height: 900px;
+        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-width: thin;
     }
     #project .section-2 {
         height: 955px;
     }
 }
-@media screen and (max-width: 1150px) {
-    .content {
-        width: 93%;
+@media screen and (max-width: 1288px) {
+    #error-report .title {
+        justify-content: flex-start;
+        margin-left: 25px;
     }
+    .error-content-1,
+    .error-content-2 {
+        min-width: 1026px;
+    }
+}
+@media screen and (max-width: 1150px) {
     .user {
         display: none;
     }
@@ -1897,28 +1920,25 @@ hr {
     #application-management .section-2, #action-leave-ot .section-2,
     .error-content {
         overflow-x: scroll;
+        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-width: thin;
     }
     #application-management .board-content,  #application-management .board-th,
     #action-leave-ot .board-content, #action-leave-ot .board-th {
         min-width: 1200px;
     }
-    .error-content-1,
-    .error-content-2 {
-        min-width: 1026px;
-    }
-    #error-report .title {
-        justify-content: flex-start;
-        margin-left: 25px;
-    }
+    
     #action-meeting .section-1 a {
         width: 20%;
     }
     #project-row-res-2 {
         display: flex;
     }
-    .sidebar .menu-btn,
-    .sidebar .text {
-        display: none;
+    .sidebar {
+        width: 250px;
+    }
+    .menu ul li a {
+        gap: 10px
     }
 }
 @media screen and (max-width: 910px) {
@@ -1966,8 +1986,14 @@ hr {
     .notibar {
         width: 40vw;
     }
-    #project-detail .section-2, #project .section-2 {
+    #project-detail .section-2 {
+        height: 956px;
+    }
+    .project-detail-group {
+        max-height: 900px;
         overflow: scroll;
+        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-width: thin;
     }
 
 }

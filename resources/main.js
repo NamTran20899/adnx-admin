@@ -13,13 +13,9 @@ $(".menu > ul > li").click(function (e) {
 
 if ($(".container").width() < 1150) {
   $(".sidebar").addClass("active");
-  $(".menu-href").removeAttr("href");
 }
 
 $(".menu-btn").click(function () {
-  if ($(".container").width() < 780) {
-    $(".sidebar").addClass("active");
-  }
   $(".sidebar").toggleClass("active");
 });
 
