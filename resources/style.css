@@ -1322,7 +1322,7 @@ hr {
     margin-left: 20px;
 }
 #error-report .board-td div:nth-child(1) h5 {
-    width: 350px;
+    width: 360px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
