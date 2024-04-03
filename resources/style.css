@@ -1327,6 +1327,18 @@ hr {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+#error-report .board-td div:nth-child(1) h5:hover {
+    overflow: visible;
+    text-overflow: inherit;
+    background: #fff;
+    border: 1px solid #eaebec;
+    padding: 0 .5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.28);
+    white-space: normal;
+    word-wrap: break-word;
+    display:block;
+    color:black;
+}
 #error-report .board-td div:nth-child(1) {
     width: 50%;
     display: flex;
