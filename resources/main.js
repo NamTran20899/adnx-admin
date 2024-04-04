@@ -160,8 +160,8 @@ document.addEventListener("DOMContentLoaded", function() {
 $(document).ready(function(){
   $('#toggleBtn_lotrinh1').click(function(){
       $('#content_lotrinh1').slideToggle();
-      $('#content_lotrinh2').slideUp();
-      $('#content_lotrinh3').slideUp();
+      // $('#content_lotrinh2').slideUp();
+      // $('#content_lotrinh3').slideUp();
   });
   $('#toggleBtn_lotrinh2').click(function(){
       $('#content2').slideToggle();
@@ -216,7 +216,9 @@ var flagColors = ["red", "yellow", "black"];
 var flagIcon = document.getElementById("flagIcon");
 var savedColor = localStorage.getItem("currentColor");
 if (savedColor) {
-  flagIcon.style.color = savedColor;
+  if (flagIcon) {
+    flagIcon.style.color = savedColor;
+  }
 }
 function changeColor() {
   var currentColor = flagIcon.style.color;

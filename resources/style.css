@@ -566,6 +566,7 @@ main {
     align-items: center;
     justify-content: space-between;
 }
+#Board_Route .section-1 .keyword,
 #application-management .section-1 .keyword,
 #application-management .section-1 .to-date,
 #application-management .section-1 .from-date,
@@ -657,6 +658,7 @@ main {
     width: 55px;
     font-size: 18px;
 }
+#Board_Route .section-1 .keyword input,
 #application-management .section-1 .keyword input,
 #application-management .section-1 .to-date input,
 #application-management .section-1 .from-date input,
@@ -1486,7 +1488,7 @@ hr {
 #action-leave-ot .section-1-btn-group {
     width: 35%;
 }
-
+#Board_Personnel .section-1,
 #application-management .section-2,
 #action-leave-ot .section-2 {
     width: 100%;
@@ -1536,6 +1538,7 @@ hr {
 #action-leave-ot .board-td div:nth-child(6) {
     width: 10%;
 }
+#Board_Personnel .board-td div:nth-child(1) h2,
 #application-management .board-td div:nth-child(1) h2,
 #action-leave-ot .board-td div:nth-child(1) h2 {
     margin-left: 10px;
@@ -1917,12 +1920,14 @@ hr {
     .project-container {
         width: 50%;
     }
+    #Board_Personnel .section-1,
     #application-management .section-2, #action-leave-ot .section-2,
     .error-content {
         overflow-x: scroll;
         scrollbar-color: rgb(19, 152, 235) red;
         scrollbar-width: thin;
     }
+    #Board_Personnel .board-content,#Board_Personnel .board-th,
     #application-management .board-content,  #application-management .board-th,
     #action-leave-ot .board-content, #action-leave-ot .board-th {
         min-width: 1200px;
@@ -2006,7 +2011,7 @@ hr {
     .project-row .project-container:nth-child(1) {
         width: 100%;
     }
-    
+    #Board_Personnel .section-1,
     #application-management .section-1, #action-leave-ot .section-1, #project-detail .section-1 {
         flex-direction: column;
         height: 285px;

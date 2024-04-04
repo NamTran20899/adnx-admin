@@ -12,6 +12,7 @@
     <!-- Flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>Lộ trình</title>
 </head>
 <body>
@@ -376,22 +377,18 @@
                 </div>
             </div>
             <!-- Content -->
-            <div class="content_Route">
+            <div class="content">
                 <div id="Board_Route" class="content-container">
                     <section class="section-1">
-                        <div class="custom-select">
-                            <select>
-                              <option value="">Lục địa Loren</option>
-                              <option value="">Thiên Long</option>
-                              <option value="">2</option>
-                              <option value="">3</option>
-                              <option value="">4</option>
-                              <option value="">5</option>
-                              <option value="">6</option>
-                            </select>
-                          </div>
-                        <div class="search">
-                            <input class="text" type="text" placeholder="Nhập từ khoá">
+                        <select class="project js-states form-control" name="project">
+                            <option value="-1"></option>
+                            <option value="pj-1">project 1</option>
+                            <option value="pj-2">project 2</option>
+                            <option value="pj-3">project 3</option>
+                            <option value="pj-4">project 4</option>
+                        </select>
+                        <div class="keyword">
+                            <input type="text" placeholder="Nhập từ khoá">
                         </div>
                         <button class="search-btn text">
                             Tìm kiếm
@@ -401,15 +398,15 @@
                         </button>
                     </section>
                     <section class="section-2">
-                        <div class="board-th">
-                            <p class="text">LỘ TRÌNH</p>
+                        <div class="title">
+                            <h1>LỘ TRÌNH</h1>
                         </div>
                          <div class="board-content">
                             <button class="button_route text" id="toggleBtn_lotrinh1">
                                 <span class="dot"></span>
                                 <p>Năm 2023</p>
                             </button>
-                            <div class="content"  id="content_lotrinh1">
+                            <div class="content"  id="content_lotrinh1" hidden>
                             <button class="button_route_1 text " id="toggleBtn_lotrinh2" >
                                 <span class="dot"></span>
                                 <p>Quý 1:1/1-30/3/2023</p>
@@ -563,19 +560,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS -->
     <script src="./resources/main.js"></script>s
     <script>
-        $(".from-date").flatpickr({
-            wrap: true,
-            dateFormat: "d-m-Y",
-            minDate: "today",
+        $(".project").select2({
+            placeholder: {
+                id: '-1',
+                text: 'Lục địa loren'
+            }
         });
-        $(".to-date").flatpickr({
-            wrap: true,
-            dateFormat: "d-m-Y",
-            minDate: "today",
-        });
+
     </script>
 </body>
 </html>
