@@ -137,13 +137,12 @@ $(".mission-btn").click(function () {
   }
 });
 
-
 //Nhan su
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   function addClickEvent(elementId) {
     var element = document.getElementById(elementId);
     if (element) {
-      element.addEventListener("click", function() {
+      element.addEventListener("click", function () {
         this.classList.toggle("green");
       });
     }
@@ -154,59 +153,54 @@ document.addEventListener("DOMContentLoaded", function() {
   addClickEvent("mydot3");
 });
 
-
-
 //Lo trinh
-$(document).ready(function(){
-  $('#toggleBtn_lotrinh1').click(function(){
-      $('#content_lotrinh1').slideToggle();
-      $('#content_lotrinh2').slideUp();
-      $('#content_lotrinh3').slideUp();
+$(document).ready(function () {
+  $("#toggleBtn_lotrinh1").click(function () {
+    $("#content_lotrinh1").slideToggle();
+    $("#content_lotrinh2").slideUp();
+    $("#content_lotrinh3").slideUp();
   });
-  $('#toggleBtn_lotrinh2').click(function(){
-      $('#content2').slideToggle();
+  $("#toggleBtn_lotrinh2").click(function () {
+    $("#content2").slideToggle();
   });
-  $('#toggleBtn_lotrinh3').click(function(){
-      $('#content_lotrinh3').slideToggle();
+  $("#toggleBtn_lotrinh3").click(function () {
+    $("#content_lotrinh3").slideToggle();
   });
 });
-$(document).ready(function(){
-
-  $('#toggleBtn_lotrinh-1').click(function(){
-      $('#content_lotrinh-1').slideToggle();
-      $('#content_lotrinh-2').slideUp();
-      $('#content_lotrinh-3').slideUp();
+$(document).ready(function () {
+  $("#toggleBtn_lotrinh-1").click(function () {
+    $("#content_lotrinh-1").slideToggle();
+    $("#content_lotrinh-2").slideUp();
+    $("#content_lotrinh-3").slideUp();
   });
-  $('#toggleBtn_lotrinh-2').click(function(){
-      $('#content_lotrinh-2').slideToggle();
+  $("#toggleBtn_lotrinh-2").click(function () {
+    $("#content_lotrinh-2").slideToggle();
   });
-  $('#toggleBtn-3').click(function(){
-      $('#content_lotrinh-3').slideToggle();
+  $("#toggleBtn-3").click(function () {
+    $("#content_lotrinh-3").slideToggle();
   });
 });
 
 //Quan ly nha su
-$(document).ready(function(){
-  $('#toggleBtn1').click(function(){
-      $('#content1').slideToggle();
-      
+$(document).ready(function () {
+  $("#toggleBtn1").click(function () {
+    $("#content1").slideToggle();
   });
-  $('#toggleBtn2').click(function(){
-      $('#content2').slideToggle();
+  $("#toggleBtn2").click(function () {
+    $("#content2").slideToggle();
   });
 });
 
-$(document).ready(function(){
-  $('#toggleBtn-1').click(function(){
-      $('#content-1').slideToggle();
-      $('#content-3').slideToggle();
-      
+$(document).ready(function () {
+  $("#toggleBtn-1").click(function () {
+    $("#content-1").slideToggle();
+    $("#content-3").slideToggle();
   });
-  $('#toggleBtn-2').click(function(){
-      $('#content-2').slideToggle();
+  $("#toggleBtn-2").click(function () {
+    $("#content-2").slideToggle();
   });
-  $('#toggleBtn-3').click(function(){
-      $('#content-4').slideToggle();
+  $("#toggleBtn-3").click(function () {
+    $("#content-4").slideToggle();
   });
 });
 
@@ -366,6 +360,5 @@ function changeColor10() {
   flagIcon10.style.color = nextColor10;
   localStorage.setItem("currentColor10", nextColor10);
 }
-
 
 //Thong ke
