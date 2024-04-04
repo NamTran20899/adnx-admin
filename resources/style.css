@@ -551,10 +551,12 @@ main {
     border-radius: 15px;
 }
 /*-- Content-Project --*/
+#project-management,
 #project,
 #project-detail {
     flex-direction: column;
 }
+#project-management .section-1,
 #application-management .section-1,
 #action-leave-ot .section-1,
 #error-report .section-1,
@@ -566,7 +568,14 @@ main {
     align-items: center;
     justify-content: space-between;
 }
+<<<<<<< HEAD
 #Board_Route .section-1 .keyword,
+=======
+#project-management .section-1 .status,
+#project-management .section-1 .keyword,
+#project-management .section-1 .to-date,
+#project-management .section-1 .from-date,
+>>>>>>> d02d2395a6624c70b9e76d8502f5a9863b3b485d
 #application-management .section-1 .keyword,
 #application-management .section-1 .to-date,
 #application-management .section-1 .from-date,
@@ -637,6 +646,8 @@ main {
     font-weight: 400 !important;
     font-family: var(--font-family) !important;
 }
+#project-management .section-1 .to-date a,
+#project-management .section-1 .from-date a,
 #application-management .section-1 .to-date a,
 #application-management .section-1 .from-date a,
 #action-leave-ot .section-1 .to-date a,
@@ -658,7 +669,14 @@ main {
     width: 55px;
     font-size: 18px;
 }
+<<<<<<< HEAD
 #Board_Route .section-1 .keyword input,
+=======
+#project-management .section-1 .status input,
+#project-management .section-1 .keyword input,
+#project-management .section-1 .to-date input,
+#project-management .section-1 .from-date input,
+>>>>>>> d02d2395a6624c70b9e76d8502f5a9863b3b485d
 #application-management .section-1 .keyword input,
 #application-management .section-1 .to-date input,
 #application-management .section-1 .from-date input,
@@ -718,6 +736,7 @@ main {
     background-color: green;
     overflow: hidden;
 }
+#project-management .section-2,
 #project-detail .section-2,
 #project .section-2 {
     width: 100%;
@@ -1715,6 +1734,104 @@ hr {
 #application-management .board-td div:nth-child(7) {
     width: 10%;
 }
+
+/*-- Project Management --*/
+#project-management .section-2 {
+    max-height: 550px;
+}
+#project-management .section-2 .project-management-section-2-content {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    overflow-x: scroll;
+    scrollbar-color: rgb(19, 152, 235) red;
+    scrollbar-width: thin;
+}
+
+.pm-header {
+    background: rgb(170, 148, 2);
+    padding: 15px;
+    border-radius: 25px 0 25px 0;
+}
+.pm-header h1 {
+    font-size: 22px;
+    font-family: var(--font-family-bold);
+}
+.pm-content {
+    padding-top: 15px;
+    margin: 0 auto;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px;
+    height: 200px;
+    border-radius: 0 50px 0 50px;
+}
+#project-management .section-3 {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    gap: 15px;
+}
+#project-management .section-3 .chart {
+    width: 65%;
+    height: 500px;
+    background: var(--background);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+}
+#project-management .section-3 .statistical {
+    width: 35%;
+    height: 500px;
+    background: var(--background);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+}
+#project-management .section-3 .chart-content,
+#project-management .section-3 .statistical-content {
+    display: flex;
+    background-color: #dadada;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    flex-direction: column;
+}
+#myChart {
+    height: 425px !important;
+    width: 100% !important;
+}
+.statistical-btn {
+    width: 100%;
+    justify-content: space-around;
+    gap: 15px;
+    display: flex;
+}
+.statistical-btn a {
+    font-size: 18px;
+    font-family: var(--font-family-bold);
+    background: #aaa;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 15px;
+}
+.statistical-info ul li {
+    display: flex;
+}
+.statistical-text {
+    display: flex;
+}
+
+
+
 /*------------ Content ------------*/
 
 /*------------ Responsive ------------*/
