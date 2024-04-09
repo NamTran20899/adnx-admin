@@ -11,6 +11,13 @@ $(".menu > ul > li").click(function (e) {
   $(this).siblings().find("ul").find("li").removeClass("active");
 });
 
+$(".content").click(function (e) {
+  if ($(".sidebar").hasClass("active")) {
+    $(".menu > ul > li").siblings().removeClass("active");
+    $(".menu > ul > li").siblings().find("ul").slideUp();
+  }
+});
+
 if ($(".container").width() < 1150) {
   $(".sidebar").addClass("active");
 }
