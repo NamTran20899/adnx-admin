@@ -568,14 +568,7 @@ main {
     align-items: center;
     justify-content: space-between;
 }
-<<<<<<< HEAD
 #Board_Route .section-1 .keyword,
-=======
-#project-management .section-1 .status,
-#project-management .section-1 .keyword,
-#project-management .section-1 .to-date,
-#project-management .section-1 .from-date,
->>>>>>> d02d2395a6624c70b9e76d8502f5a9863b3b485d
 #application-management .section-1 .keyword,
 #application-management .section-1 .to-date,
 #application-management .section-1 .from-date,
@@ -669,14 +662,7 @@ main {
     width: 55px;
     font-size: 18px;
 }
-<<<<<<< HEAD
 #Board_Route .section-1 .keyword input,
-=======
-#project-management .section-1 .status input,
-#project-management .section-1 .keyword input,
-#project-management .section-1 .to-date input,
-#project-management .section-1 .from-date input,
->>>>>>> d02d2395a6624c70b9e76d8502f5a9863b3b485d
 #application-management .section-1 .keyword input,
 #application-management .section-1 .to-date input,
 #application-management .section-1 .from-date input,
@@ -2010,6 +1996,7 @@ hr {
     #project .section-2 {
         height: 955px;
     }
+
 }
 @media screen and (max-width: 1288px) {
     #error-report .title {
@@ -2037,6 +2024,7 @@ hr {
     .project-container {
         width: 50%;
     }
+    #Board_Route .section-2,
     #Board_Personnel .section-1,
     #application-management .section-2, #action-leave-ot .section-2,
     .error-content {
@@ -2044,6 +2032,7 @@ hr {
         scrollbar-color: rgb(19, 152, 235) red;
         scrollbar-width: thin;
     }
+    #Board_Route .board-content,
     #Board_Personnel .board-content,#Board_Personnel .board-th,
     #application-management .board-content,  #application-management .board-th,
     #action-leave-ot .board-content, #action-leave-ot .board-th {
@@ -2062,6 +2051,7 @@ hr {
     .menu ul li a {
         gap: 10px
     }
+    
 }
 @media screen and (max-width: 910px) {
     #dashboard,
@@ -2128,6 +2118,7 @@ hr {
     .project-row .project-container:nth-child(1) {
         width: 100%;
     }
+    #Board_Route .section-2,
     #Board_Personnel .section-1,
     #application-management .section-1, #action-leave-ot .section-1, #project-detail .section-1 {
         flex-direction: column;

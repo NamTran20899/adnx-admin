@@ -58,7 +58,6 @@
   height: 100%;
   background: var(--background-color);
   border-radius: 15px;
-  overflow: hidden;
   font-size: 20px;
   border: 2px solid rgb(51 146 204);
 }
@@ -69,7 +68,8 @@
   padding-left: 85px;
 }
 .board-lotrinh p {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: var(--font-family);
   font-weight: 500;
 }
 .board-content {
@@ -80,8 +80,8 @@
   padding-left: 1vw;
 }
 .board-lotrinh {
-  width: 306px;
-  height: 195px;
+  width: 371px;
+  height: 203px;
   background: var(--background-color);
   border-radius: 15px;
   overflow: hidden;
@@ -100,7 +100,7 @@
 .board-lotrinh1 p{
   font-size: 15px;
   color: black;
-  font-weight: 600;
+  font-weight: 400;
 }
 .board-lotrinh1 .text1{
   font-family: var(--font-family);
@@ -113,7 +113,7 @@
   padding: 6px 0 6px 0;
   width: 100%;
   display: flex;
-  justify-self: left;
+  font-weight: 700;
 }
 .board-th p:nth-child(2),
 .board-lotrinh p:nth-child(2) {
@@ -154,52 +154,58 @@ select {
 
 
 .button_route {
-width: 200px;
-height: 60px;
-border: none;
-background-color: goldenrod;
-color: #fff;
-font-size: 18px;
-font-weight: bold;
-text-transform: uppercase;
-position: relative;
-overflow: hidden;
-cursor: pointer;
-transition: background-color 0.3s;
-border-top-right-radius: 25px;
-border-bottom-right-radius: 25px; 
-border-top-left-radius: 25px;
-border-bottom-left-radius:25px ;
-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 8% 51%);
-margin: 10px 0;
-display: block;
+  width: 251px;
+  height: 42px;
+  border: none;
+  background-color: goldenrod;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 8% 51%);
+  margin: 10px 14px 10px -34px;
+  display: block;
 }
 .button_route_1{
-width: 248px;
-height: 42px;
-border: none;
-background-color: rgb(51 146 204);
-color: #fff;
-font-size: 18px;
-font-weight: bold;
-text-transform: uppercase;
-position: relative;
-overflow: hidden;
-cursor: pointer;
-transition: background-color 0.3s;
-border-top-right-radius: 25px;
-border-bottom-right-radius: 25px; 
-border-top-left-radius: 25px;
-border-bottom-left-radius:25px ;
-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 8% 51%);
-margin: 10px 20px;
-display: block;
+  width: 248px;
+  height: 42px;
+  border: none;
+  background-color: rgb(51 146 204);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 8% 51%);
+  margin: 12px 20px 12px;
+  display: block;
 }
 .button_route p{
-margin-left: 15%;
+  margin-top: 5px;
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
 }
 .button_route_1 p{
-margin-left: 15%;
+  margin-top: 5px;
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
 }
 .button_route .dot {
 position: absolute;
@@ -218,4 +224,70 @@ background-color: goldenrod;
 /* Collaspse */
 #content_lotrinh1, #content_lotrinh-1{
   display: block;
+}
+
+.timeline {
+	margin: auto;
+	width: 100%;
+}
+.timeline__item {
+	position: relative;
+}
+.timeline__item:before {
+	  background-color: grey;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 27px;
+    left: 6px;
+    width: 3px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+.timeline__item-header {
+	display: flex;
+}
+.timeline__dot {
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 24px 0;
+  margin-inline-end: 1em;
+  position: relative;
+  width: 0.75em;
+  height: 0.75em;
+}
+
+.timeline__item-body {
+  overflow: hidden;
+  height: 0;
+}
+.timeline__item-body-content {
+	background-color: hsl(var(--hue),10%,50%,0.2);
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity var(--trans-dur) var(--trans-timing),
+		visibility var(--trans-dur) steps(1,end);
+}
+.timeline__item-body--expanded {
+	height: auto;
+}
+.timeline__item-body--expanded .timeline__item-body-content {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: var(--trans-dur), 0s;
+}
+.timeline__arrow[aria-expanded="true"] .timeline__arrow-icon {
+	transform: rotate(0);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+		--primary: hsl(var(--hue),90%,70%);
+	}
 }

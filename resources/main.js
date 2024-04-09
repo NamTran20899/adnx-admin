@@ -154,40 +154,78 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Lo trinh
-<<<<<<< HEAD
-$(document).ready(function(){
-  $('#toggleBtn_lotrinh1').click(function(){
-      $('#content_lotrinh1').slideToggle();
-      // $('#content_lotrinh2').slideUp();
-      // $('#content_lotrinh3').slideUp();
-=======
-$(document).ready(function () {
-  $("#toggleBtn_lotrinh1").click(function () {
-    $("#content_lotrinh1").slideToggle();
-    $("#content_lotrinh2").slideUp();
-    $("#content_lotrinh3").slideUp();
->>>>>>> d02d2395a6624c70b9e76d8502f5a9863b3b485d
-  });
-  $("#toggleBtn_lotrinh2").click(function () {
-    $("#content2").slideToggle();
-  });
-  $("#toggleBtn_lotrinh3").click(function () {
-    $("#content_lotrinh3").slideToggle();
-  });
+window.addEventListener("DOMContentLoaded",() => {
+	const ctl = new CollapsibleTimeline("#timeline");
 });
-$(document).ready(function () {
-  $("#toggleBtn_lotrinh-1").click(function () {
-    $("#content_lotrinh-1").slideToggle();
-    $("#content_lotrinh-2").slideUp();
-    $("#content_lotrinh-3").slideUp();
-  });
-  $("#toggleBtn_lotrinh-2").click(function () {
-    $("#content_lotrinh-2").slideToggle();
-  });
-  $("#toggleBtn-3").click(function () {
-    $("#content_lotrinh-3").slideToggle();
-  });
-});
+
+class CollapsibleTimeline {
+	constructor(el) {
+		this.el = document.querySelector(el);
+
+		this.init();
+	}
+	init() {
+		this.el?.addEventListener("click",this.itemAction.bind(this));
+	}
+	animateItemAction(button,ctrld,contentHeight,shouldCollapse) {
+		const expandedClass = "timeline__item-body--expanded";
+		const animOptions = {
+			duration: 300,
+			easing: "cubic-bezier(0.65,0,0.35,1)"
+		};
+
+		if (shouldCollapse) {
+			button.ariaExpanded = "false";
+			ctrld.ariaHidden = "true";
+			ctrld.classList.remove(expandedClass);
+			animOptions.duration *= 2;
+			this.animation = ctrld.animate([
+				{ height: `${contentHeight}px` },
+				{ height: `${contentHeight}px` },
+				{ height: "0px" }
+			],animOptions);
+		} else {
+			button.ariaExpanded = "true";
+			ctrld.ariaHidden = "false";
+			ctrld.classList.add(expandedClass);
+			this.animation = ctrld.animate([
+				{ height: "0px" },
+				{ height: `${contentHeight}px` }
+			],animOptions);
+		}
+	}
+	itemAction(e) {
+		const { target } = e;
+		const action = target?.getAttribute("data-action");
+		const item = target?.getAttribute("data-item");
+
+		if (action) {
+			const targetExpanded = action === "expand" ? "false" : "true";
+			const buttons = Array.from(this.el?.querySelectorAll(`[aria-expanded="${targetExpanded}"]`));
+			const wasExpanded = action === "collapse";
+
+			for (let button of buttons) {
+				const buttonID = button.getAttribute("data-item");
+				const ctrld = this.el?.querySelector(`#item${buttonID}-ctrld`);
+				const contentHeight = ctrld.firstElementChild?.offsetHeight;
+
+				this.animateItemAction(button,ctrld,contentHeight,wasExpanded);
+			}
+
+		} else if (item) {
+			const button = this.el?.querySelector(`[data-item="${item}"]`);
+			const expanded = button?.getAttribute("aria-expanded");
+
+			if (!expanded) return;
+
+			const wasExpanded = expanded === "true";
+			const ctrld = this.el?.querySelector(`#item${item}-ctrld`);
+			const contentHeight = ctrld.firstElementChild?.offsetHeight;
+
+			this.animateItemAction(button,ctrld,contentHeight,wasExpanded);
+		}
+	}
+}
 
 //Quan ly nha su
 $(document).ready(function () {
@@ -213,7 +251,7 @@ $(document).ready(function () {
 });
 
 // Flag
-var flagColors = ["red", "yellow", "black"];
+var flagColors = ["red", "yellow", "green"];
 //
 var flagIcon = document.getElementById("flagIcon");
 var savedColor = localStorage.getItem("currentColor");
@@ -234,7 +272,9 @@ function changeColor() {
 var flagIcon1 = document.getElementById("flagIcon1");
 var savedColor1 = localStorage.getItem("currentColor1");
 if (savedColor1) {
-  flagIcon1.style.color = savedColor1;
+  if (flagIcon1) {
+    flagIcon1.style.color = savedColor1;
+  }
 }
 function changeColor1() {
   var currentColor1 = flagIcon1.style.color;
@@ -248,7 +288,9 @@ function changeColor1() {
 var flagIcon2 = document.getElementById("flagIcon2");
 var savedColor2 = localStorage.getItem("currentColor2");
 if (savedColor2) {
-  flagIcon2.style.color = savedColor2;
+  if (flagIcon2) {
+    flagIcon2.style.color = savedColor2;
+  }
 }
 function changeColor2() {
   var currentColor2 = flagIcon2.style.color;
@@ -262,7 +304,9 @@ function changeColor2() {
 var flagIcon3 = document.getElementById("flagIcon3");
 var savedColor3 = localStorage.getItem("currentColor3");
 if (savedColor3) {
-  flagIcon3.style.color = savedColor3;
+  if (flagIcon3) {
+    flagIcon3.style.color = savedColor3;
+  }
 }
 function changeColor3() {
   var currentColor3 = flagIcon3.style.color;
@@ -276,7 +320,9 @@ function changeColor3() {
 var flagIcon4 = document.getElementById("flagIcon4");
 var savedColor4 = localStorage.getItem("currentColor4");
 if (savedColor4) {
-  flagIcon4.style.color = savedColor4;
+  if (flagIcon4) {
+    flagIcon4.style.color = savedColor4;
+  }
 }
 function changeColor4() {
   var currentColor4 = flagIcon4.style.color;
@@ -290,7 +336,9 @@ function changeColor4() {
 var flagIcon5 = document.getElementById("flagIcon5");
 var savedColor5 = localStorage.getItem("currentColor5");
 if (savedColor5) {
-  flagIcon5.style.color = savedColor5;
+  if (flagIcon5) {
+    flagIcon5.style.color = savedColor5;
+  }
 }
 function changeColor5() {
   var currentColor5 = flagIcon5.style.color;
@@ -304,7 +352,9 @@ function changeColor5() {
 var flagIcon6 = document.getElementById("flagIcon6");
 var savedColor6 = localStorage.getItem("currentColor6");
 if (savedColor6) {
-  flagIcon6.style.color = savedColor6;
+  if (flagIcon6) {
+    flagIcon6.style.color = savedColor6;
+  }
 }
 function changeColor6() {
   var currentColor6 = flagIcon6.style.color;
@@ -318,7 +368,9 @@ function changeColor6() {
 var flagIcon7 = document.getElementById("flagIcon7");
 var savedColor7 = localStorage.getItem("currentColor7");
 if (savedColor7) {
-  flagIcon7.style.color = savedColor7;
+  if (flagIcon7) {
+    flagIcon7.style.color = savedColor7;
+  }
 }
 function changeColor7() {
   var currentColor7 = flagIcon7.style.color;
@@ -332,7 +384,9 @@ function changeColor7() {
 var flagIcon8 = document.getElementById("flagIcon8");
 var savedColor8 = localStorage.getItem("currentColor8");
 if (savedColor8) {
-  flagIcon8.style.color = savedColor8;
+  if (flagIcon8) {
+    flagIcon8.style.color = savedColor8;
+  }
 }
 function changeColor8() {
   var currentColor8 = flagIcon8.style.color;
@@ -346,7 +400,9 @@ function changeColor8() {
 var flagIcon9 = document.getElementById("flagIcon9");
 var savedColor9 = localStorage.getItem("currentColor9");
 if (savedColor9) {
-  flagIcon9.style.color = savedColor9;
+  if (flagIcon9) {
+    flagIcon9.style.color = savedColor9;
+  }
 }
 function changeColor9() {
   var currentColor9 = flagIcon9.style.color;
@@ -360,7 +416,9 @@ function changeColor9() {
 var flagIcon10 = document.getElementById("flagIcon10");
 var savedColor10 = localStorage.getItem("currentColor10");
 if (savedColor10) {
-  flagIcon10.style.color = savedColor10;
+  if (flagIcon10) {
+    flagIcon10.style.color = savedColor10;
+  }
 }
 function changeColor10() {
   var currentColor10 = flagIcon10.style.color;
@@ -371,4 +429,3 @@ function changeColor10() {
   localStorage.setItem("currentColor10", nextColor10);
 }
 
-//Thong ke
