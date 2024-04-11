@@ -358,7 +358,7 @@ main {
     height: 50%;
     max-height: 500px;
     overflow-x: scroll;
-    scrollbar-color: rgb(19, 152, 235) red;
+    scrollbar-color: rgb(19, 152, 235) #cfcfcf;
     scrollbar-width: thin;
 }
 #dashboard .due-reminder .title,
@@ -1753,7 +1753,7 @@ hr {
     border-radius: 15px;
     padding: 15px;
     overflow-x: scroll;
-    scrollbar-color: rgb(19, 152, 235) red;
+    scrollbar-color: rgb(19, 152, 235) #cfcfcf;
     scrollbar-width: thin;
 }
 
@@ -2062,12 +2062,12 @@ hr {
     .project-content-group {
         overflow: scroll;
         max-height: 900px;
-        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
     #Board_Route .section-2{
         overflow-x: scroll;
-        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
     #project .section-2 {
@@ -2107,7 +2107,7 @@ hr {
     #application-management .section-2, #action-leave-ot .section-2,
     .error-content {
         overflow-x: scroll;
-        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
     #project .task_board_name,
@@ -2201,7 +2201,7 @@ hr {
     .project-detail-group {
         max-height: 900px;
         overflow: scroll;
-        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
 
