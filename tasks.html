@@ -445,7 +445,7 @@
                                         <p class="text_task">1</p>
                                         <p class="text_task1">|</p>
                                         <a class="circle_task">
-                                            <p class="plus">+</p>
+                                            <i class="plus fa-sharp fa-solid fa-plus"></i>
                                         </a>
                                     </button>
                                     <button>
@@ -488,7 +488,7 @@
                                     <p class="text_task">1</p>
                                     <p class="text_task1">|</p>
                                     <a class="circle_task">
-                                        <p class="plus">+</p>
+                                        <i class="plus fa-sharp fa-solid fa-plus"></i>
                                     </a>
                                 </button>
                                 <button>
@@ -526,7 +526,7 @@
                                 <p class="text_task">1</p>
                                 <p class="text_task1">|</p>
                                 <a class="circle_task">
-                                    <p class="plus">+</p>
+                                    <i class="plus fa-sharp fa-solid fa-plus"></i>
                                 </a>
                             </button>
                             <button>
@@ -563,7 +563,7 @@
                             <p class="text_task">1</p>
                             <p class="text_task1">|</p>
                             <a class="circle_task">
-                                <p class="plus">+</p>
+                                <i class="plus fa-sharp fa-solid fa-plus"></i>
                             </a>
                         </button>
                         <button>
@@ -603,7 +603,7 @@
                                     <p class="text_task">2</p>
                                     <p class="text_task1">|</p>
                                     <a class="circle_task">
-                                        <p class="plus">+</p>
+                                        <i class="plus fa-sharp fa-solid fa-plus"></i>
                                     </a>
                                 </button>
                                 <button>
@@ -644,7 +644,7 @@
                                     <p class="text_task">1</p>
                                     <p class="text_task1">|</p>
                                     <a class="circle_task">
-                                        <p class="plus">+</p>
+                                        <i class="plus fa-sharp fa-solid fa-plus"></i>
                                     </a>
                                 </button>
                                 <button>
@@ -682,7 +682,7 @@
                                 <p class="text_task">1</p>
                                 <p class="text_task1">|</p>
                                 <a class="circle_task">
-                                    <p class="plus">+</p>
+                                    <i class="plus fa-sharp fa-solid fa-plus"></i>
                                 </a>
                             </button>
                             <button>
@@ -719,7 +719,7 @@
                             <p class="text_task">1</p>
                             <p class="text_task1">|</p>
                             <a class="circle_task">
-                                <p class="plus">+</p>
+                                <i class="plus fa-sharp fa-solid fa-plus"></i>
                             </a>
                         </button>
                         <button>
@@ -762,7 +762,7 @@
                             <p class="text_task">1</p>
                             <p class="text_task1">|</p>
                             <a class="circle_task">
-                                <p class="plus">+</p>
+                                <i class="plus fa-sharp fa-solid fa-plus"></i>
                             </a>
                         </button>
                         <button>
@@ -800,7 +800,7 @@
                         <p class="text_task">1</p>
                         <p class="text_task1">|</p>
                         <a class="circle_task">
-                            <p class="plus">+</p>
+                            <i class="plus fa-sharp fa-solid fa-plus"></i>
                         </a>
                     </button>
                     <button>
@@ -837,7 +837,7 @@
                     <p class="text_task">1</p>
                     <p class="text_task1">|</p>
                     <a class="circle_task">
-                        <p class="plus">+</p>
+                        <i class="plus fa-sharp fa-solid fa-plus"></i>
                     </a>
                 </button>
                 <button>
@@ -867,14 +867,22 @@
         </div>
     </div>
 </div>
-        <div class="text newtask">
-        <a class="new" href="#popuptask" >
-            <i class="fa-solid fa-plus" ></i>
-                Task
-        </a>
+        <div class=" text newtask popover">
+            <button class="popover__trigger new"><i class="fa-solid fa-plus"></i>Task </button>
+            <div class="popover__menu1">
+            <ul >
+                <li class="search1"><input class="text1" type="text" placeholder="Tìm kiếm"><i class=" popover__trigger close-icon fa-solid fa-xmark"></i></li>
+                <li class="task_loren popover__menu-item">In <input class="text_loren" type="text" placeholder="Lục địa loren"> For <i class="user_plus fa-thin fa-users-medical"></i></i></li>
+                <li class="popover__menu-item"><textarea class="text2"  name="description"></textarea></li>
+                <li class=" popover__menu-item"><i class="plus1 fa-sharp fa-solid fa-plus"></i>Add Subtask</li>
+                <li class="text_sub popover__menu-item"><input class="new_sub" type="text" placeholder="New Subtask"><i class="flag_sub fa-solid fa-flag"></i><i class="user_sub fa-light fa-user"></i><button class="bt_save">Lưu</button></li>
+                <li class="text_sub  popover__menu-item"><input class="new_sub" type="text" placeholder="New Subtask" ><i class="flag_sub fa-solid fa-flag"></i><i class="user_sub fa-light fa-user"></i><button class="bt_save">Lưu</button></li>
+            </ul>
+            <button class=" new1">Lưu </button>
+            </div>
         </div>
-</div>
-    </section>
+                            </div>
+                    </section>
     <div id="popuptask1" class="overlay">
         <div class="popuptask">
             <div class="popuptask-title">
@@ -900,7 +908,7 @@
             </div>
         </div>
     </div> 
-    <div id="popuptask" class="overlay">
+    <!-- <div id="popuptask" class="overlay">
         <div class="popuptask">
             <div class="popuptask-title">
                 <p class="text">Tạo mới</p>
@@ -976,7 +984,7 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>    -->
                 </div>
             </div>
         </main>
@@ -1000,23 +1008,13 @@
             wrap: true,
             dateFormat: "d-m-Y",
             minDate: "today",
+            disableMobile: "true"
         });
         $(".to-date").flatpickr({
             wrap: true,
             dateFormat: "d-m-Y",
             minDate: "today",
-        });
-        $(".start").flatpickr({
-            wrap: true,
-            enableTime: true,
-            dateFormat: "d-m-Y H:i",
-            minDate: "today",
-        });
-        $(".end").flatpickr({
-            wrap: true,
-            enableTime: true,
-            dateFormat: "d-m-Y H:i",
-            minDate: "today",
+            disableMobile: "true"
         });
     </script>
 </body>

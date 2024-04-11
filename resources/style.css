@@ -1337,7 +1337,7 @@ hr {
 .board-content {
     background-color: #fff;
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px 25px;
     height: 100%;
 }
 #error-report .board-th p:nth-child(1) {
@@ -2035,6 +2035,9 @@ hr {
     display: none;
 }
 @media screen and (max-width: 1440px) {
+    #Board_Route .board-content{
+        max-width: 1440px;
+    }
     #Board_Route .section-2,
     #dashboard .section-1 .due-reminder ul, 
     #dashboard .section-1 .today-work ul {
@@ -2076,6 +2079,9 @@ hr {
 
 }
 @media screen and (max-width: 1288px) {
+    #Board_Route .board-content{
+        max-width: 1280px;
+    }
     #error-report .title {
         justify-content: flex-start;
         margin-left: 25px;
@@ -2107,6 +2113,11 @@ hr {
     #application-management .section-2, #action-leave-ot .section-2,
     .error-content {
         overflow-x: scroll;
+        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-width: thin;
+    }
+    #project .section-2{
+        overflow-y: scroll;
         scrollbar-color: rgb(19, 152, 235) red;
         scrollbar-width: thin;
     }
