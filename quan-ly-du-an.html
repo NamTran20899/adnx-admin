@@ -361,7 +361,7 @@
 
                     <section class="section-2">
                         <div class="title">
-                            <select class="project js-states form-control" name="project">
+                            <select class="project1 js-states form-control" name="project">
                                 <option value="-1"></option>
                                 <option value="pj-1">project 1</option>
                                 <option value="pj-2">project 2</option>
@@ -488,6 +488,12 @@
 
     <script>
         $(".project").select2({
+            placeholder: {
+                id: '-1',
+                text: 'Dự án'
+            }
+        });
+        $(".project1").select2({
             placeholder: {
                 id: '-1',
                 text: 'Dự án'

@@ -381,7 +381,7 @@
             <!-- Content -->
             <div class="content">
                 <div id="project" class="content-container">
-                    <section class="section-1">
+                    <section class="section-1-task">
                         <select class="project js-states form-control" name="project">
                             <option value="-1"></option>
                             <option value="pj-1">project 1</option>
@@ -393,13 +393,13 @@
                             <a class="input-button" title="toggle" data-toggle>
                                 <i class="fa-light fa-calendar-days"></i>
                             </a>
-                            <input class="text" type="text" placeholder="Từ ngày" data-input>
+                            <input type="text" placeholder="Từ ngày" data-input>
                         </div>
                         <div class="to-date">
                             <a class="input-button" title="toggle" data-toggle>
                                 <i class="fa-light fa-calendar-days"></i>
                             </a>
-                            <input class="text" type="text" placeholder="Đến ngày" data-input>
+                            <input type="text" placeholder="Đến ngày" data-input>
                         </div>
                         <div class="status">
                             <input class="text" type="text" placeholder="Trạng thái">
@@ -407,12 +407,14 @@
                         <div class="keyword">
                             <input class="text" type="text" placeholder="Nhập từ khoá">
                         </div>
-                        <button class="search-btn text">
-                            Tìm kiếm
-                        </button>
-                        <button class="search-advanced-btn text">
-                            Tìm kiếm <br> nâng cao
-                        </button>
+                        <div class="section-1-btn-group">
+                            <button class="search-btn text">
+                                Tìm kiếm
+                            </button>
+                            <button class="search-btn text">
+                                Tìm kiếm Nâng Cao
+                            </button>
+                            </div>
                     </section>
                     <section class="section-2">
                         <div class="task_board_name">
@@ -420,11 +422,15 @@
                                 <p>Người được giao</p>
                                 <p>Hoàn thành</p>
                                 <p>Ưu tiên</p>
-                                <p>
-                                <a class="circle">
-                                    +
-                                </a>
-                                </p>
+                                <div class="popover">
+                                <button class="circle popover__trigger">+</button>
+                                <ul class="popover__menu">
+                                    <li class="search "><input class="text" type="text"placeholder="Tìm kiếm"></li>
+                                    <li class="popover__menu-item"><i class="fa-solid fa-user"></i>Trạng Thái</li>
+                                    <li class="popover__menu-item"><i class="fa-solid fa-clock"></i>Khoảng Thời Gian</li>
+                                    <li class="popover__menu-item"><i class="fa-solid fa-hourglass-start"></i>Bắt Đầu</li>
+                                </ul>
+                                </div>
                         </div>
                           <div class="task_content">
                             <div class="task_board_content" >
@@ -446,7 +452,9 @@
                                         <i class="fa-solid fa-pen"></i>
                                     </button>
                                     <button>
-                                        <i class="fa-solid fa-eye"></i>
+                                        <a href="#popuptask1">
+                                            <i class="fa-solid fa-eye"></i>
+                                            </a>
                                     </button>
                                 </span> 
                                 <div class="team-group flex">
@@ -833,10 +841,12 @@
                     </a>
                 </button>
                 <button>
-                    <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-pen"></i>
                 </button>
                 <button>
+                    <a href="#popuptask1">
                     <i class="fa-solid fa-eye"></i>
+                    </a>
                 </button>
             </span> 
             <div class="team-group flex">
@@ -865,6 +875,31 @@
         </div>
 </div>
     </section>
+    <div id="popuptask1" class="overlay">
+        <div class="popuptask">
+            <div class="popuptask-title">
+                <p class="text">Tạo mới</p>
+                <a href="#" class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+            <div class="popuptask-content">
+               <div class="popup_content_task">
+                <div class="popup_content_text">
+                    <div class="popuptask-input">
+                        <label class="text" for="name-pj">Tên công việc</label>
+                        <input type="text" id="name-pj">
+                    </div>
+                </div>
+                <div class="popup_content_chat">
+                        <div class="team-avatar-task">
+                    <span class="leader-name text">NT</span>
+                </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div> 
     <div id="popuptask" class="overlay">
         <div class="popuptask">
             <div class="popuptask-title">

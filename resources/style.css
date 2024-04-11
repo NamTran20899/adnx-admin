@@ -553,7 +553,8 @@ main {
 /*-- Content-Project --*/
 #project-management,
 #project,
-#project-detail {
+#project-detail,
+#Board_Route {
     flex-direction: column;
 }
 #project-management .section-1,
@@ -561,6 +562,7 @@ main {
 #action-leave-ot .section-1,
 #error-report .section-1,
 #project-detail .section-1,
+#project .section-1-task,
 #project .section-1 {
     display: flex;
     gap: 15px;
@@ -583,10 +585,16 @@ main {
 #project-detail .section-1 .keyword,
 #project-detail .section-1 .to-date,
 #project-detail .section-1 .from-date,
-#project .section-1 .status,
 #project .section-1 .keyword,
 #project .section-1 .to-date,
-#project .section-1 .from-date {
+#project .section-1 .from-date,
+#project-management .section-1 .from-date,
+#project-management .section-1 .to-date,
+#project-management .section-1 .keyword,
+#project .section-1-task .status,
+#project .section-1-task .keyword,
+#project .section-1-task .to-date,
+#project .section-1-task .from-date {
     display: flex;
     align-items: center;
     border: 1px solid rgb(51 146 204);
@@ -649,7 +657,11 @@ main {
 #error-report .section-1 .from-date a,
 #project-detail .section-1 .to-date a,
 #project-detail .section-1 .from-date a,
+#project .section-1-task .to-date a,
+#project .section-1-task .from-date a,
 #project .section-1 .to-date a,
+#project-management .section-1 .from-date a,
+#project-management .section-1 .to-date a,
 #project .section-1 .from-date a {
     display: flex;
     justify-content: center;
@@ -677,7 +689,13 @@ main {
 #project-detail .section-1 .keyword input,
 #project-detail .section-1 .to-date input,
 #project-detail .section-1 .from-date input,
-#project .section-1 .status input,
+#project .section-1-task .status input,
+#project .section-1-task .keyword input,
+#project .section-1-task .to-date input,
+#project .section-1-task .from-date input,
+#project-management .section-1 .from-date input,
+#project-management .section-1 .to-date input,
+#project-management .section-1 .keyword input,
 #project .section-1 .keyword input,
 #project .section-1 .to-date input,
 #project .section-1 .from-date input {
@@ -1966,10 +1984,12 @@ hr {
     display: none;
 }
 @media screen and (max-width: 1440px) {
+    #Board_Route .section-2,
     #dashboard .section-1 .due-reminder ul, 
     #dashboard .section-1 .today-work ul {
         overflow-x: scroll;
     }
+    #Board_Route .section-2,
     #dashboard .section-1 .due-reminder ul li, 
     #dashboard .section-1 .today-work ul li {
         min-width: 700px;
@@ -1987,9 +2007,15 @@ hr {
     #project-row-res-1 {
         display: flex;
     }
+    
     .project-content-group {
         overflow: scroll;
         max-height: 900px;
+        scrollbar-color: rgb(19, 152, 235) red;
+        scrollbar-width: thin;
+    }
+    #Board_Route .section-2{
+        overflow-x: scroll;
         scrollbar-color: rgb(19, 152, 235) red;
         scrollbar-width: thin;
     }
@@ -2024,6 +2050,7 @@ hr {
     .project-container {
         width: 50%;
     }
+    #project .section-2,
     #Board_Route .section-2,
     #Board_Personnel .section-1,
     #application-management .section-2, #action-leave-ot .section-2,
@@ -2032,7 +2059,9 @@ hr {
         scrollbar-color: rgb(19, 152, 235) red;
         scrollbar-width: thin;
     }
-    #Board_Route .board-content,
+    #project .task_board_name,
+    #project .task_content,
+    #Board_Route .board-content,#Board_Route .board_td_route,
     #Board_Personnel .board-content,#Board_Personnel .board-th,
     #application-management .board-content,  #application-management .board-th,
     #action-leave-ot .board-content, #action-leave-ot .board-th {
@@ -2055,8 +2084,11 @@ hr {
 }
 @media screen and (max-width: 910px) {
     #dashboard,
+    #project .section-1-task,
     #project .section-1,
-    .project-detail-group {
+    .project-detail-group,
+    #project-management .section-1,
+    #Board_Route .section-1 {
         flex-direction: column;
     }
     .project-detail-group .detail-col-1,
@@ -2065,17 +2097,31 @@ hr {
     #dashboard .section-2 {
         width: 100% !important;
     }
+    #Board_Route .select2-container,
+    #Board_Route .section-1-btn-group,
+    #Board_Route .section-1 .keyword,
     #project .select2-container,
+    #project-management .select2-container,
+    #project .section-1-task .from-date,
+    #project .section-1-task .to-date,
+    #project .section-1-task .status,
+    #project .section-1-task .keyword,
     #project .section-1 .from-date,
     #project .section-1 .to-date,
     #project .section-1 .keyword,
-    #project .section-1-btn-group {
+    #project-management .section-1 .from-date,
+    #project-management .section-1 .to-date,
+    #project-management .section-1 .keyword,
+    #project .section-1-btn-group,
+    #project-management .section-1-btn-group{
         width: 100% !important;
     }
     #project .title {
         justify-content: flex-start;
         margin-left: 25px;
     }
+    #project-management .section-1,
+    #project .section-1-task,
     #project .section-1 {
         height: 251px;
     }
@@ -2131,8 +2177,16 @@ hr {
     .select2-container {
         width: 100% !important;
     }
+    #project-management .section-1 .from-date,
+    #project-management .section-1 .to-date,
+    #project-management .section-1 .keyword,
+    #Board_Route .section-1 .keyword,
     .section-1-btn-group,
-    #application-management .section-1 .keyword, #application-management .section-1 .to-date, #application-management .section-1 .from-date, #action-leave-ot .section-1 .approved-btn, #action-leave-ot .section-1 .to-date, #action-leave-ot .section-1 .from-date, #error-report .section-1 .status, #error-report .section-1 .keyword, #error-report .section-1 .to-date, #error-report .section-1 .from-date, #project-detail .section-1 .status, #project-detail .section-1 .keyword, #project-detail .section-1 .to-date, #project-detail .section-1 .from-date, #project .section-1 .status, #project .section-1 .keyword, #project .section-1 .to-date, #project .section-1 .from-date {
+    #project .section-1-task .from-date,
+    #project .section-1-task .to-date,
+    #project .section-1-task .status,
+    #project .section-1-task .keyword,
+    #application-management .section-1 .keyword, #application-management .section-1 .to-date, #application-management .section-1 .from-date, #action-leave-ot .section-1 .approved-btn, #action-leave-ot .section-1 .to-date, #action-leave-ot .section-1 .from-date, #error-report .section-1 .status, #error-report .section-1 .keyword, #error-report .section-1 .to-date, #error-report .section-1 .from-date, #project-detail .section-1 .status, #project-detail .section-1 .keyword, #project-detail .section-1 .to-date, #project-detail .section-1 .from-date, #project .section-1 .keyword, #project .section-1 .to-date, #project .section-1 .from-date {
         width: 100% !important;
     }
     #action-meeting .section-1 a {
