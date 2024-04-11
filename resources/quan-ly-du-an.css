@@ -572,6 +572,9 @@
     position: relative;
     padding: 10px;
 }
+.circle{
+    color: black;
+}
 .circle,
 .close-icon {
     position: absolute;
