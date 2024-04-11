@@ -1406,6 +1406,9 @@ hr {
 .tick.green {
     border-left: 15px solid green;
 }
+.tick.blue {
+    border-left: 15px solid blue;
+}
 .board-th p {
     font-size: 22px;
 }
@@ -1833,9 +1836,57 @@ hr {
 .statistical-text {
     display: flex;
 }
-
-
-
+/*--- Staff --*/
+#Board_Personnel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#Board_Personnel .section-1 {
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    border-radius: 15px;
+    border: 2px solid rgb(51 146 204);
+}
+#Board_Personnel .board-th p:nth-child(1),
+#Board_Personnel .board-td div:nth-child(1) {
+    width: 5%;
+}
+#Board_Personnel .board-th p:nth-child(2),
+#Board_Personnel .board-td div:nth-child(2) {
+    width: 30%;
+}
+#Board_Personnel .board-th p:nth-child(3),
+#Board_Personnel .board-td div:nth-child(3) {
+    width: 20%;
+}
+#Board_Personnel .board-th p:nth-child(4),
+#Board_Personnel .board-td div:nth-child(4) {
+    width: 20%;
+}
+#Board_Personnel .board-th p:nth-child(5),
+#Board_Personnel .board-td div:nth-child(5) {
+    width: 20%;
+}
+#Board_Personnel .board-th p:nth-child(6),
+#Board_Personnel .board-td div:nth-child(6) {
+    width: 20%;
+}
+#Board_Personnel .board-th p:nth-child(7),
+#Board_Personnel .board-td div:nth-child(7) {
+    width: 12%;
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.dot.green{
+    background-color: green;
+}
 /*------------ Content ------------*/
 
 /*------------ Responsive ------------*/
@@ -2165,7 +2216,6 @@ hr {
         width: 100%;
     }
     #Board_Route .section-2,
-    #Board_Personnel .section-1,
     #application-management .section-1, #action-leave-ot .section-1, #project-detail .section-1 {
         flex-direction: column;
         height: 285px;
