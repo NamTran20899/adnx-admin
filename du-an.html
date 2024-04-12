@@ -1252,7 +1252,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS -->
     <script src="./resources/main.js"></script>
-
     <script>
         $(".project").select2({
             placeholder: {
@@ -1271,6 +1270,17 @@
             dateFormat: "d-m-Y",
             minDate: "today",
             disableMobile: "true"
+        });
+    </script>
+    <!-- Tooltip -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        tippy('.leader-avatar', {
+            content: "leader name",
+        });
+        tippy('.team-avatar', {
+            content: "team name",
         });
     </script>
 </body>
