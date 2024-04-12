@@ -9,16 +9,17 @@
 :root {
     --font-family-bold: Avo-Bold;
     --font-family: Avo;
-    --background: linear-gradient(90deg, rgba(52,147,204,1) 0%, rgba(50,110,202,1) 100%);
+    --background: linear-gradient(to right, rgb(48, 156, 223) 0%, rgb(63, 125, 218) 100%);
     --border-color: rgb(51 146 204);
     --color-red: #ff0844;
     --color-green: #0fd850;
     --color-orange: #feae4b;
     --color-grey: #e3e3e3;
     --color-purple: #ff5cf1;
-    --red-btn: linear-gradient(to left, #ff5858 0%, #f09819 100%);
+    --orange-btn: linear-gradient(to left, #ff5858 0%, #f09819 100%);
     --green-btn: linear-gradient(to left, #09a460 0%, #3cba92 100%);
     --blue-btn : linear-gradient(to left, #1D8FE1 0%, #35cae1 100%);
+    --red-btn: linear-gradient(to left, #ff0844 0%, #fb774f 100%);
 }
 *:focus {
     outline: none;
@@ -117,7 +118,7 @@ header {
 .user {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     font-size: 15px;
     color: #fff;
 }
@@ -141,12 +142,12 @@ header {
 .indicator {
     display: flex;
     background-color: gold;
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     position: absolute;
     top: 2%;
     right: -25%;
@@ -747,7 +748,7 @@ main {
 }
 .new-top-btn,
 .search-btn {
-    background: var(--red-btn)
+    background: var(--orange-btn);
 }
 .excel-btn,
 .search-advanced-btn {
@@ -785,7 +786,7 @@ main {
     color: #fff;
 }
 .new-btn {
-    background: var(--red-btn);
+    background: var(--orange-btn);
 }
 .project-detail-group,
 .project-content-group {
@@ -1123,7 +1124,7 @@ input[type="file"]::-webkit-file-upload-button{
     color: #fff;
 }
 .confirm {
-    background: var(--background);
+    background: var(--blue-btn);
 }
 .project-detail-group {
     flex-direction: row;
@@ -1455,6 +1456,7 @@ hr {
 .board-td div h5 {
     font-size: 18px;
     text-align: left;
+    cursor: default;
 }
 .board-btn-group {
     display: flex;
@@ -1463,7 +1465,7 @@ hr {
 }
 .board-btn-group button {
     background: none;
-    border: 1px solid var(--color-grey);
+    border: 1px solid rgb(184, 184, 184);
     border-radius: 5px;
     padding: 5px 10px;
     color: var(--border-color);
@@ -1478,6 +1480,7 @@ hr {
 .condition {
     padding: 5px 10px;
     border-radius: 10px;
+    cursor: default;
 }
 .board-td div p {
     font-size: 12px;
@@ -1486,9 +1489,12 @@ hr {
 .condition {
     background: var(--color-purple);
 }
-.deny,
+.deny {
+    background: var(--red-btn);
+}
 .urgent {
     background: var(--color-red);
+    cursor: default;
 }
 .pending,
 .high {
@@ -1624,7 +1630,7 @@ hr {
     height: 100%;
     width: 15%;
     color: #fff;
-    background: var(--red-btn);
+    background: var(--orange-btn);
     padding: 0.5rem 0.75rem;
 }
 #action-meeting .section-2 {
