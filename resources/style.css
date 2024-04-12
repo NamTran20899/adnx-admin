@@ -16,10 +16,20 @@
     --color-orange: #feae4b;
     --color-grey: #e3e3e3;
     --color-purple: #ff5cf1;
-    --orange-btn: linear-gradient(to left, #ff5858 0%, #f09819 100%);
-    --green-btn: linear-gradient(to left, #09a460 0%, #3cba92 100%);
-    --blue-btn : linear-gradient(to left, #1D8FE1 0%, #35cae1 100%);
-    --red-btn: linear-gradient(to left, #ff0844 0%, #fb774f 100%);
+    --orange-btn: linear-gradient(to right, #FF8008 0%, #fbc028  51%, #FF8008  100%);
+    --green-btn: linear-gradient(to right, #1D976C 0%, #87fab2  51%, #1D976C  100%);
+    --blue-btn : linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+    --red-btn: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+}
+
+.btn-grad {
+    background-size: 200% auto;
+    transition: 0.5s;
+}
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
 *:focus {
     outline: none;
@@ -748,12 +758,11 @@ main {
 }
 .new-top-btn,
 .search-btn {
-    background: var(--orange-btn);
+    background-image: var(--orange-btn);
 }
 .excel-btn,
 .search-advanced-btn {
-    background: var(--green-btn);
-    overflow: hidden;
+    background-image: var(--green-btn);
 }
 #project-management .section-2,
 #project-detail .section-2,
@@ -786,7 +795,7 @@ main {
     color: #fff;
 }
 .new-btn {
-    background: var(--orange-btn);
+    background-image: var(--orange-btn);
 }
 .project-detail-group,
 .project-content-group {
@@ -1124,7 +1133,7 @@ input[type="file"]::-webkit-file-upload-button{
     color: #fff;
 }
 .confirm {
-    background: var(--blue-btn);
+    background-image: var(--blue-btn);
 }
 .project-detail-group {
     flex-direction: row;
@@ -1339,10 +1348,10 @@ hr {
     border: 2px solid rgb(51 146 204);
 }
 .export-btn {
-    background: var(--green-btn);
+    background-image: var(--green-btn);
 }
 .import-btn {
-    background: var(--blue-btn);
+    background-image: var(--blue-btn);
 }
 .error-content {
     display: flex;
@@ -1490,7 +1499,7 @@ hr {
     background: var(--color-purple);
 }
 .deny {
-    background: var(--red-btn);
+    background-image: var(--red-btn);
 }
 .urgent {
     background: var(--color-red);
@@ -1630,7 +1639,7 @@ hr {
     height: 100%;
     width: 15%;
     color: #fff;
-    background: var(--orange-btn);
+    background-image: var(--orange-btn);
     padding: 0.5rem 0.75rem;
 }
 #action-meeting .section-2 {
