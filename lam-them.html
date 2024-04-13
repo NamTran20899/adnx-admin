@@ -342,10 +342,10 @@
                             <input type="text" placeholder="Đến ngày" data-input>
                         </div>
                         <div class="section-1-btn-group">
-                            <button class="search-btn">
+                            <button class="search-btn btn-grad">
                                 Tìm kiếm
                             </button>
-                            <button class="new-top-btn">
+                            <button class="new-top-btn btn-grad">
                                 <i class="fa-solid fa-plus"></i>
                                 Tạo mới
                             </button>
@@ -368,19 +368,19 @@
                                     <span class="tick blue"></span>
                                     <h2>1</h2>
                                 </div>
-                                <div>
+                                <div class="name">
                                     <h5>Nguyễn Hoàng Tiến</h5>
                                 </div>
                                 <div>
-                                    <h5>Khám nghĩa vụ quân sự</h5>
+                                    <h5 class="reason">Khám nghĩa vụ quân sự</h5>
                                     <a class="approve" href="#popup">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </div>
-                                <div>
+                                <div class="type">
                                     <h5>Phép năm</h5>
                                 </div>
-                                <div>
+                                <div class="date">
                                     <h5>15/02/2023</h5>
                                 </div>
                                 <div>
@@ -392,19 +392,19 @@
                                     <span class="tick blue"></span>
                                     <h2>2</h2>
                                 </div>
-                                <div>
+                                <div class="name">
                                     <h5>Nguyễn Hoàng Tiến</h5>
                                 </div>
                                 <div>
-                                    <h5>Khám nghĩa vụ quân sự</h5>
+                                    <h5 class="reason">Khám nghĩa vụ quân sự</h5>
                                     <a class="approve" href="#popup">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </div>
-                                <div>
+                                <div class="type">
                                     <h5>Phép năm</h5>
                                 </div>
-                                <div>
+                                <div class="date">
                                     <h5>15/02/2023</h5>
                                 </div>
                                 <div>
@@ -416,19 +416,19 @@
                                     <span class="tick blue"></span>
                                     <h2>3</h2>
                                 </div>
-                                <div>
+                                <div class="name">
                                     <h5>Nguyễn Hoàng Tiến</h5>
                                 </div>
                                 <div>
-                                    <h5>Khám nghĩa vụ quân sự</h5>
+                                    <h5 class="reason">Khám nghĩa vụ quân sự</h5>
                                     <a class="approve" href="#popup">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </div>
-                                <div>
+                                <div class="type">
                                     <h5>Phép năm</h5>
                                 </div>
-                                <div>
+                                <div class="date">
                                     <h5>15/02/2023</h5>
                                 </div>
                                 <div>
@@ -450,7 +450,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS -->
     <script src="./resources/main.js"></script>
-
     <script>
         $(".from-date").flatpickr({
             wrap: true,
@@ -463,6 +462,23 @@
             dateFormat: "d-m-Y",
             minDate: "today",
             disableMobile: "true"
+        });
+    </script>
+    <!-- Tooltip -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+        tippy('.name', {
+            content: "Nguyễn Hoàng Tiến",
+        });
+        tippy('.reason', {
+            content: "Khám nghĩa vụ quân sự",
+        });
+        tippy('.type', {
+            content: "Phép năm",
+        });
+        tippy('.date', {
+            content: "15/02/2023",
         });
     </script>
 </body>

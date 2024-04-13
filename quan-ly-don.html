@@ -342,10 +342,10 @@
                             <input type="text" placeholder="Nhập từ khoá">
                         </div>
                         <div class="section-1-btn-group">
-                            <button class="search-btn">
+                            <button class="search-btn btn-grad">
                                 Tìm kiếm
                             </button>
-                            <button class="excel-btn">
+                            <button class="excel-btn btn-grad">
                                 <i class="fa-solid fa-download"></i>
                                 Excel
                             </button>
@@ -368,19 +368,25 @@
                                     <span class="tick blue"></span>
                                     <h2>1</h2>
                                 </div>
-                                <div>
+                                <div class="name">
                                     <h5>Nguyễn Hoàng Tiến</h5>
                                 </div>
-                                <div>
-                                    <h5>Nghỉ phép</h5>
+                                <div class="type">
+                                    <h5 data-template="type-1">Nghỉ phép</h5>
+                                    <div id="type-1" class="tooltip">
+                                        Nghỉ phép
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="reason">
                                     <h5>Khám nghĩa vụ quân sự</h5>
                                 </div>
-                                <div>
-                                    <h5>24h</h5>
+                                <div class="time">
+                                    <h5 data-template="time-1">24h</h5>
+                                    <div id="time-1" class="tooltip">
+                                        24h
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="date">
                                     <h5>15/02/2023</h5>
                                 </div>
                                 <div>
@@ -394,19 +400,25 @@
                                     <span class="tick blue"></span>
                                     <h2>2</h2>
                                 </div>
-                                <div>
+                                <div class="name">
                                     <h5>Nguyễn Hoàng Tiến</h5>
                                 </div>
-                                <div>
-                                    <h5>Làm thêm</h5>
+                                <div class="type">
+                                    <h5 data-template="type-2">Làm thêm</h5>
+                                    <div id="type-2" class="tooltip">
+                                        Làm thêm
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="reason">
                                     <h5>Khám nghĩa vụ quân sự</h5>
                                 </div>
-                                <div>
-                                    <h5>5.5h</h5>
+                                <div class="time">
+                                    <h5 data-template="time-2">5.5h</h5>
+                                    <div id="time-2" class="tooltip">
+                                        5.5h
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="date">
                                     <h5>15/02/2023</h5>
                                 </div>
                                 <div>
@@ -429,11 +441,11 @@
                                 <div class="popup-row">
                                     <div class="popup-input">
                                         <label for="staff">Nhân viên</label>
-                                        <input type="text" id="staff">
+                                        <input type="text" id="staff" value="Nguyễn Hoàng Tiến" disabled>
                                     </div>
                                     <div class="popup-input">
                                         <label for="status">Trạng thái</label>
-                                        <input type="text" id="status">
+                                        <input type="text" id="status" value="online" disabled>
                                     </div>
                                 </div>
                                 
@@ -441,22 +453,22 @@
                                 <div class="popup-row">
                                     <div class="popup-input">
                                         <label for="leave">Dạng nghỉ phép</label>
-                                        <input type="text" id="leave">
+                                        <input type="text" id="leave" value="Làm thêm" disabled>
                                     </div>
                                     <div class="popup-input">
                                         <label for="break-time">Thời gian nghỉ</label>
-                                        <input type="text" id="break-time">
+                                        <input type="text" id="break-time" value="22h" disabled>
                                     </div>
                                 </div>
 
                                 <div class="popup-row">
                                     <div class="popup-input">
                                         <label for="time">Thời gian (Ngày)</label>
-                                        <input type="text" id="time">
+                                        <input type="text" id="time" value="15/02/2023" disabled>
                                     </div>
                                     <div class="popup-input">
                                         <label for="reason">Lí do</label>
-                                        <input type="text" id="reason">
+                                        <input type="text" id="reason" value="Khám nghĩa vụ quân sự" disabled>
                                     </div>
                                 </div>
 
@@ -466,8 +478,8 @@
                                 </div>
                                 
                                 <div class="popup-btn">
-                                    <button class="confirm">Duyệt</button>
-                                    <button class="deny">Từ chối</button> 
+                                    <button class="confirm btn-grad">Duyệt</button>
+                                    <button class="deny btn-grad">Từ chối</button> 
                                 </div>
 		                    </div>
 	                    </div>
@@ -485,7 +497,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS -->
     <script src="./resources/main.js"></script>
-
     <script>
         $(".from-date").flatpickr({
             wrap: true,
@@ -498,6 +509,36 @@
             dateFormat: "d-m-Y",
             minDate: "today",
             disableMobile: "true"
+        });
+    </script>
+    <!-- Tooltip -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+        tippy('.name', {
+            content: "Nguyễn Hoàng Tiến",
+        });
+        tippy('.reason', {
+            content: "Khám nghĩa vụ quân sự",
+        });
+        tippy('.type > h5', {
+            content(reference) {
+                const id = reference.getAttribute('data-template');
+                const type = document.getElementById(id);
+                return type.innerHTML;
+            },
+            allowHTML: true,
+        });
+        tippy('.date', {
+            content: "15/02/2023",
+        });
+        tippy('.time > h5', {
+            content(reference) {
+                const id = reference.getAttribute('data-template');
+                const time = document.getElementById(id);
+                return time.innerHTML;
+            },
+            allowHTML: true,
         });
     </script>
 </body>

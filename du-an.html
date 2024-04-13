@@ -349,10 +349,10 @@
                             <input type="text" placeholder="Nhập từ khoá">
                         </div>
                         <div class="section-1-btn-group">
-                            <button class="search-btn">
+                            <button class="search-btn btn-grad">
                                 Tìm kiếm
                             </button>
-                            <button class="search-advanced-btn">
+                            <button class="search-advanced-btn btn-grad">
                                 Tìm kiếm <br> nâng cao
                             </button>
                         </div>
@@ -362,7 +362,7 @@
                         <div class="title">
                             <h1>Dự án</h1>
                             <div class="project-btn-group">
-                                <a class="new-btn" href="#project-popup">
+                                <a class="new-btn btn-grad" href="#project-popup">
                                     <i class="fa-solid fa-plus"></i>
                                     Tạo mới
                                 </a>
@@ -1234,7 +1234,7 @@
                                 </div>
                                 
                                 <div class="popup-btn">
-                                    <button class="confirm">Xác nhận</button>
+                                    <button class="confirm btn-grad">Xác nhận</button>
                                 </div>
 		                    </div>
 	                    </div>
@@ -1252,7 +1252,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS -->
     <script src="./resources/main.js"></script>
-
     <script>
         $(".project").select2({
             placeholder: {
@@ -1271,6 +1270,17 @@
             dateFormat: "d-m-Y",
             minDate: "today",
             disableMobile: "true"
+        });
+    </script>
+    <!-- Tooltip -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        tippy('.leader-avatar', {
+            content: "leader name",
+        });
+        tippy('.team-avatar', {
+            content: "team name",
         });
     </script>
 </body>
