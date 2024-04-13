@@ -66,12 +66,12 @@
   gap: 10px;
   padding-left: 33px;
 }
-.board-lotrinh p {
+.board-roadmap p {
   font-size: 20px;
   font-family: var(--font-family);
   font-weight: 500;
 }
-.board-lotrinh {
+.board-roadmap {
   width: 100%;
   height: 275px;
   background: var(--background-color);
@@ -80,7 +80,7 @@
   font-size: 20px;
   border: 2px solid rgb(51 146 204);
 }
-.board-lotrinh1{
+.board-roadmap1{
   background-color: #fff;
   border-radius: 15px;
   height: 100%;
@@ -89,12 +89,12 @@
   text-align: left;
   padding: 7px 0 0 7px;
 }
-.board-lotrinh1 p{
+.board-roadmap1 p{
   font-size: 18px;
   color: black;
   font-weight: 400;
 }
-.board-lotrinh1 .Link{
+.board-roadmap1 .Link{
   background-color: rgb(51 146 204);
   border: 2px solid goldenrod;
   border-radius: 4px;
@@ -102,41 +102,41 @@
   margin-left: 5px;
   padding: 0px 5px 0px 5px;
 }
-.board-lotrinh1 .text1{
+.board-roadmap1 .text1{
   font-family: var(--font-family);
   font-size: 15px;
   color: black;
   font-weight: 700;
 }
 .board-th p:nth-child(1),
-.board-lotrinh p:nth-child(1) {
+.board-roadmap p:nth-child(1) {
   padding: 6px 0 6px 0;
   width: 100%;
   display: flex;
   font-weight: 700;
 }
 .board-th p:nth-child(2),
-.board-lotrinh p:nth-child(2) {
+.board-roadmap p:nth-child(2) {
   width: 100%;
 }
 .board-th p:nth-child(3),
-.board-lotrinh p:nth-child(3) {
+.board-roadmap p:nth-child(3) {
   width: 100%;
 }
 .board-th p:nth-child(4),
-.board-lotrinh p:nth-child(4) {
+.board-roadmap p:nth-child(4) {
   width: 100%;
 }
 .board-th p:nth-child(5),
-.board-lotrinh p:nth-child(5) {
+.board-roadmap p:nth-child(5) {
   width: 100%;
 }
 .board-th p:nth-child(6),
-.board-lotrinh p:nth-child(6) {
+.board-roadmap p:nth-child(6) {
   width: 100%;
 }
 .board-th p:nth-child(7),
-.board-lotrinh p:nth-child(7) {
+.board-roadmap p:nth-child(7) {
   width: 100%;  
 }
 
@@ -217,7 +217,7 @@ background-color: goldenrod;
 }
 
 /* Collaspse */
-#content_lotrinh1, #content_lotrinh-1{
+#content_roadmap1, #content_roadmap-1{
   display: block;
 }
 
