@@ -154,7 +154,7 @@ select {
 
 
 .button_route {
-  width: 251px;
+  width: 231px;
   height: 42px;
   border: none;
   background-color: goldenrod;
@@ -243,6 +243,19 @@ background-color: goldenrod;
 .timeline__item-header {
 	display: flex;
 }
+.timeline__item-header p {
+	display: flex;
+  gap: 14px;
+}
+.timeline__item-header button{
+  background: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  height: 27px;
+  align-items: center;
+}
 .timeline__dot {
   background-color: gray;
   border-radius: 50%;
@@ -275,11 +288,17 @@ background-color: goldenrod;
 	opacity: 1;
 	visibility: visible;
 	transition-delay: var(--trans-dur), 0s;
+  position: relative;
 }
 .timeline__arrow[aria-expanded="true"] .timeline__arrow-icon {
 	transform: rotate(0);
 }
 
+.btn-dropdown-roadmap{
+  position: absolute;
+  right: 23px;
+  top: 6px;
+}
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
 	:root {

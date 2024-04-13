@@ -847,16 +847,40 @@ main {
     gap: 10px;
     font-size: 18px;
 }
+.gear-content-road-map a:nth-child(1) ,
 .gear-content a:nth-child(1) {
     padding: 10px 10px 5px 10px;
 }
+.gear-content-road-map a:nth-child(2),
 .gear-content a:nth-child(2) {
     padding: 5px 10px 10px 10px;
 }
+.gear-content-road-map a:hover,
 .gear-content a:hover {
     background: rgb(178, 178, 178);
     color: white;
 }
+.gear-content-road-map{
+    background: #fff;
+      border-radius: 15px;
+      position: absolute;
+      top: 14%;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      overflow: hidden;
+      max-height: 0;
+      transition: all 0.25s;
+      z-index: 10;
+  }
+  .gear-content-road-map a {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
 .open {
     max-height: 200px;
     transition: all 0.4s;
@@ -1779,6 +1803,16 @@ hr {
     padding: 15px;
     height: 200px;
     border-radius: 0 50px 0 50px;
+}
+.card .task-work{
+    font-size: 28px;
+}
+.card .number-work{
+    font-size: 92px;
+}
+.statistical-info{
+    margin: 17px 0px 0px 1px;
+    font-size: 23px;
 }
 #project-management .section-3 {
     display: flex;
