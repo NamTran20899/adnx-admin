@@ -25,27 +25,7 @@
 .keyword {
     width: 20% !important;
 }
-/* .to-date a,
-.from-date a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    background: var(--background-color);
-    color: #fff;
-    height: 100%;
-    width: 60px;
-}
-.status input,
-.keyword input,
-.to-date input,
-.from-date input {
-    padding: 6px 8px;
-    border: none;
-    width: 100%;
-} */
+
 
 .search-btn {
     background-color: goldenrod;
@@ -303,11 +283,12 @@
  {
   width: 3%;
 }
-.task_board_content p:nth-child(1) {
+.task_board_content a:nth-child(1) {
     display: flex;
-    width: 90%;
+    width: 105%;
     justify-content: left;
     font-weight: 600;
+    gap: 3px;
 }
 .task_board_content span:nth-child(2) {
   width: 82%;
@@ -498,7 +479,9 @@
 }
 
 .task_content .newtask{
-    
+    display: flex;
+    justify-content: right;
+    margin: 373px 4px 6px 0px;
 }
 .new {
     font-family: var(--font-family);
@@ -508,9 +491,6 @@
     border: 2px solid #326fca;
     padding: 10px;
     width: 92px;
-    position: absolute;
-    top: 118px;
-    left: 458px;
 }
 .new1 {
     font-family: var(--font-family);
@@ -550,7 +530,7 @@
     margin: 55px auto;
     background: #fff;
     border-radius: 15px;
-    width: 80%;
+    width: 100%;
     position: relative;
     transition: all 0.3s ease-in-out;
     background: grey;
@@ -560,17 +540,28 @@
     border-radius: 15px;
     display: flex;
     width: 100%;
-    flex-direction: column;
+}
+.popup_content_task{
+    display: flex;
+    width: 100%;
+}
+.popup_content_chat{
+    width: 100%;
+    background: darkgray;
+}
+.popup_content_text{
+    width: 100%;
     padding: 5px 15px 15px 15px;
 }
-.popuptask-title {
+.popuptask-title-task {
     display: flex;
     font-size: 20px;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     width: 100%;
     position: relative;
     padding: 10px;
+    gap: 21px;
 }
 .circle{
     color: black;
@@ -611,12 +602,12 @@
     text-align: left;
     margin-bottom: 5px;
 }
-.popuptask-input textarea,
 .popuptask-input input {
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 14px;
-    height: 100%;
+    font-family: var(--font-family);
+    font-size: 24px;
+    height: 53px;
     padding: 8px 10px;
 }
 .popuptask-btn {
@@ -633,9 +624,188 @@
     cursor: pointer;
     color: #fff;
 }
-#description {
+.content_title{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid white;
+    width: 40%;
+    color: black;
+}
+.flag_popup{
+    width: 33px;
+    border-radius: 100%;
+    border: 1px solid yellow;
+    color: yellow;
+}
+.button_share{
+    display: flex;
+    align-items: center;
+    height: 29px;
+}
+.button_share i{
+    color: #337dcb;
+}
+.end-date,
+.start-date{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.end-date i,
+.start-date i{
+    color: #326fca;
+}
+.button_finish{
+    background: greenyellow;
+    width: 145px;
+    font-size: 15px;
+    border: 1px solid greenyellow;
+    border-radius: 15px;
+}
+.button-eye-dow{
+    background: white;
+    width: 74px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+#description-task {
+    margin-top: 20px;
     resize: none;
-    height: 190px;
+    width: 100%;
+    height: 250px;
+    border: 1px solid grey;
+}
+.flag_sub-popup{
+    position: absolute;
+    right: 59%;
+}
+.user_sub-popup{
+    position: absolute;
+    right: 56%;
+}
+.bt_save-popup{
+    background-color: rgb(51 146 204);
+    border: 1px solid rgb(51 146 204);
+    color: white;
+    display: flex;
+    height: 10px;
+    align-items: center;
+    position: absolute;
+    right: 51%;
+}
+.popup-addtask{
+    display: flex;
+    align-items: center;
+    gap: 50%;
+}
+.popup-time-arrow {
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    color: #778899;
+}
+.popup-drop-serch{
+    display: flex;
+    justify-content: left;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+.text-search{
+    height: 33px;
+    width: 155px;
+    border: 1px solid grey;
+}
+.new-subtask{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.attachment{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+    color: #778899;
+}
+.attachment i{
+    color: #337dcb;
+}
+.popup-save{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 100px;
+}
+.bt-popup-save{
+    border-radius: 10px;
+    border: 1px solid rgb(51 146 204);
+    width: 70px;
+    height: 33px;
+    color: #fff;
+    background-color: rgb(51 146 204);
+    
+}
+.board-chat{
+    padding: 15px;
+}
+.room_chat{
+    background-color: white;
+    border: 1px solid grey;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.infor-chat{
+    gap: 138px;
+    padding: 5px 0px 20px 5px;
+}
+.content-chat{
+    padding: 5px 0px 0px 5px;
+    gap: 5px;
+    height: 100px;
+}
+.name{
+    color: black;
+}
+.date,.chat{
+    color: #778899;
+}
+.person{
+    color: purple;
+}
+.emoji {
+    padding: 5px 0px 0px 5px;
+    height: 47px;
+    border-radius: 0 0 15px 15px;
+    border: 2px solid grey;
+    gap: 4px;
+}
+.emoji p{
+    color: black;
+    border: 1px solid grey;
+    border-radius: 14px;
+    width: 68px;
+    height: 33px;
+
+}
+.emoji i{
+    color: gold;
+}
+.comment input{
+    margin-top: 337px ;
+    width: 100%;
+    height: 56px;
+    border-radius: 0 0px 15px 0px;
+    border: 1px solid grey;
+}
+.comment i{
+    position: absolute;
+    color: rgb(51 146 204);
+    top: 95%;
+    right: 1%;
 }
 .confirm {
     background: var(--background-color);
@@ -751,8 +921,7 @@ li i{
 	border-radius: 14px;
     background: #fff;
     list-style-type: none;
-    margin: 0px 2px 0 0;
-    min-width: 100%;
+    margin: -84px 0px 0px 602px;
     height: 413px;
     position: absolute;
     top: -213px;
@@ -805,6 +974,7 @@ button {
     border: 1px solid grey;
     display: flex;
     align-items: center;
+    color: #778899;
 }
 .text_sub input{
     width: 100%;
@@ -843,7 +1013,8 @@ button {
     align-items: center;
     justify-content: center;
 }
-.flag_sub,.user_sub{
+.flag_sub,.user_sub,
+.flag_sub-popup,.user_sub-popup{
     border: 1px solid grey;
     border-radius: 100%;
     width: 25px;

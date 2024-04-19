@@ -121,7 +121,9 @@ prevNextIcon.forEach((icon) => {
 $(".btn-dropdown").click(function () {
   $(this).next().toggleClass("open");
 });
-
+$(".btn-dropdown-roadmap").click(function () {
+  $(this).next().toggleClass("open");
+});
 // mision
 $(".mission-btn").click(function () {
   if (!$(this).hasClass("mission-btn-active")) {
