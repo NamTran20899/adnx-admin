@@ -329,6 +329,13 @@
                         <div class="approved-btn">
                             <button>Đã duyệt</button>
                         </div>
+                        <select class="approved-btn js-states form-control" name="project">
+                            <option value="-1"></option>
+                            <option value="pj-1">project 1</option>
+                            <option value="pj-2">project 2</option>
+                            <option value="pj-3">project 3</option>
+                            <option value="pj-4">project 4</option>
+                        </select>
                         <div class="from-date">
                             <a class="input-button" title="toggle" data-toggle>
                                 <i class="fa-light fa-calendar-days"></i>
@@ -462,6 +469,12 @@
             dateFormat: "d-m-Y",
             minDate: "today",
             disableMobile: "true"
+        });
+        $(".project").select2({
+            placeholder: {
+                id: '-1',
+                text: 'Dự án'
+            }
         });
     </script>
     <!-- Tooltip -->

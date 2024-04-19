@@ -16,10 +16,10 @@
     --color-orange: #feae4b;
     --color-grey: #e3e3e3;
     --color-purple: #ff5cf1;
-    --orange-btn: linear-gradient(to right, #FF8008 0%, #fbc028  51%, #FF8008  100%);
-    --green-btn: linear-gradient(to right, #1D976C 0%, #87fab2  51%, #1D976C  100%);
-    --blue-btn : linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
-    --red-btn: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    --orange-btn: linear-gradient(to right, #FF8008 0%, #fbc028  55%, #FF8008  100%);
+    --green-btn: linear-gradient(to right, #1D976C 0%, #52d181  55%, #1D976C  100%);
+    --blue-btn : linear-gradient(to right, #1FA2FF 0%, #12D8FA  55%, #1FA2FF  100%);
+    --red-btn: linear-gradient(to right, #D31027 0%, #EA384D  55%, #D31027  100%);
 }
 
 .btn-grad {
