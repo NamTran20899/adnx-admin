@@ -628,6 +628,7 @@ main {
     overflow: hidden;
     border-radius: 5px;
 }
+
 .select2-container {
     width: 15% !important;
 }
@@ -897,6 +898,21 @@ main {
       max-height: 0;
       transition: all 0.25s;
       z-index: 10;
+  }
+
+  .gear-content-road-map-head{
+    background: #fff;
+    border-radius: 15px;
+    position: absolute;
+    top: 34%;
+    left: 11%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.25s;
+    z-index: 10;
   }
   .gear-content-road-map a {
     color: #000;
@@ -1397,6 +1413,11 @@ hr {
     padding: 15px 25px;
     height: 100%;
 }
+.board-content-personnel {
+    background-color: #fff;
+    border-radius: 15px;
+    height: 100%;
+}
 #error-report .board-th p:nth-child(1) {
     width: 50%;
     display: flex;
@@ -1823,12 +1844,12 @@ hr {
 }
 
 .pm-header {
-    background: rgb(170, 148, 2);
+    background: var(--orange-btn);
     padding: 15px;
     border-radius: 25px 0 25px 0;
 }
 .pm-header h1 {
-    font-size: 20px;
+    font-size: 40px;
     font-family: var(--font-family-bold);
 }
 .pm-content {
@@ -1863,7 +1884,7 @@ hr {
 }
 #project-management .section-3 .chart {
     width: 65%;
-    height: 500px;
+    height: 414px;
     background: var(--background);
     border-radius: 15px;
     overflow: hidden;
@@ -1871,7 +1892,7 @@ hr {
 }
 #project-management .section-3 .statistical {
     width: 35%;
-    height: 500px;
+    height: 414px;
     background: var(--background);
     border-radius: 15px;
     overflow: hidden;
@@ -1888,9 +1909,10 @@ hr {
     flex-direction: column;
 }
 #myChart {
-    height: 425px !important;
+    height: 331px !important;
     width: 100% !important;
 }
+
 .statistical-btn {
     width: 100%;
     justify-content: space-around;
@@ -1905,11 +1927,18 @@ hr {
     border-radius: 15px;
     padding: 15px;
 }
+.statistical-info {
+    margin: 17px 0px 0px 1px;
+    font-size: 21px;
+    display: flex;
+    justify-content: space-evenly;
+}
 .statistical-info ul li {
     display: flex;
 }
 .statistical-text {
     display: flex;
+    gap: 41px;
 }
 /*--- Staff --*/
 #Board_Personnel {
@@ -1958,9 +1987,30 @@ hr {
     background-color: var(--color-red);
     border-radius: 50%;
     transition: background-color 0.3s ease;
+    border: 1px solid var(--color-red);
 }
 .dot.green{
     background-color: var(--color-green);
+}
+
+.board-content-personnel .input-search{
+    position: relative;
+    background: rgb(19, 152, 235);
+    width: 25%;
+    height: 7%;
+    top: 331px;
+    right: -75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%, 2% 87%);
+}
+.input-search input{
+    display: flex;
+    height: 40%;
+    width: 75%;
+    border: 1px solid rgb(19, 152, 235);
+    border-radius: 4px
 }
 /*------------ Content ------------*/
 
@@ -2109,19 +2159,39 @@ hr {
 #project-row-res-2 {
     display: none;
 }
+    
 @media screen and (max-width: 1440px) {
+    #popuptask1 .popuptask{
+        overflow-x: scroll;
+    }
+    
+    .board-content-personnel .input-search{
+        top: 306px;
+        right: -75%;
+    }
+    #popuptask1 .popuptask,
     #Board_Route .board-content{
         max-width: 1440px;
     }
+    #project-management .section-3,
+    #project-management .section-2,
     #Board_Route .section-2,
     #dashboard .section-1 .due-reminder ul, 
     #dashboard .section-1 .today-work ul {
         overflow-x: scroll;
     }
+   
+    #popuptask1 .popuptask,
+    #project-management .section-3,
+    #project-management .section-2,
     #Board_Route .section-2,
     #dashboard .section-1 .due-reminder ul li, 
     #dashboard .section-1 .today-work ul li {
         min-width: 700px;
+    }
+    #popuptask1 .popuptask,
+    #project-management .statistical{
+        min-width: 400px;
     }
     .header-right,
     .header-left {
@@ -2137,12 +2207,16 @@ hr {
         display: flex;
     }
     
+    
     .project-content-group {
         overflow: scroll;
         max-height: 900px;
         scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
+    #popuptask1 .popuptask,
+    #project-management .section-3,
+    #project-management .section-2,
     #Board_Route .section-2{
         overflow-x: scroll;
         scrollbar-color: rgb(19, 152, 235) #cfcfcf;
@@ -2151,9 +2225,10 @@ hr {
     #project .section-2 {
         height: 955px;
     }
-
+    
 }
 @media screen and (max-width: 1288px) {
+    #popuptask1 .popuptask,
     #Board_Route .board-content{
         max-width: 1280px;
     }
@@ -2167,6 +2242,10 @@ hr {
     }
 }
 @media screen and (max-width: 1150px) {
+    .board-content-personnel .input-search{
+        top: 329px;
+        right: -75%;
+    }
     .user {
         display: none;
     }
@@ -2182,6 +2261,15 @@ hr {
     .project-container {
         width: 50%;
     }
+   
+    #Board_Personnel .section-1{
+        overflow-y: scroll;
+        scrollbar-color: rgb(19, 152, 235) #cfcfcf;
+        scrollbar-width: thin;
+    }
+    #popuptask1 .popuptask,
+    #project-management .section-3,
+    #project-management .section-2,
     #project .section-2,
     #Board_Route .section-2,
     #Board_Personnel .section-1,
@@ -2191,15 +2279,21 @@ hr {
         scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
+    
+    
     #project .section-2{
         overflow-y: scroll;
         scrollbar-color: rgb(19, 152, 235) var(--color-red);
         scrollbar-width: thin;
     }
+  
+    #popuptask1 .popuptask,
+    #project-management .chart,
+    #project-management .project-management-section-2-content,
     #project .task_board_name,
     #project .task_content,
     #Board_Route .board-content,#Board_Route .board_td_route,
-    #Board_Personnel .board-content,#Board_Personnel .board-th,
+    #Board_Personnel .board-content-personnel,#Board_Personnel .board-th,
     #application-management .board-content,  #application-management .board-th,
     #action-leave-ot .board-content, #action-leave-ot .board-th {
         min-width: 1200px;
@@ -2217,9 +2311,15 @@ hr {
     .menu ul li a {
         gap: 10px
     }
-    
+    .custom-select{
+        width: 130%;
+    }
 }
 @media screen and (max-width: 910px) {
+    .board-content-personnel .input-search{
+        top: 302px;
+        right: -75%;
+    }
     #dashboard,
     #project .section-1-task,
     #project .section-1,
@@ -2228,12 +2328,14 @@ hr {
     #Board_Route .section-1 {
         flex-direction: column;
     }
+
     .project-detail-group .detail-col-1,
     .project-detail-group .detail-col-2,
     #dashboard .section-1,
     #dashboard .section-2 {
         width: 100% !important;
     }
+    #popuptask1 .popuptask,
     #Board_Route .select2-container,
     #Board_Route .section-1-btn-group,
     #Board_Route .section-1 .keyword,
@@ -2284,13 +2386,21 @@ hr {
     #project-detail .section-2 {
         height: 956px;
     }
+    #popuptask1 .popuptask,
     .project-detail-group {
         max-height: 900px;
         overflow: scroll;
         scrollbar-color: rgb(19, 152, 235) #cfcfcf;
         scrollbar-width: thin;
     }
-
+    .custom-select {
+        position: relative;
+        display: flex;
+        padding: 8px;
+        align-items: center;
+        font-family: var(--font-family);
+        width: 30%;
+    }
 }
 @media screen and (max-width: 768px) {
     .project-row {
@@ -2301,6 +2411,7 @@ hr {
     .project-row .project-container:nth-child(1) {
         width: 100%;
     }
+  
     #Board_Route .section-2,
     #application-management .section-1, #action-leave-ot .section-1, #project-detail .section-1 {
         flex-direction: column;

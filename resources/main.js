@@ -124,6 +124,9 @@ $(".btn-dropdown").click(function () {
 $(".btn-dropdown-roadmap").click(function () {
   $(this).next().toggleClass("open");
 });
+$(".btn-dropdown-roadmap-head").click(function () {
+  $(this).next().toggleClass("open");
+});
 // mision
 $(".mission-btn").click(function () {
   if (!$(this).hasClass("mission-btn-active")) {
@@ -459,3 +462,31 @@ function changeColor10() {
   flagIcon10.style.color = nextColor10;
   localStorage.setItem("currentColor10", nextColor10);
 }
+
+
+
+
+const sortableList = document.querySelector(".sortable-list");
+const items = sortableList.querySelectorAll(".item");
+
+items.forEach(item => {
+item.addEventListener("dragstart", () =>{
+  setTimeout(() => item.classList.add("dragging"), 0 );
+});
+item.addEventListener("dragend",() => item.classList.remove("dragging"));
+});
+
+const initSortableList = (e) => {
+e.preventDefault();
+const draggingItem = document.querySelector(".dragging");
+let siblings = [...sortableList.querySelectorAll(".item:not(.dragging)")];
+
+let nextSibling = siblings.find(sibling =>{
+  return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+});
+
+sortableList.insertBefore(draggingItem, nextSibling);
+}
+
+sortableList.addEventListener("dragover", initSortableList);
+sortableList.addEventListener("dragenter", e => e.preventDefault());

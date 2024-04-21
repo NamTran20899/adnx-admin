@@ -96,7 +96,7 @@
 }
 .board-roadmap1 .Link{
   background-color: rgb(51 146 204);
-  border: 2px solid goldenrod;
+  border: 1px solid goldenrod;
   border-radius: 4px;
   font-size: 12px;
   margin-left: 5px;
@@ -157,7 +157,7 @@ select {
   width: 231px;
   height: 42px;
   border: none;
-  background-color: goldenrod;
+  background-image: var(--orange-btn);
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -191,8 +191,8 @@ select {
   border-bottom-right-radius: 25px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 8% 51%);
-  margin: 12px -44px 12px;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 10% 51%);
+  margin: 12px -41px 12px;
   display: block;
 }
 .button_route_1 p{
@@ -245,8 +245,14 @@ background-color: goldenrod;
 }
 .timeline__item-header p {
 	display: flex;
-  gap: 14px;
+  gap: 10px;
 }
+.line{
+    background: rgb(51 146 204);
+    color: black;
+    width: 43px;
+    height: 8px;
+    margin: 29px 0;}
 .timeline__item-header button{
   background: none;
   border: 1px solid grey;
@@ -257,18 +263,29 @@ background-color: goldenrod;
   align-items: center;
 }
 .timeline__dot {
-  background-color: gray;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
   margin: 24px 0;
   margin-inline-end: -15px;
   position: relative;
-  width: 0.75em;
-  height: 0.75em;
+  width: 0.85em;
+  height: 0.85em;
   z-index: 2;
 }
-
+.timeline__dot1 {
+  background-color: rgb(51 146 204);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 24px 0;
+  margin-inline-end: -15px;
+  position: relative;
+  width: 0.85em;
+  height: 0.85em;
+  z-index: 2;
+}
 .timeline__item-body {
   overflow: hidden;
   height: 0;
@@ -298,6 +315,22 @@ background-color: goldenrod;
   position: absolute;
   right: 23px;
   top: 6px;
+}
+.btn-dropdown-roadmap-head{
+  position: absolute;
+  right: 23px;
+  top: 6px;
+  color: black;
+}
+.gear-content-road-map-header a:nth-child(1){
+    padding: 10px 10px 5px 10px;
+}
+.gear-content-road-map-header a:nth-child(2) {
+    padding: 5px 10px 10px 10px;
+}
+.gear-content-road-map-header a:hover {
+    background: rgb(178, 178, 178);
+    color: white;
 }
 /* Dark theme */
 @media (prefers-color-scheme: dark) {

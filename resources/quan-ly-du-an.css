@@ -34,15 +34,11 @@
     background-color: goldenrod;
 }
 
-#project .section-2,.section-3 
-,.section-4 {
+#project-management .section-2,#project-management .section-3 
+{
     width: 100%;
-    height: 100%;
-    background: var(--background-color);
     border-radius: 15px;
-    /* overflow: hidden; */
     font-size: 20px;
-    border: 2px solid rgb(51 146 204);
 }
 .section-3{
     width: 61%;
@@ -146,24 +142,28 @@
     margin-bottom: -9%;
 }
 /* Dropdown */
-.custom-select {
+.custom-select  {
     position: relative;
-  }
-  
-  select {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    font-family: var(--font-family);
+}
+ /* select {
     padding: 0.675em 6em 0.675em 1em;
     display: flex;
     align-items: center;
     border: 1px solid rgb(51 146 204);
     color: rgb(51 146 204);
     font-family: var(--font-family);
-    width: 260px;
-    height: 35px;
+    width: 354px;
+    height: 100%;
     overflow: hidden;
     border-radius: 5px;
     margin: 0.5vw;
-  }
-  
+    font-size: 19px;
+}
+
   .custom-select::before,
   .custom-select::after {
     --size: 0.3rem;
@@ -172,7 +172,7 @@
     right: 1rem;
     pointer-events: none;
     color: aqua;
-  }
+  } */
 
 /* Statistical */
 .board_mission{
@@ -283,22 +283,27 @@
  {
   width: 3%;
 }
-.task_board_content a:nth-child(1) {
+.task_board_content_child p:nth-child(1),
+.task_board_content p:nth-child(1) {
     display: flex;
     width: 105%;
     justify-content: left;
     font-weight: 600;
     gap: 3px;
 }
+.task_board_content_child span:nth-child(2),
 .task_board_content span:nth-child(2) {
   width: 82%;
 }
+.task_board_content_child .team-group:nth-child(3),
 .task_board_content .team-group:nth-child(3) {
   width: 36%;
 }
+.task_board_content_child p:nth-child(4),
 .task_board_content p:nth-child(4) {
   width: 38%;
 }
+.task_board_content_child button:nth-child(5),
 .task_board_content button:nth-child(5)
  {
   width: 38%;
@@ -328,6 +333,21 @@
     align-items: center;
     padding: 10px 20px;
   }
+  .task_board_content_child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(218, 215, 215);
+    margin-top: 2px;
+    color: black;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .task_board_content_child p,
   .task_board_content p{
     font-family: var(--font-family);
     font-size: 18px;
@@ -342,10 +362,10 @@
     overflow: hidden;
     border-radius: 100%;
     background: blue;
-    
+    color: #fff;
 }
 .team-avatar-task {
-    border: 1px solid grey;
+    border: 1px solid #fff;
 }
 .team-avatar-task:nth-child(1) {
     z-index: 5;
@@ -440,6 +460,16 @@
     align-items: center;
     position: relative;
 }
+.circle_task_child{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(218, 215, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
 /* Flag */
 #flagButton,#flagButton1,#flagButton2
@@ -507,33 +537,29 @@
 .new:hover{
     cursor: pointer;
 }
-
-
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.3s;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 100;
+.close_task{
+    position: relative;
+    right: 1px;
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 23%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
+.close_task i {
+    color: #d4d0d0;
+    font-size: 20px;
 }
 .popuptask {
     margin: 55px auto;
     background: #fff;
     border-radius: 15px;
-    width: 100%;
     position: relative;
     transition: all 0.3s ease-in-out;
-    background: grey;
+    background: #d4d0d0;
 }
 .popuptask-content {
     background: #fff;
@@ -547,7 +573,8 @@
 }
 .popup_content_chat{
     width: 100%;
-    background: darkgray;
+    background: #f8f8f8;
+    border-radius: 15px;
 }
 .popup_content_text{
     width: 100%;
@@ -561,7 +588,7 @@
     width: 100%;
     position: relative;
     padding: 10px;
-    gap: 21px;
+    gap: 7px;
 }
 .circle{
     color: black;
@@ -658,10 +685,10 @@
     color: #326fca;
 }
 .button_finish{
-    background: greenyellow;
+    background: #63a007;
     width: 145px;
     font-size: 15px;
-    border: 1px solid greenyellow;
+    border: 1px solid #63a007;
     border-radius: 15px;
 }
 .button-eye-dow{
@@ -680,11 +707,11 @@
 }
 .flag_sub-popup{
     position: absolute;
-    right: 59%;
+    right: 60%;
 }
 .user_sub-popup{
     position: absolute;
-    right: 56%;
+    right: 57%;
 }
 .bt_save-popup{
     background-color: rgb(51 146 204);
@@ -699,7 +726,7 @@
 .popup-addtask{
     display: flex;
     align-items: center;
-    gap: 50%;
+    gap: 33%;
 }
 .popup-time-arrow {
     display: flex;
@@ -759,8 +786,9 @@
     border-radius: 15px;
 }
 .infor-chat{
-    gap: 138px;
+    gap: 206px;
     padding: 5px 0px 20px 5px;
+    font-size: 13px;
 }
 .content-chat{
     padding: 5px 0px 0px 5px;
@@ -780,12 +808,12 @@
     padding: 5px 0px 0px 5px;
     height: 47px;
     border-radius: 0 0 15px 15px;
-    border: 2px solid grey;
+    border: 1px solid #d1cfcf;
     gap: 4px;
 }
 .emoji p{
     color: black;
-    border: 1px solid grey;
+    border: 1px solid #d1cfcf;
     border-radius: 14px;
     width: 68px;
     height: 33px;
@@ -795,7 +823,7 @@
     color: gold;
 }
 .comment input{
-    margin-top: 337px ;
+    margin-top: 340px ;
     width: 100%;
     height: 56px;
     border-radius: 0 0px 15px 0px;
@@ -1030,4 +1058,13 @@ button {
 .user_sub {
     position: absolute;
     right: 14%;
+}
+
+
+.item.dragging{
+	opacity:  0.6;
+}
+
+.item.dragging :where(.details,i){
+	opacity: 0;
 }

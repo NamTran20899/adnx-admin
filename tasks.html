@@ -432,13 +432,15 @@
                                 </ul>
                                 </div>
                         </div>
-                          <div class="task_content">
-                            <div class="task_board_content" >
-                                <a href="#popuptask1" style="cursor: pointer" id="toggleBtn1">
+                          <div class="task_content ">
+                            <div class="task_board_content">
+                                <p >
                                 <span class="tick"></span>
-                                <i class=" triangle fa-solid fa-caret-down fa-xs"></i>
+                                <i class=" triangle fa-solid fa-caret-down fa-xs"  style="cursor: pointer" id="toggleBtn1"></i>
+                                <a href="#popuptask1">
                                     Cover Fanpage Lục Địa Loren
                                 </a>
+                                </p>
                                 <span class="head-btn-group flex gap">
                                     <button class="flex " style="gap:3px">
                                         <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
@@ -473,21 +475,23 @@
                                     <i id="flagIcon" class="fas fa-flag" onclick="changeColor()"></i>
                                 </button>
                         </div>
-                    <div id="content1" hidden>
-                        <div class="task_board_content" >
-                            <a href="#popuptask1" style="cursor: pointer" id="toggleBtn2">
+                    <div hidden id="content1" >
+                        <div class="task_board_content_child" >
+                            <p >
                                 <i class="fa-solid fa-circle"></i>
                                 <i class="draggable uil uil-draggabledots"></i>
-                                <i class=" triangle1 fa-solid fa-caret-down fa-xs"></i>
+                                <i class=" triangle1 fa-solid fa-caret-down fa-xs"  style="cursor: pointer" id="toggleBtn2"></i>
                                 <i class="fa-solid fa-square"></i>
+                                <a href="#popuptask1">
                                 Feedback hệ thống
-                            </a>
+                                </a>
+                            </p>
                             <span class="head-btn-group flex gap">
                                 <button class="flex " style="gap:3px">
                                     <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                                     <p class="text_task">1</p>
                                     <p class="text_task1">|</p>
-                                    <a class="circle_task">
+                                    <a class="circle_task_child">
                                         <i class="plus fa-sharp fa-solid fa-plus"></i>
                                     </a>
                                 </button>
@@ -515,17 +519,19 @@
                             </button>
                     </div>
                     <div hidden id="content2">
-                    <div class="task_board_content">
-                        <a href="#popuptask1" style="cursor: pointer">
+                    <div class="task_board_content_child">
+                        <p  style="cursor: pointer">
                             <i class=" square fa-solid fa-square"></i>
+                            <a href="#popuptask1">
                             Lỗi không có deadline
-                        </a>
+                            </a>
+                        </p>
                         <span class="head-btn-group flex gap">
                             <button class="flex " style="gap:3px">
                                 <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                                 <p class="text_task">1</p>
                                 <p class="text_task1">|</p>
-                                <a class="circle_task">
+                                <a class="circle_task_child">
                                     <i class="plus fa-sharp fa-solid fa-plus"></i>
                                 </a>
                             </button>
@@ -552,17 +558,19 @@
                             <i id="flagIcon2" class="fas fa-flag" onclick="changeColor2()"></i>
                         </button>
                 </div>
-                <div class="task_board_content">
-                    <a href="#popuptask1" style="cursor: pointer">
+                <div class="task_board_content_child">
+                    <p style="cursor: pointer">
                         <i class=" square fa-solid fa-square"></i>
+                        <a href="#popuptask1" >
                         Lỗi không có deadline
-                    </a>
+                        </a>
+                    </p>
                     <span class="head-btn-group flex gap">
                         <button class="flex " style="gap:3px">
                             <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                             <p class="text_task">1</p>
                             <p class="text_task1">|</p>
-                            <a class="circle_task">
+                            <a class="circle_task_child">
                                 <i class="plus fa-sharp fa-solid fa-plus"></i>
                             </a>
                         </button>
@@ -589,14 +597,19 @@
                         <i id="flagIcon3" class="fas fa-flag" onclick="changeColor3()"></i>
                     </button>
                 </div>
-                </div>
+                    </div>  
+                
             </div>
-                        <div class="task_board_content" >
-                            <a href="#popuptask1" style="cursor: pointer" id="toggleBtn-1">
+       
+            <div class="sortable-list">
+                <div class="task_board_content" >
+                            <p >
                             <span class="tick"></span>
-                            <i class=" triangle fa-solid fa-caret-down fa-xs"></i>
+                            <i class=" triangle fa-solid fa-caret-down fa-xs" style="cursor: pointer" id="toggleBtn-1"></i>
+                            <a href="#popuptask1" >
                                 Hệ Thống ID ADNX
                             </a>
+                            </p>
                             <span class="head-btn-group flex gap">
                                 <button class="flex " style="gap:3px">
                                     <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
@@ -628,22 +641,26 @@
                             <button id="flagButton4" >
                                 <i id="flagIcon4" class="fas fa-flag" onclick="changeColor4()"></i>
                             </button>
-                        </div>
-                        <div hidden id="content-1">
-                        <div class="task_board_content" >
-                            <a href="#popuptask1" style="cursor: pointer" id="toggleBtn-2">
+                </div>
+                <div class="item" draggable="true">
+                    <div hidden id="content-1" > 
+                        <div class="task_board_content_child details " >
+                            
+                            <p >
                                 <i class="fa-solid fa-circle"></i>
                                 <i class="draggable uil uil-draggabledots"></i>
-                                <i class=" triangle1 fa-solid fa-caret-down fa-xs"></i>
+                                <i class=" triangle1 fa-solid fa-caret-down fa-xs"  style="cursor: pointer" id="toggleBtn-2"></i>
                                 <i class="fa-solid fa-square"></i>
+                                <a href="#popuptask1">
                                 Feedback hệ thống
-                            </a>
+                                </a>
+                            </p>
                             <span class="head-btn-group flex gap">
                                 <button class="flex " style="gap:3px">
                                     <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                                     <p class="text_task">1</p>
                                     <p class="text_task1">|</p>
-                                    <a class="circle_task">
+                                    <a class="circle_task_child">
                                         <i class="plus fa-sharp fa-solid fa-plus"></i>
                                     </a>
                                 </button>
@@ -669,19 +686,22 @@
                             <button id="flagButton5" >
                                 <i id="flagIcon5" class="fas fa-flag" onclick="changeColor5()"></i>
                             </button>
-                    </div>
-                    <div hidden id="content-2">
-                    <div class="task_board_content">
-                        <a href="#popuptask1" style="cursor: pointer">
+                        
+                        </div>
+                <div hidden id="content-2">
+                    <div class="task_board_content_child">
+                        <p  style="cursor: pointer">
                             <i class=" square fa-solid fa-square"></i>
+                            <a href="#popuptask1">
                             Lỗi không có deadline
-                        </a>
+                            </a>
+                        </p>
                         <span class="head-btn-group flex gap">
                             <button class="flex " style="gap:3px">
                                 <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                                 <p class="text_task">1</p>
                                 <p class="text_task1">|</p>
-                                <a class="circle_task">
+                                <a class="circle_task_child">
                                     <i class="plus fa-sharp fa-solid fa-plus"></i>
                                 </a>
                             </button>
@@ -707,18 +727,20 @@
                         <button id="flagButton6" >
                             <i id="flagIcon6" class="fas fa-flag" onclick="changeColor6()"></i>
                         </button>
-                </div>
-                <div class="task_board_content">
-                    <a href="#popuptask1" style="cursor: pointer">
+                    </div>
+                    <div class="task_board_content_child">
+                    <p style="cursor: pointer">
                         <i class=" square fa-solid fa-square"></i>
+                        <a href="#popuptask1" >
                         Lỗi không có deadline
-                    </a>
+                        </a>
+                    </p>
                     <span class="head-btn-group flex gap">
                         <button class="flex " style="gap:3px">
                             <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                             <p class="text_task">1</p>
                             <p class="text_task1">|</p>
-                            <a class="circle_task">
+                            <a class="circle_task_child">
                                 <i class="plus fa-sharp fa-solid fa-plus"></i>
                             </a>
                         </button>
@@ -744,32 +766,119 @@
                     <button id="flagButton7" >
                         <i id="flagIcon7" class="fas fa-flag" onclick="changeColor7()"></i>
                     </button>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div hidden id="content-3">
-                <div class="task_board_content" id="toggleBtn-3">
-                    <a href="#popuptask1" style="cursor: pointer">
-                        <i class="fa-solid fa-circle"></i>
-                        <i class="draggable uil uil-draggabledots"></i>
-                        <i class=" triangle1 fa-solid fa-caret-down fa-xs"></i>
-                        <i class="fa-solid fa-square"></i>
-                        Feedback hệ thống
-                    </a>
+                </div>
+                <div class="item" draggable="true">
+                    <div hidden id="content-3" >
+                        <div class="task_board_content_child details " >
+                            
+                            <p  >
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="draggable uil uil-draggabledots"></i>
+                                <i class=" triangle1 fa-solid fa-caret-down fa-xs" style="cursor: pointer" id="toggleBtn-3"></i>
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#popuptask1">
+                                Feedback hệ thống 1
+                                </a>
+                            </p>
+                            <span class="head-btn-group flex gap">
+                                <button class="flex " style="gap:3px">
+                                    <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
+                                    <p class="text_task">1</p>
+                                    <p class="text_task1">|</p>
+                                    <a class="circle_task_child">
+                                        <i class="plus fa-sharp fa-solid fa-plus"></i>
+                                    </a>
+                                </button>
+                                <button>
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                <button>
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                            </span> 
+                            <div class="team-group flex">
+                                <div class="team-avatar-task">
+                                    <span class="leader-name text">NT</span>
+                                </div>
+                                <div class="team-avatar-task">
+                                    <span class="leader-name text">KH</span>
+                                </div>
+                                <div class="team-avatar-task">
+                                    <span class="leader-name text">NQ</span>
+                                </div>
+                            </div>
+                            <p>27/04/2023 19:00</p>
+                            <button id="flagButton8">
+                                <i id="flagIcon8" class="fas fa-flag" onclick="changeColor8()"></i>
+                            </button>
+                        
+                    </div>
+                <div hidden id="content-4">
+                    <div class="task_board_content_child">
+                        <p  style="cursor: pointer">
+                            <i class=" square fa-solid fa-square"></i>
+                            <a href="#popuptask1">
+                            Lỗi không có deadline
+                        </a>
+                        </p>
+                        <span class="head-btn-group flex gap">
+                            <button class="flex " style="gap:3px">
+                                <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
+                                <p class="text_task">1</p>
+                                <p class="text_task1">|</p>
+                                <a class="circle_task_child">
+                                    <i class="plus fa-sharp fa-solid fa-plus"></i>
+                                </a>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </span> 
+                        <div class="team-group flex">
+                            <div class="team-avatar-task">
+                                <span class="leader-name text">NT</span>
+                            </div>
+                            <div class="team-avatar-task">
+                                <span class="leader-name text">KH</span>
+                            </div>
+                            <div class="team-avatar-task">
+                                <span class="leader-name text">NQ</span>
+                            </div>
+                        </div>
+                        <p>27/04/2023 19:00</p>
+                        <button id="flagButton9" >
+                            <i id="flagIcon9" class="fas fa-flag" onclick="changeColor9()"></i>
+                        </button>
+                </div>
+                <div class="task_board_content_child">
+                    <p style="cursor: pointer">
+                        <i class=" square fa-solid fa-square"></i>
+                        <a href="#popuptask1" >
+                        Lỗi không có deadline
+                        </a>
+                    </p>
                     <span class="head-btn-group flex gap">
                         <button class="flex " style="gap:3px">
                             <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
                             <p class="text_task">1</p>
                             <p class="text_task1">|</p>
-                            <a class="circle_task">
+                            <a class="circle_task_child">
                                 <i class="plus fa-sharp fa-solid fa-plus"></i>
                             </a>
                         </button>
                         <button>
-                            <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-pen"></i>
                         </button>
                         <button>
+                            <a href="#popuptask1">
                             <i class="fa-solid fa-eye"></i>
+                            </a>
                         </button>
                     </span> 
                     <div class="team-group flex">
@@ -784,89 +893,16 @@
                         </div>
                     </div>
                     <p>27/04/2023 19:00</p>
-                    <button id="flagButton8" >
-                        <i id="flagIcon8" class="fas fa-flag" onclick="changeColor8()"></i>
+                    <button id="flagButton10" >
+                        <i id="flagIcon10" class="fas fa-flag" onclick="changeColor10()"></i>
                     </button>
-            </div>
-            <div hidden id="content-4">
-            <div class="task_board_content">
-                <a href="#popuptask1" style="cursor: pointer">
-                    <i class=" square fa-solid fa-square"></i>
-                    Lỗi không có deadline
-                </a>
-                <span class="head-btn-group flex gap">
-                    <button class="flex " style="gap:3px">
-                        <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
-                        <p class="text_task">1</p>
-                        <p class="text_task1">|</p>
-                        <a class="circle_task">
-                            <i class="plus fa-sharp fa-solid fa-plus"></i>
-                        </a>
-                    </button>
-                    <button>
-                        <i class="fa-solid fa-pen"></i>
-                    </button>
-                    <button>
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
-                </span> 
-                <div class="team-group flex">
-                    <div class="team-avatar-task">
-                        <span class="leader-name text">NT</span>
-                    </div>
-                    <div class="team-avatar-task">
-                        <span class="leader-name text">KH</span>
-                    </div>
-                    <div class="team-avatar-task">
-                        <span class="leader-name text">NQ</span>
+                </div>
+                </div>
                     </div>
                 </div>
-                <p>27/04/2023 19:00</p>
-                <button id="flagButton9" >
-                    <i id="flagIcon9" class="fas fa-flag" onclick="changeColor9()"></i>
-                </button>
         </div>
-        <div class="task_board_content">
-            <a href="#popuptask1" style="cursor: pointer">
-                <i class=" square fa-solid fa-square"></i>
-                Lỗi không có deadline
-            </a>
-            <span class="head-btn-group flex gap">
-                <button class="flex " style="gap:3px">
-                    <i class="fa-solid fa-arrows-rotate" style="padding-top: 1px;"></i>
-                    <p class="text_task">1</p>
-                    <p class="text_task1">|</p>
-                    <a class="circle_task">
-                        <i class="plus fa-sharp fa-solid fa-plus"></i>
-                    </a>
-                </button>
-                <button>
-                        <i class="fa-solid fa-pen"></i>
-                </button>
-                <button>
-                    <a href="#popuptask1">
-                    <i class="fa-solid fa-eye"></i>
-                    </a>
-                </button>
-            </span> 
-            <div class="team-group flex">
-                <div class="team-avatar-task">
-                    <span class="leader-name text">NT</span>
-                </div>
-                <div class="team-avatar-task">
-                    <span class="leader-name text">KH</span>
-                </div>
-                <div class="team-avatar-task">
-                    <span class="leader-name text">NQ</span>
-                </div>
-            </div>
-            <p>27/04/2023 19:00</p>
-            <button id="flagButton10" >
-                <i id="flagIcon10" class="fas fa-flag" onclick="changeColor10()"></i>
-            </button>
-        </div>
-    </div>
-</div>
+
+
         <div class=" text newtask popover">
             <button class="popover__trigger new"><i class="fa-solid fa-plus"></i>Task </button>
             <div class="popover__menu1">
@@ -881,7 +917,7 @@
             <button class=" new1">Lưu </button>
             </div>
         </div>
-        </div>
+            </div>
     <div id="popuptask1" class="overlay">
         <div class="popuptask">
             <div class="popuptask-title-task">
@@ -925,7 +961,7 @@
                 <div>
                     <button class="button-eye-dow"><i class="fa-light fa-eye"></i> | <i class=" fa-solid fa-arrow-down-right"></i></button>
                 </div>
-                <a href="#" class="close">
+                <a href="#" class="close_task">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
             </div>
@@ -940,14 +976,18 @@
                         </div>
                         <div class="popup-addtask">
                         <div class="popup-drop-serch">
-                            <select class="project2 js-states form-control" name="project">
+                            <div class="project2">
+                            <select class=" js-states form-control" name="project">
                                 <option value="-1"></option>
                                 <option value="pj-1">project 1</option>
                                 <option value="pj-2">project 2</option>
                                 <option value="pj-3">project 3</option>
                                 <option value="pj-4">project 4</option>
                             </select>
+                            </div>
+                            
                             <input class="text-search" type="text" id="name-pj" placeholder="Tìm kiếm">
+                               
                         </div>
                         <div class="popup-time-arrow">
                             <i class="fa-light fa-clock-rotate-left"></i>
@@ -1000,6 +1040,7 @@
     </div>
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Select2 -->
@@ -1031,6 +1072,32 @@
             minDate: "today",
             disableMobile: "true"
         });
+    </script>
+    <script>
+    const sortableList = document.querySelector(".sortable-list");
+    const items = sortableList.querySelectorAll(".item");
+
+    items.forEach(item => {
+    item.addEventListener("dragstart", () =>{
+    setTimeout(() => item.classList.add("dragging"), 0 );
+    });
+    item.addEventListener("dragend",() => item.classList.remove("dragging"));
+    });
+
+    const initSortableList = (e) => {
+    e.preventDefault();
+    const draggingItem = document.querySelector(".dragging");
+    let siblings = [...sortableList.querySelectorAll(".item:not(.dragging)")];
+
+    let nextSibling = siblings.find(sibling =>{
+     return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+    });
+
+    sortableList.insertBefore(draggingItem, nextSibling);
+    }
+
+    sortableList.addEventListener("dragover", initSortableList);
+    sortableList.addEventListener("dragenter", e => e.preventDefault());
     </script>
 </body>
 </html>
